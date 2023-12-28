@@ -46,7 +46,7 @@ class FrontendController extends Controller
 		return view('frontend.vice_principal_message',compact('data'));
 	}
 
-	public function presidentmessage()
+	public function vice_prinicpalmessage()
 	{
 		$data = DB::table("principles")->where('type',2)->first();
 		return view('frontend.principle_message',compact('data'));

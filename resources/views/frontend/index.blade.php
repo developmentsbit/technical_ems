@@ -206,6 +206,7 @@ right:0;
     margin-left: 18px;
     transition: .3s;
 }
+
 </style>
 
 @if(config('app.locale') == 'en')
@@ -262,19 +263,20 @@ right:0;
 
      <div class="col-sm-12 col-12  topheader">
       <div class="row">
-        <div class="col-sm-4 col-12 bangabondhu" id="email">
+        <div class="col-md-4 col-12 bangabondhu" id="email">
 
-          <label><a href="{{url('/time_line')}}"  class="btn btn-success btn-sm" target="_blank"><span uk-icon="icon: grid; ratio: 0.8"></span>&nbsp;@lang('frontend.golden_jubilee_and_bangabandhu_corner')  </a></label>
+          <label><a href="{{url('/time_line')}}"  class="btn btn-success btn-md" target="_blank"><span uk-icon="icon: grid; ratio: 0.8"></span>&nbsp;@lang('frontend.golden_jubilee_and_bangabandhu_corner')  </a></label>
 
         </div>
-
-
-        <div class="col-sm-8 col-12 text-center text-sm-center text-lg-right" id="email">
-          <div class="btn-group" role="group" aria-label="Basic example">
-
-            <label><a id="top_button" target="_blank" href="https://fgc.gov.bd/showResult.php" style="text-decoration:none;color:white;margin-right:10px" class="btn btn-outline-danger btn-sm">@lang('frontend.internal_results')</a></label>
+          
+          
+          <div class="col-sm-8 col-12 text-center text-sm-center text-lg-right" id="email">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <label><a href="{{url('/time_line')}}"  class="btn btn-danger btn-md" target="_blank" style="margin-right: 8px;">@lang('frontend.working_alumni_database')  </a></label>
+              <label><a href="{{url('/time_line')}}"  class="btn btn-info btn-md" target="_blank" style="margin-right: 8px;">@lang('frontend.attached_cv')  </a></label>
+            {{--<label><a id="top_button" target="_blank" href="https://fgc.gov.bd/showResult.php" style="text-decoration:none;color:white;margin-right:10px" class="btn btn-outline-danger btn-sm">@lang('frontend.internal_results')</a></label>
             <label><a id="top_button" target="_blank" href="/ems/admission/" style="text-decoration:none;color:white;margin-right:10px" class="btn btn-outline-warning btn-sm"> <i class="fa fa-users"></i>&nbsp; @lang('frontend.admission_form')</a></label>
-            <label><a id="top_button" target="_blank" href="#" style="text-decoration:none;color:white;margin-right:10px" class="btn btn-outline-info btn-sm">@lang('frontend.student_login')</a></label>
+            <label><a id="top_button" target="_blank" href="#" style="text-decoration:none;color:white;margin-right:10px" class="btn btn-outline-info btn-sm">@lang('frontend.student_login')</a></label>--}}
             <label>
               <div class="site-lang" style="margin-top: -4px;">
                   @if(config('app.locale')=='bn')
@@ -397,17 +399,21 @@ right:0;
                     <li><a href="{{ url('page/1') }}">@lang('frontend.about_us')</a></li>
                     <li><a href="{{ url('page/2') }}">@lang('frontend.mission_vision')</a></li>
                     <li><a href="{{ url('page/3') }}">@lang('frontend.history')</a></li>
+                    <li><a href="{{ url('page/7') }}">@lang('frontend.position') </a></li>
                     <li><a href="{{ url('page/4') }}">@lang('frontend.citizen_charter')</a></li>
-
-                    <li><a href="{{url('teacher_permission')}}">@lang('frontend.teaching_permission_recognition')</a></li>
-                    <li><a href="{{url('mpo_nationalizations')}}">@lang('frontend.mpo_nationalization_info')</a></li>
-
-                  </div>
-
-                  <div class="col-md-6 col-12 dmenu mt-3">
                     <li><a href="{{ url('page/6') }}">@lang('frontend.infrastructure')</a></li>
-                    <li><a href="{{ url('page/7') }}">@lang('frontend.yearly_working_plan') </a></li>
                     <li><a href="{{ url('page/8') }}">@lang('frontend.contact')</a></li>
+                    
+                    {{--<li><a href="{{url('teacher_permission')}}">@lang('frontend.teaching_permission_recognition')</a></li>
+                    <li><a href="{{url('mpo_nationalizations')}}">@lang('frontend.mpo_nationalization_info')</a></li>--}}
+                    
+                  </div>
+                  
+                  <div class="col-md-6 col-12 dmenu mt-3">
+                    <li><a href="{{ url('page/28') }}">@lang('frontend.structure')</a></li>
+                    <li><a href="{{ url('page/29') }}">@lang('frontend.info')</a></li>
+                    <li><a href="{{ url('page/30') }}">@lang('frontend.ongoingeducation')</a></li>
+                  
                   </div>
 
 
@@ -432,38 +438,18 @@ right:0;
                 @endphp
 
                 <div class="col-md-12 col-12 dmenu mt-3">
-                <li><a href="{{ url('principal_message') }}">
-                  @if($setting->type == 'school')
-                  @lang('frontend.principal_message')
-                  @else
-                  @lang('frontend.principal_message')
-                  @endif
-                 </a></li>
-                 @if($setting->type == 'madrasah')
-                 <li><a href="{{ url('presidentmessage') }}">@lang('frontend.presidentmessage') </a></li>
-                 @elseif($setting->type == 'school')
-                 <li><a href="{{ url('presidentmessage') }}">@lang('frontend.presidentmessage') </a></li>
-                 <li><a href="{{ url('managing_comitte') }}">@lang('frontend.managing_comitte')</a></li>
-
-                 @if($president_check)
-                 <li><a href="{{ url('presidents') }}">@lang('frontend.presidents')</a></li>
-                 @endif
-
-                 <li><a href="{{ url('donar') }}">@lang('frontend.donar')</a></li>
-                 <li><a href="{{ url('ex_member') }}">@lang('frontend.ex_member')</a></li>
-                 @endif
-
-                 @if($setting->type == 'college' || $setting->type == 'madrasah')
-                 <li><a href="{{ url('vice_principal_messages') }}">@lang('frontend.vice_principal_message') </a></li>
-                 <li><a href="{{ url('principles') }}">@lang('frontend.principles')</a></li>
-                 @endif
+                  <li><a href="{{ url('principal_message') }}">@lang('frontend.principal_message')</a></li>
+                  <li><a href="{{ url('vice_prinicpalmessage') }}">@lang('frontend.vice_principal_message') </a></li>
+                  <li><a href="{{ url('principles') }}">@lang('frontend.principles')</a></li>
+                  <li><a href="{{ url('teacherinfo') }}">@lang('frontend.teacherinfo')</a></li>
+                  <li><a href="{{ url('staffinfo') }}">@lang('frontend.staffinfo')</a></li>
                </div>
              </ul>
            </li>
 
 
 
-           <li class="nav-item dropdown">
+           <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               @lang('frontend.teachers_and_staff')
             </a>
@@ -523,91 +509,176 @@ right:0;
 
              </div>
            </ul>
-         </li>
+         </li> -->
 
-         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          @lang('frontend.student')
-         </a>
-         <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink">
+         <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            @lang('frontend.student')
+          </a>
+          <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink">
 
-          <div class="col-md-12 col-12 dmenu mt-3">
-
-
-            <li><a href="{{url('gender_wise_student_list')}}">@lang('frontend.class_gender_based_education')</a></li>
-           <li><a href="{{url('section_wise_student_list')}}">@lang('frontend.section_wise_student')</a></li>
+            <div class="col-md-12 col-12 dmenu mt-3">
 
 
-          {{-- <li><a href="{{url('gender_wise_students')}}">@lang('frontend.class_gender_based_education')</a></li>
-           <li><a href="{{url('section_wise_students')}}">@lang('frontend.section_wise_student')</a></li> --}}
+              <li><a href="{{url('gender_wise_student_list')}}">@lang('frontend.class_gender_based_education')</a></li>
+            <li><a href="{{url('section_wise_student_list')}}">@lang('frontend.section_wise_student')</a></li>
 
-           <li><a href="{{ url('student_attendance') }}">@lang('frontend.student_attendance')</a></li>
-           {{--
 
-            this is from original database
+            {{-- <li><a href="{{url('gender_wise_students')}}">@lang('frontend.class_gender_based_education')</a></li>
+            <li><a href="{{url('section_wise_students')}}">@lang('frontend.section_wise_student')</a></li> --}}
+
+            <li><a href="{{ url('student_attendance') }}">@lang('frontend.student_attendance')</a></li>
+            {{--
+
+              this is from original database
+
+              @php
+              $class = DB::table('addclass')->get();
+            @endphp
+            @if($class)
+            @foreach ($class as $c)
+              @php
+              $check = DB::table('class_wise_student_infos')->where('class_id',$c->id)->count();
+              @endphp
+
+              @if($check > 0)
+            <li><a href="{{url('classWiseStudent')}}/{{$c->id}}">@if($lang == 'en'){{$c->class_name}}@else {{$c->class_name_bn}}@endif</a></li>
+              @endif
+            @endforeach
+            @endif
+            --}}
+
+            {{-- this is from secondary database 
 
             @php
-            $class = DB::table('addclass')->get();
-           @endphp
-           @if($class)
-           @foreach ($class as $c)
-            @php
-            $check = DB::table('class_wise_student_infos')->where('class_id',$c->id)->count();
+            $class = DB::connection('mysql_second')->table('add_class')->get();
             @endphp
 
-            @if($check > 0)
-           <li><a href="{{url('classWiseStudent')}}/{{$c->id}}">@if($lang == 'en'){{$c->class_name}}@else {{$c->class_name_bn}}@endif</a></li>
-            @endif
-           @endforeach
-           @endif
-           --}}
+                  @if($class)
+                  @foreach ($class as $c)
 
-           {{-- this is from secondary database --}}
+                  @php
+                  $count = DB::connection('mysql_second')->table('running_student_info')->where('class_id',$c->id)->count();
+                  @endphp
 
-           @php
-           $class = DB::connection('mysql_second')->table('add_class')->get();
-           @endphp
+                  @if($count > 0)
+                  <li><a href="{{url('class_student_info')}}/{{$c->id}}">{{$c->class_name}}</a></li>
+                  @endif
+                  @endforeach
+                  @endif --}}
 
-                @if($class)
-                @foreach ($class as $c)
-
-                @php
-                $count = DB::connection('mysql_second')->table('running_student_info')->where('class_id',$c->id)->count();
-                @endphp
-
-                @if($count > 0)
-                <li><a href="{{url('class_student_info')}}/{{$c->id}}">{{$c->class_name}}</a></li>
-                @endif
-                @endforeach
-                @endif
-
-         </div>
-       </ul>
-     </li>
+          </div>
+        </ul>
+      </li> -->
 
 
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              @lang('frontend.department_wise')</a>
+            <ul class="dropdown-menu bg-white" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item dropdown-toggle" href="#">ইলেকট্রনিক্স টেকনোলজি</a>
+                  <ul class="dropdown-menu bg-white">
+                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;ইলেকট্রনিক্স টেকনোলজি সম্পর্কে</a></li>
+                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;বিভাগীয় প্রধান পরিচিতি </a></li>
+                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;শিক্ষকবৃন্দের তথ্য</a></li>
+                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;প্রথম শিফটের শিক্ষকবৃন্দের তথ্য</a></li>
+                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;দ্বিতীয় শিফটের শিক্ষকবৃন্দের তথ্য</a></li>
+                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;কর্মচারীদের তথ্য</a></li>
+                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;শিক্ষার্থী তথ্য </a></li>
+                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp; ল্যাব/ সপ  </a></li>
+                  </ul>
+                </li>
+            </ul>
+        </li>
+        
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              @lang('frontend.academic_works')</a>
+            <ul class="dropdown-menu bg-white" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item dropdown-toggle" href="#">@lang('frontend.class_routine')</a>
+                  <ul class="dropdown-menu bg-white">
+                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;ইলেকট্রনিক্স টেকনোলজি</a></li>
+                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;ইলেকট্রোমেডিকেল টেকনোলজি</a></li>
+                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;সিভিল টেকনোলজি</a></li>
+                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;ইলেকট্রিক্যাল টেকনোলজি</a></li>
+                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;মেকানিক্যাল টেকনোলজি</a></li>
+                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;পাওয়ার টেকনোলজি</a></li>
+                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;কম্পিউটার টেকনোলজি</a></li>
+                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;নন-টেক</a></li>
+                  </ul>
+                </li>
+            </ul>
+        </li>
+        
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              @lang('frontend.result')</a>
+            <ul class="dropdown-menu bg-white" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item dropdown-toggle" href="#">@lang('frontend.internal_results')</a>
+                  <ul class="dropdown-menu bg-white">
+                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;ইলেকট্রনিক্স টেকনোলজি</a></li>
+                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;ইলেকট্রোমেডিকেল টেকনোলজি</a></li>
+                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;সিভিল টেকনোলজি</a></li>
+                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;ইলেকট্রিক্যাল টেকনোলজি</a></li>
+                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;মেকানিক্যাল টেকনোলজি</a></li>
+                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;পাওয়ার টেকনোলজি</a></li>
+                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;কম্পিউটার টেকনোলজি</a></li>
+                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;নন-টেক</a></li>
+                  </ul>
+                </li>
+                <li><a class="dropdown-item dropdown-toggle" href="#">@lang('frontend.public_exam_result')</a>
+            </ul>
+        </li>
 
-
-     <li class="nav-item dropdown">
+        <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          @lang('frontend.academic_information')
-         </a>
-         <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink">
+            @lang('frontend.job_placement')
+          </a>
+          <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink">
+            <div class="col-md-12 col-12 dmenu mt-3" style="padding-left: 4%;">
+              <li><a href="#">কর্মসংস্থান সংক্রান্ত তথ্যাবলী </a></li>
+              <li><a href="#">কর্মরত প্রাক্তন ছাত্র-ছাত্রীদের ডাটাবেজ</a></li>
+              <li><a href="#">কর্ম প্রত্যাশীদের বায়োডাটা সংযুক্তকরণ</a></li>
+              <li><a href="#">নিয়োগ বিজ্ঞপ্তিসমূহ</a></li>
+              <li><a href="#">প্রাক্তন ছাত্র-ছাত্রীদের সাফল্য</a></li>
+            </div>
+          </ul>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            @lang('frontend.industries_linkes')
+          </a>
+          <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink">
+            <div class="col-md-12 col-12 dmenu mt-3">
+              <li><a href="#">সম্পাদিত চুক্তিসমূহ</a></li>
+              <li><a href="#">ইন্ডাস্ট্রিয়াল এটাচমেন্ট</a></li>
+              <li><a href="#">ইন্ডাস্ট্রি ভিজিট</a></li>
+              <li><a href="#">নিকটস্থ ইন্ডাস্ট্রিসমূহ</a></li>
+            </div>
+          </ul>
+        </li>
+      
+      <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            @lang('frontend.academic_information')
+          </a>
+          <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink">
 
-          <div class="col-md-12 col-12 dmenu mt-3">
+            <div class="col-md-12 col-12 dmenu mt-3">
 
-           <li><a href="{{ url('page/9') }}">@lang('frontend.rules_regulation')</a></li>
-           <li><a href="{{ url('academiccalenders') }}">@lang('frontend.academiccalenders')</a></li>
-           <li><a href="{{ url('classroutines') }}">@lang('frontend.classroutines')</a></li>
-           <li><a href="{{ url('holidaylists') }}">@lang('frontend.holidaylists')</a></li>
-           <li><a href="{{ url('page/10') }}">@lang('frontend.uniform')</a></li>
-           <li><a href="{{ url('page/11') }}">@lang('frontend.fees')</a></li>
-           <li><a href="{{ url('page/5') }}">@lang('frontend.studentinfochart')</a></li>
+            <li><a href="{{ url('page/9') }}">@lang('frontend.rules_regulation')</a></li>
+            <li><a href="{{ url('academiccalenders') }}">@lang('frontend.academiccalenders')</a></li>
+            <li><a href="{{ url('classroutines') }}">@lang('frontend.classroutines')</a></li>
+            <li><a href="{{ url('holidaylists') }}">@lang('frontend.holidaylists')</a></li>
+            <li><a href="{{ url('page/10') }}">@lang('frontend.uniform')</a></li>
+            <li><a href="{{ url('page/11') }}">@lang('frontend.fees')</a></li>
+            <li><a href="{{ url('page/5') }}">@lang('frontend.studentinfochart')</a></li>
 
 
-         </div>
-       </ul>
-     </li>
+          </div>
+        </ul>
+      </li> -->
 
 
 
@@ -654,7 +725,7 @@ right:0;
     </li>
 
 
-    <li class="nav-item dropdown">
+    <!-- <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         @lang('frontend.admission_information')
       </a>
@@ -671,10 +742,10 @@ right:0;
 
        </div>
      </ul>
-   </li>
+   </li> -->
 
 
-   <li class="nav-item dropdown">
+   <!-- <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     @lang('frontend.exam_information')
     </a>
@@ -684,11 +755,11 @@ right:0;
        <li><a href="{{ url('page/12') }}">@lang('frontend.exam_rules')</a></li>
        <li><a href="{{ url('examroutines') }}">@lang('frontend.examroutines')</a></li>
        <li><a href="{{ url('examsyllabus') }}">@lang('frontend.examsyllabus')</a></li>
-       <!--<li><a href="{{ url('examsuggession') }}">@lang('frontend.examsuggession')</a></li>-->
+       <li><a href="{{ url('examsuggession') }}">@lang('frontend.examsuggession')</a></li>
 
      </div>
    </ul>
- </li>
+ </li> -->
 
 
 
@@ -764,27 +835,17 @@ right:0;
     <li class="uk-parent">
       <a href="#"><span uk-icon="icon: chevron-right; ratio: 0.9"></span>&nbsp;&nbsp;@lang('frontend.administrative_information') </a>
       <ul class="uk-nav-sub">
-      <li><a href="{{ url('principal_message') }}">
-        @if($setting->type == 'school')
-        @lang('frontend.principal_message')
-        @else
-        @lang('frontend.principal_message')
-        @endif
+      <li><a href="{{ url('principal_message') }}">@lang('frontend.principal_message')
         </a></li>
-        @if($setting->type == 'madrasah')
-        <li><a href="{{ url('presidentmessage') }}">@lang('frontend.presidentmessage') </a></li>
-        @elseif($setting->type == 'school')
-        <li><a href="{{ url('presidentmessage') }}">@lang('frontend.presidentmessage') </a></li>
+
+        <!-- <li><a href="{{ url('presidentmessage') }}">@lang('frontend.presidentmessage') </a></li>
         <li><a href="{{ url('managing_comitte') }}">@lang('frontend.managing_comitte')</a></li>
         <li><a href="{{ url('presidents') }}">@lang('frontend.presidents')</a></li>
         <li><a href="{{ url('donar') }}">@lang('frontend.donar')</a></li>
-        <li><a href="{{ url('ex_member') }}">@lang('frontend.ex_member')</a></li>
-        @endif
-
-        @if($setting->type == 'college' || $setting->type == 'madrasah')
-        <li><a href="{{ url('vice_principal_messages') }}">@lang('frontend.vice_principal_message') </a></li>
+        <li><a href="{{ url('ex_member') }}">@lang('frontend.ex_member')</a></li> -->
+        
+        <li><a href="{{ url('vice_prinicpalmessage') }}">@lang('frontend.vice_principal_message') </a></li>
         <li><a href="{{ url('principles') }}">@lang('frontend.principles')</a></li>
-        @endif
       </ul>
     </li>
 
@@ -818,7 +879,7 @@ right:0;
         <li><a href="{{url('section_wise_students')}}">@lang('frontend.section_wise_student')</a></li>
 
         <li><a href="#">@lang('frontend.student_attendance')</a></li>
-        @php
+      {{--  @php
         $class = DB::connection('mysql_second')->table('add_class')->get();
         @endphp
         @if($class)
@@ -830,7 +891,7 @@ right:0;
         <li><a href="#">{{$c->class_name}}</a></li>
         @endif
         @endforeach
-        @endif
+        @endif --}}
      </ul>
    </li>
    @endif

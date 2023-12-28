@@ -92,7 +92,7 @@ Route::get('/teacher_permission', [FrontendController::class, 'teacher_permissio
 Route::get('/mpo_nationalizations', [FrontendController::class, 'mpo_nationalizations']);
 Route::get('/principal_message', [FrontendController::class, 'principle_message']);
 Route::get('/vice_principal_messages', [FrontendController::class, 'vice_principal_message']);
-Route::get('/presidentmessage', [FrontendController::class, 'presidentmessage']);
+Route::get('/vice_prinicpalmessage', [FrontendController::class, 'vice_prinicpalmessage']);
 
 Route::get('/managing_comitte', [FrontendController::class, 'managing_comitte']);
 Route::get('/presidents', [FrontendController::class, 'presidents']);
