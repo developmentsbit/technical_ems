@@ -2,17 +2,17 @@
 
 return [
 
-     'managetitle' => 'Principal/President/Head Teacher Message',
-     'addtitle' => 'Add Principal/President/Head Teacher',
-     'edittitle' => 'Edit Principal/President/Head Teacher',
-     'viewtitle' => 'View Principal/President/Head Teacher',
+     'managetitle' => 'Principal/Vice Principle Message',
+     'addtitle' => 'Add Principal/Vice Principle Message',
+     'edittitle' => 'Edit Principal/Vice Principle Message',
+     'viewtitle' => 'View Principal/Vice Principle Message',
      'type' => 'Type',
      'name' => 'Name',
      'image' => 'Image',
      'details' => 'Details',
      'download' => 'Download/File Image',
-     'principal'=>'Principal/Head Teacher',
-     'president'=>'President',
+     'principal'=>'Principal',
+     'president'=>'Vice Principle',
      'name_bn'=>'Name (Bangla)',
      'details_bn'=>'Details (Bangla)',
 

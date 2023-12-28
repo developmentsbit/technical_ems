@@ -20,7 +20,7 @@ $setting = DB::table("setting")->first();
                             @lang('frontend.announcement')
                          </div>--}}
                          <div class="col-12 pt-1">
-						 	<marquee behavior="scroll" direction="left" style="padding-right: 10px;padding-left: 10px;font-size: 21px;">
+						 	<marquee onmouseover="this.stop();" onmouseout="this.start();" behavior="scroll" direction="left" style="padding-right: 10px;padding-left: 10px;font-size: 21px;font-weight:bold;">
                                  {{$setting->scrolling_text}}
                              </marquee>
                          </div>

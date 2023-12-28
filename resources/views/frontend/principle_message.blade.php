@@ -16,7 +16,7 @@
         @if($data->type == 1)
         @lang('frontend.principal_message')
         @else
-        @lang('frontend.presidentmessage')
+        @lang('frontend.vice_principal_message')
         @endif
       </li>
       </ul>

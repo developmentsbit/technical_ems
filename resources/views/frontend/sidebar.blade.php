@@ -3,9 +3,8 @@
 @php
 
   $principle = DB::table('principles')->where('type',1)->first();
-  $president = DB::table('principles')->where('type',2)->first();
+  $v_principle = DB::table('principles')->where('type',2)->first();
   $president_check = DB::table('principles')->where('type',2)->count();
-  $v_principle = DB::table('vice_principal_messages')->first();
   $usefullink = DB::table('usefullinks')->get();
   $setting = DB::table('setting')->first();
 
@@ -16,41 +15,10 @@
 
 <div class="col-sm-3 col-12">
 
-    @if($president_check > 0)
-	@if(request()->Is('presidentmessage'))
-	
-	@else
-	<div class="col-sm-12 col-12 p-0 mt-2">
-		<ul class="list-group">
-			<li class="list-group-item" id="featureheads">@lang('frontend.presidentmessage')</li>
-		</ul>
-		<li class="list-group-item p-0" id="padd">
-			<a href="{{ url('presidentmessage') }}"><center><img src="{{ asset($president->image) }}" class="img-fluid"></center></a>
-			<center>
-
-				<div class="mt-2">
-					<span class="head">@if($lang == 'en'){{$president->name}}@elseif($lang == 'bn'){{$president->name_bn}}@endif<br><a class="btn btn-success btn-sm w-100" style="border-radius: 0px;" href="{{ url('presidentmessage') }}" class="details">@lang('frontend.details')</a></span>
-
-				</div>
-			</center>
-		</li>
-	</div>
-	@endif
-	@endif
-
-
-
-    @if(request()->Is('principal_message'))
-
-    @else
 	<div class="col-sm-12 col-12 p-0 mt-2">
 		<ul class="list-group">
 			<li class="list-group-item" id="featureheads">
-				@if($setting->type == 'school')
 				@lang('frontend.principal_message')
-				@else
-				@lang('frontend.principal_message')
-				@endif
 			</li>
 		</ul>
 		<li class="list-group-item p-0 pt-2" id="padd">
@@ -64,19 +32,13 @@
 			</center>
 		</li>
 	</div>
-    @endif
 
-    @if($setting->type == 'college' || $setting->type == 'madrasah')
-
-	@if(request()->Is('vice_principal_messages'))
-
-    @else
 	<div class="col-sm-12 col-12 p-0 mt-2">
 		<ul class="list-group">
 			<li class="list-group-item" id="featureheads">@lang('frontend.vice_principal_message')</li>
 		</ul>
 		<li class="list-group-item p-0 pt-2" id="padd">
-			<a href="{{ url('vice_principal_message') }}"><center><img src="{{ asset('/vice_principal_image') }}/{{$v_principle->image}}" class="img-fluid"></center></a>
+			<a href="{{ url('vice_principal_message') }}"><center><img src="{{ asset($v_principle->image) }}" class="img-fluid"></center></a>
 			<center>
 
 				<div class="mt-2">
@@ -86,9 +48,6 @@
 			</center>
 		</li>
 	</div>
-    @endif
-
-	@endif
 
 
 

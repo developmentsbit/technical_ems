@@ -54,11 +54,11 @@
 							<div class="input-group mt-2">
 								<select class="form-control" name="type">
 									@if($data->type == 1)
-									<option value="1">Principal</option>
-									<option value="2">President</option>
+									<option value="1">@lang('principle.principal')</option>
+									<option value="2">@lang('principle.president')</option>
 									@else
-									<option value="2">President</option>
-									<option value="1">Principal</option>
+									<option value="2">@lang('principle.president')</option>
+									<option value="1">@lang('principle.principal')</option>
 									@endif
 								</select>
 							</div>
