@@ -41,12 +41,6 @@
               <td>{{ $data->designation }}</td>
             </tr>
 
-            <tr>
-              <td>শিফট</td>
-              <td align="center">:</td>
-              <td>{{ $data->shift }}</td>
-            </tr>
-
 
             <tr>
               <td>বিভাগ / শাখা</td>
@@ -57,14 +51,14 @@
             <tr>
               <td>পিতার নাম</td>
               <td align="center">:</td>
-              <td>{{ $data->fathers_name }}</td>
+              <td>{{ $data->father_name }}</td>
             </tr> 
 
 
             <tr>
               <td>মাতার নাম</td>
               <td align="center">:</td>
-              <td>{{ $data->mothers_name }}</td>
+              <td>{{ $data->mother_name }}</td>
             </tr> 
 
 
@@ -77,7 +71,7 @@
             <tr>
               <td>ই-মেইল</td>
               <td align="center">:</td>
-              <td>{{ $data->mobile }}</td>
+              <td>{{ $data->email }}</td>
             </tr> 
 
             <tr>
@@ -89,13 +83,19 @@
             <tr>
               <td>রক্তের গ্রুপ</td>
               <td align="center">:</td>
-              <td>{{ $data->blood_group }}</td>
+              <td>{{ $data->blood }}</td>
             </tr>
 
             <tr>
-              <td>ঠিকানা</td>
+              <td>বর্তমান ঠিকানা</td>
               <td align="center">:</td>
               <td>{{ $data->present_address }}</td>
+            </tr> 
+            
+            <tr>
+              <td>স্থায়ী ঠিকানা</td>
+              <td align="center">:</td>
+              <td>{{ $data->parmanent_address }}</td>
             </tr> 
 
 

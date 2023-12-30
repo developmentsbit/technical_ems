@@ -26,6 +26,8 @@ return [
      'managing_commitee'=>'ম্যানেজিং কমিটি',
      'donar'=>'ডোনার',
      'ex_member'=>'প্রাক্তন সদস্য',
+     'comitteemembers'=>'কমিটির সদস্য',
+     'councilmembers'=>'কাউন্সিল সদস্য',
 
 
 

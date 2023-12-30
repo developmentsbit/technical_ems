@@ -52,6 +52,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 							<th>@lang('teacherstaff.name')</th>
 							<th>@lang('teacherstaff.email')</th>
 							<th>@lang('teacherstaff.mobile')</th>
+							<th>@lang('teacherstaff.shift')</th>
 							<th>@lang('teacherstaff.type')</th>
 							<th>@lang('common.image')</th>
 							<th>@lang('common.action')</th>
@@ -67,11 +68,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 							<td>{{ $d->name }}</td>
 							<td>{{ $d->email }}</td>
 							<td>{{ $d->mobile }}</td>
+							<td>{{ $d->shift }}</td>
 							<td>
 								@if($d->type == 1)
-								Teacher
-								@else
-								Staff
+								<span>@lang('teacherstaff.teacher')</span>
+								@endif
+								@if($d->type == 2)
+								<span>@lang('teacherstaff.staff')</span>
+								@endif
+								@if($d->type == 3)
+								<span>@lang('teacherstaff.department_head')</span>
 								@endif
 							</td>
 							<td><img src="{{ asset($d->image) }}" style="max-height: 50px;"></td>

@@ -15,15 +15,11 @@
         <li class="list-group-item font-weight-bold bg-success text-light" id="about">
 
           @if($data[0]->type == 3)
-          @lang('frontend.managing_comitte')
+          @lang('frontend.comitteemembers')
           @elseif($data[0]->type == 2)
-          @lang('frontend.presidents')
+          @lang('frontend.councilmembers')
           @elseif($data[0]->type == 1)
           @lang('frontend.principles')
-          @elseif($data[0]->type == 4)
-          @lang('frontend.donar')
-          @else
-          @lang('frontend.ex_member')
           @endif
 
         </li>

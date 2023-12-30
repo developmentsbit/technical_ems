@@ -94,8 +94,8 @@ Route::get('/principal_message', [FrontendController::class, 'principle_message'
 Route::get('/vice_principal_messages', [FrontendController::class, 'vice_principal_message']);
 Route::get('/vice_prinicpalmessage', [FrontendController::class, 'vice_prinicpalmessage']);
 
-Route::get('/managing_comitte', [FrontendController::class, 'managing_comitte']);
-Route::get('/presidents', [FrontendController::class, 'presidents']);
+Route::get('/comitteemembers', [FrontendController::class, 'comitteemembers']);
+Route::get('/councilmembers', [FrontendController::class, 'councilmembers']);
 Route::get('/principles', [FrontendController::class, 'principles']);
 Route::get('/donar', [FrontendController::class, 'donar']);
 Route::get('/ex_member', [FrontendController::class, 'ex_member']);
@@ -104,6 +104,7 @@ Route::get('/department_teacher/{id}', [FrontendController::class, 'Teacher_info
 
 Route::get('/teacherinfo', [FrontendController::class, 'teacherinfo']);
 Route::get('/staffinfo', [FrontendController::class, 'staffinfo']);
+Route::get('/deapartmentheadinfo', [FrontendController::class, 'deapartmentheadinfo']);
 Route::get('/teacherstaffdetails/{id}', [FrontendController::class, 'teacherstaffdetails']);
 
 Route::get('/admissionInfo/{id}', [FrontendController::class, 'admissionInfo']);

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('designation')->nullable();
             $table->string('nid')->nullable();
+            $table->string('shift')->nullable();
             $table->string('dob')->nullable();
             $table->string('blood')->nullable();
             $table->string('religion')->nullable();
@@ -34,7 +35,7 @@ return new class extends Migration
             $table->string('gender')->nullable();
             $table->string('type')->nullable();
             $table->integer('status')->nullable();
-            $table->string('image')->nullable();
+            $table->string('image',100)->default('0');
             $table->timestamps();
         });
     }
