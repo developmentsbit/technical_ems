@@ -28,6 +28,10 @@ return [
      'image' => 'Image',
      'download' => 'Download/File Image',
      'sl'=>'Serial No.',
+     'department_head'=>'Department Head',
+     'teacher'=>'Teacher',
+     'staff'=>'Staff',
+     'shift'=>'Shift',
 
 
 

@@ -53,13 +53,13 @@ class FrontendController extends Controller
 	}
 
 
-	public function managing_comitte(){
+	public function comitteemembers(){
 		$data = DB::table("members")->where('status',1)->where('type',3)->get();
 		return view('frontend.members',compact('data'));
 
 	}
 
-	public function presidents(){
+	public function councilmembers(){
 		$data = DB::table("members")->where('status',1)->where('type',2)->get();
 		return view('frontend.members',compact('data'));
 
@@ -360,9 +360,9 @@ class FrontendController extends Controller
 	{
 		$data = DB::table("teacherstaff")
 		->where('teacherstaff.department_id',$id)
-		->where('teacherstaff.type',2)
-		->join('departments','departments.id','teacherstaff.department_id')
-		->select('teacherstaff.*','departments.department_name_bn')
+		->where('teacherstaff.type',1)
+		->join('department','department.id','teacherstaff.department_id')
+		->select('teacherstaff.*','department.department_name_bn')
 		->get();
 		return view('frontend.departmentteacher',compact('data'));
 	}
@@ -372,8 +372,8 @@ class FrontendController extends Controller
 	{
 		$data = DB::table("teacherstaff")
 		->where('teacherstaff.id',$id)
-		->join('departments','departments.id','teacherstaff.department_id')
-		->select('teacherstaff.*','departments.department_name_bn')
+		->join('department','department.id','teacherstaff.department_id')
+		->select('teacherstaff.*','department.department_name_bn')
 		->first();
 		return view('frontend.departmentteacherdetails',compact('data'));
 	}
@@ -387,8 +387,8 @@ class FrontendController extends Controller
 		$data = DB::table("teacherstaff")
 		->where('teacherstaff.department_id',$id)
 		->where('teacherstaff.type',3)
-		->join('departments','departments.id','teacherstaff.department_id')
-		->select('teacherstaff.*','departments.department_name_bn')
+		->join('department','department.id','teacherstaff.department_id')
+		->select('teacherstaff.*','department.department_name_bn')
 		->get();
 		return view('frontend.departmentemployee',compact('data'));
 	}
@@ -398,8 +398,8 @@ class FrontendController extends Controller
 	{
 		$data = DB::table("teacherstaff")
 		->where('teacherstaff.id',$id)
-		->join('departments','departments.id','teacherstaff.department_id')
-		->select('teacherstaff.*','departments.department_name_bn')
+		->join('department','department.id','teacherstaff.department_id')
+		->select('teacherstaff.*','department.department_name_bn')
 		->first();
 		return view('frontend.departmentemployeedetails',compact('data'));
 	}
@@ -411,9 +411,9 @@ class FrontendController extends Controller
 		$data = DB::table("teacherstaff")
 		->where('teacherstaff.department_id',$id)
 		->orderBy('teacherstaff.id','DESC')
-		->where('teacherstaff.type',1)
-		->join('departments','departments.id','teacherstaff.department_id')
-		->select('teacherstaff.*','departments.department_name_bn')
+		->where('teacherstaff.type',3)
+		->join('department','department.id','teacherstaff.department_id')
+		->select('teacherstaff.*','department.department_name_bn')
 		->first();
 
 		return view('frontend.departmenthead',compact('data'));

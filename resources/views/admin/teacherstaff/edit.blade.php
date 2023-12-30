@@ -72,6 +72,15 @@
 							</div>
 						</div>
 						<div class="form-group mb-3 col-md-4">
+							<label>@lang('teacherstaff.religion'): <span class="text-danger" style="font-size: 15px;">*</span></label>
+							<div class="input-group -mt-2">
+								<select class="form-control" name="shift" id="shift">
+									<option value="1st Shift" @php $data->religion == "1st Shift" ? 'selected' : '' @endphp>1st Shift</option>
+									<option value="2nd Shift" @php $data->religion == "2nd Shift" ? 'selected' : '' @endphp>2nd Shift</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group mb-3 col-md-4">
 							<label>@lang('teacherstaff.nid'):</label>
 							<div class="input-group -mt-2">
 								<input class="form-control" type="text" name="nid" id="nid" value="{{ $data->nid }}">
@@ -83,7 +92,7 @@
 								<input class="form-control" type="text" name="blood" id="blood"  value="{{ $data->blood }}">
 							</div>
 						</div>
-						<div class="form-group mb-3 col-md-6">
+						<div class="form-group mb-3 col-md-4">
 							<label>@lang('teacherstaff.religion'): <span class="text-danger" style="font-size: 15px;">*</span></label>
 							<div class="input-group -mt-2">
 								<select class="form-control" name="religion" id="option_s2">
@@ -95,7 +104,7 @@
 								</select>
 							</div>
 						</div>
-						<div class="form-group mb-3 col-md-6">
+						<div class="form-group mb-3 col-md-4">
 							<label>@lang('teacherstaff.relationship'): <span class="text-danger" style="font-size: 15px;">*</span></label>
 							<div class="input-group -mt-2">
 								<select class="form-control" name="relationship" id="option_s2">
@@ -182,12 +191,19 @@
 							<div class="input-group -mt-2">
 								<select class="form-control" name="type" id="option_s2">
 									@if($data->type == 1)
-									<option value="1">Teacher</option>
-									<option value="2">Staff</option>
-									@else
-									<option value="2">Staff</option>
-									<option value="1">Teacher</option>
-
+									<option value="1">@lang('teacherstaff.teacher')</option>
+									<option value="2">@lang('teacherstaff.staff')</option>
+									<option value="3">@lang('teacherstaff.department_head')</option>
+									@endif
+									@if($data->type == 2)
+									<option value="2">@lang('teacherstaff.staff')</option>
+									<option value="1">@lang('teacherstaff.teacher')</option>
+									<option value="3">@lang('teacherstaff.department_head')</option>
+									@endif
+									@if($data->type == 3)
+									<option value="3">@lang('teacherstaff.department_head')</option>
+									<option value="1">@lang('teacherstaff.teacher')</option>
+									<option value="2">@lang('teacherstaff.staff')</option>
 									@endif
 								</select>
 							</div>

@@ -441,6 +441,8 @@ right:0;
                   <li><a href="{{ url('principal_message') }}">@lang('frontend.principal_message')</a></li>
                   <li><a href="{{ url('vice_prinicpalmessage') }}">@lang('frontend.vice_principal_message') </a></li>
                   <li><a href="{{ url('principles') }}">@lang('frontend.principles')</a></li>
+                  <li><a href="{{ url('councilmembers') }}">@lang('frontend.councilmembers')</a></li>
+                  <li><a href="{{ url('comitteemembers') }}">@lang('frontend.comitteemembers')</a></li>
                   <li><a href="{{ url('teacherinfo') }}">@lang('frontend.teacherinfo')</a></li>
                   <li><a href="{{ url('staffinfo') }}">@lang('frontend.staffinfo')</a></li>
                </div>
@@ -576,18 +578,22 @@ right:0;
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               @lang('frontend.department_wise')</a>
             <ul class="dropdown-menu bg-white" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item dropdown-toggle" href="#">ইলেকট্রনিক্স টেকনোলজি</a>
+                @if($department)
+                @foreach($department as $dept)
+                <li><a class="dropdown-item dropdown-toggle" href="#">{{$dept->department_name_bn}}</a>
                   <ul class="dropdown-menu bg-white">
-                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;ইলেকট্রনিক্স টেকনোলজি সম্পর্কে</a></li>
-                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;বিভাগীয় প্রধান পরিচিতি </a></li>
-                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;শিক্ষকবৃন্দের তথ্য</a></li>
-                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;প্রথম শিফটের শিক্ষকবৃন্দের তথ্য</a></li>
-                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;দ্বিতীয় শিফটের শিক্ষকবৃন্দের তথ্য</a></li>
-                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;কর্মচারীদের তথ্য</a></li>
-                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;শিক্ষার্থী তথ্য </a></li>
-                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp; ল্যাব/ সপ  </a></li>
+                    <li><a class="dropdown-item" href="{{url('about_dept')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;{{$dept->department_name_bn}} সম্পর্কে</a></li>
+                    <li><a class="dropdown-item" href="{{url('departmenthead')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;বিভাগীয় প্রধান পরিচিতি </a></li>
+                    <li><a class="dropdown-item" href="{{url('departmentteacher')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;শিক্ষকবৃন্দের তথ্য</a></li>
+                    <li><a class="dropdown-item" href="{{url('dept_teacher_shift')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;প্রথম শিফটের শিক্ষকবৃন্দের তথ্য</a></li>
+                    <li><a class="dropdown-item" href="{{url('dept_teacher_shift2')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;দ্বিতীয় শিফটের শিক্ষকবৃন্দের তথ্য</a></li>
+                    <li><a class="dropdown-item" href="{{url('emp_info')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;কর্মচারীদের তথ্য</a></li>
+                    <li><a class="dropdown-item" href="{{url('Student_infos')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;শিক্ষার্থী তথ্য </a></li>
+                    <li><a class="dropdown-item" href="{{url('shop_info')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp; ল্যাব/ সপ  </a></li>
                   </ul>
                 </li>
+                @endforeach
+                @endif
             </ul>
         </li>
         
@@ -595,18 +601,67 @@ right:0;
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               @lang('frontend.academic_works')</a>
             <ul class="dropdown-menu bg-white" aria-labelledby="navbarDropdownMenuLink">
+                
                 <li><a class="dropdown-item dropdown-toggle" href="#">@lang('frontend.class_routine')</a>
                   <ul class="dropdown-menu bg-white">
-                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;ইলেকট্রনিক্স টেকনোলজি</a></li>
-                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;ইলেকট্রোমেডিকেল টেকনোলজি</a></li>
-                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;সিভিল টেকনোলজি</a></li>
-                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;ইলেকট্রিক্যাল টেকনোলজি</a></li>
-                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;মেকানিক্যাল টেকনোলজি</a></li>
-                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;পাওয়ার টেকনোলজি</a></li>
-                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;কম্পিউটার টেকনোলজি</a></li>
-                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;নন-টেক</a></li>
+                    @if($department)
+                    @foreach($department as $dept)
+                    <li><a class="dropdown-item" href="{{url('class_Routine')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;{{$dept->department_name_bn}}</a></li>
+                    @endforeach
+                    @endif
                   </ul>
                 </li>
+
+                <li><a class="dropdown-item dropdown-toggle" href="#">@lang('frontend.onlineclassroutines')</a>
+                  <ul class="dropdown-menu bg-white">
+                    @if($department)
+                    @foreach($department as $dept)
+                    <li><a class="dropdown-item" href="{{url('class_Routine')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;{{$dept->department_name_bn}}</a></li>
+                    @endforeach
+                    @endif
+                  </ul>
+                </li>
+
+                <li><a class="dropdown-item dropdown-toggle" href="#">@lang('frontend.digitalclassroomcontent')</a>
+                  <ul class="dropdown-menu bg-white">
+                    @if($department)
+                    @foreach($department as $dept)
+                    <li><a class="dropdown-item" href="{{url('class_Routine')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;{{$dept->department_name_bn}}</a></li>
+                    @endforeach
+                    @endif
+                  </ul>
+                </li>
+
+                <li><a class="dropdown-item dropdown-toggle" href="#">@lang('frontend.syllabus')</a>
+                  <ul class="dropdown-menu bg-white">
+                    @if($department)
+                    @foreach($department as $dept)
+                    <li><a class="dropdown-item" href="{{url('class_Routine')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;{{$dept->department_name_bn}}</a></li>
+                    @endforeach
+                    @endif
+                  </ul>
+                </li>
+
+                <li><a class="dropdown-item dropdown-toggle" href="#">@lang('frontend.semesterplan')</a>
+                  <ul class="dropdown-menu bg-white">
+                    @if($department)
+                    @foreach($department as $dept)
+                    <li><a class="dropdown-item" href="{{url('class_Routine')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;{{$dept->department_name_bn}}</a></li>
+                    @endforeach
+                    @endif
+                  </ul>
+                </li>
+
+                <li><a class="dropdown-item dropdown-toggle" href="#">@lang('frontend.class_routine')</a>
+                  <ul class="dropdown-menu bg-white">
+                    @if($department)
+                    @foreach($department as $dept)
+                    <li><a class="dropdown-item" href="{{url('class_Routine')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;{{$dept->department_name_bn}}</a></li>
+                    @endforeach
+                    @endif
+                  </ul>
+                </li>
+
             </ul>
         </li>
         

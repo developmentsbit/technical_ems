@@ -66,22 +66,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 							<td>{{ $i++ }}</td>
 							<td>
 								@if($d->type == 1)
-								<span>Principle</span>
+								<span>@lang('member.principal')</span>
 								@endif
 								@if($d->type == 2)
-								<span>Chairman</span>
+								<span>@lang('member.councilmembers')</span>
 								@endif
 
 								@if($d->type == 3)
-								<span>Managing Committee</span>
-								@endif
-
-								@if($d->type == 4)
-								<span>Donar</span>
-								@endif
-
-								@if($d->type == 5)
-								<span>Ex-Member</span>
+								<span>@lang('member.comitteemembers')</span>
 								@endif
 
 							</td>

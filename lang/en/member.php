@@ -27,6 +27,8 @@ return [
      'managing_commitee'=>'Managing Commitee',
      'donar'=>'Donar',
      'ex_member'=>'Ex Member',
+     'comitteemembers'=>'Comittee Members',
+     'councilmembers'=>'Council Members',
 
 
 
