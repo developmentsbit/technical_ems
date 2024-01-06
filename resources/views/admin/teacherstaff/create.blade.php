@@ -76,8 +76,8 @@
 							<label>@lang('teacherstaff.shift'): <span class="text-danger" style="font-size: 15px;">*</span></label>
 							<div class="input-group mt-2">
 								<select class="form-control" name="shift" id="shift">
-									<option value="1st Shift">1st Shift</option>
-									<option value="2nd Shift">2nd Shift</option>
+									<option value="1">1st Shift</option>
+									<option value="2">2nd Shift</option>
 								</select>
 							</div>
 						</div>

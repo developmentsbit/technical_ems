@@ -110,6 +110,7 @@ $array = array(
     'syllabus'=>'সিলেবাস',
     'semesterplan'=>'সেমিস্টার প্ল্যান',
     'studentprojects'=>'শিক্ষাথীদের প্রজেক্টসমূহ',
+    'probidhan'=>'প্রবিধান',
 
     'holidaylists'=>'ছুটির তালিকা',
     'uniform'=>'ইউনিফর্ম',

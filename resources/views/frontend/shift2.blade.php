@@ -1,6 +1,9 @@
 @extends('frontend.index')
 @section('content')
 
+
+
+
 <div class="container">
 
  <div class="col-sm-12 col-12" id="mainpage">
@@ -11,8 +14,9 @@
      <ul class="list-group p-0">
       <li class="list-group-item bg-success text-white">
         <span class="student"><span uk-icon="icon: info; ratio: 1.2"></span>&nbsp;&nbsp;
-        {{ $data[0]->department_name_bn }} বিভাগের শিক্ষকদের তথ্য</span>
+        {{ $data[0]->department_name_bn }} বিভাগের দ্বিতীয় শিফটের শিক্ষকবৃন্দের তথ্য</span>
       </li>
+
 
       
       <li class="list-group-item">
@@ -46,19 +50,17 @@
               </tr>
 
               <tr>
-                <td colspan="3"><center><a href="{{ url('departmentteacherdetails',$d->id) }}" class="btn btn-warning text-white btn-sm float-end">বিস্তারিত দেখুন</a></center></td> 
+                <td colspan="3"><center><a href="{{ url('shiftdetails',$d->id) }}" class="btn btn-warning text-white btn-sm float-end">বিস্তারিত দেখুন</a></center></td> 
               </tr>               
             </table>
           </div><!-----------End Teacher Information----------------------->
+
           @endforeach
           @endif
-
-
 
         </div>
       </div>
     </li>
-
 
 
   </ul>
@@ -83,4 +85,3 @@
 
 
 @endsection
-
