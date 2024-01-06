@@ -102,8 +102,8 @@ class ClassController extends Controller
        else{
         Toastr::success(__('New Class Delete Unsuccessfully'));
         return redirect()->route('addclass.index');
+        }
     }
-}
 
 
 }

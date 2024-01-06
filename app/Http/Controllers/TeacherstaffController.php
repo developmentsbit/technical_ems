@@ -117,7 +117,7 @@ class TeacherstaffController extends Controller
         $data['name']                 = $request->name;
         $data['designation']          = $request->designation;
         $data['nid']                  = $request->nid;
-        $data['shift']                  = $request->shift;
+        $data['shift']                = $request->shift;
         $data['dob']                  = $request->dob;
         $data['blood']                = $request->blood;
         $data['religion']             = $request->religion;

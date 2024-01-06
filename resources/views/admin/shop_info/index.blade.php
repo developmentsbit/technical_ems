@@ -20,7 +20,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 <div class="container mt-2">
 		@component('components.breadcrumb')
             @slot('title')
-                @lang('teacherstaff.viewtitle')
+                @lang('shop_info.viewtitle')
             @endslot
             @slot('breadcrumb1')
                 @lang('common.dashboard')
@@ -33,7 +33,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
                     @lang('common.add_new')
                 @endslot
                 @slot('action_button1_link')
-                    {{ route('teacherstaff.create') }}
+                    {{ route('shop_info.create') }}
                 @endslot
             @endif
             @slot('action_button1_class')
@@ -43,17 +43,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 	<div class="col-12">
 		<div class="card">
 			<div class="card-body">
-				<h3>@lang('teacherstaff.managetitle')</h3><br>
+				<h3>@lang('shop_info.managetitle')</h3><br>
 				<table id="datatable-buttons" class="table table-striped dt-responsive nowrap w-100">
 					<thead class="mythead">
 						<tr>
 							<th>#</th>
 							<th>@lang('teacherstaff.department')</th>
-							<th>@lang('teacherstaff.name')</th>
-							<th>@lang('teacherstaff.email')</th>
-							<th>@lang('teacherstaff.mobile')</th>
-							<th>@lang('teacherstaff.shift')</th>
-							<th>@lang('teacherstaff.type')</th>
+							<th>@lang('shop_info.title')</th>
 							<th>@lang('common.image')</th>
 							<th>@lang('common.action')</th>
 						</tr>
@@ -64,34 +60,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 						@foreach($data as $d)
 						<tr id="tr{{ $d->id }}">
 							<td>{{ $i++ }}</td>
-							<td>{{ $d->department }}</td>
-							<td>{{ $d->name }}</td>
-							<td>{{ $d->email }}</td>
-							<td>{{ $d->mobile }}</td>
-							<td>
-								@if($d->shift == 1)
-								<span>1st Shift</span>
-								@endif
-								@if($d->shift == 2)
-								<span>2nd Shift</span>
-								@endif
-							</td>
-							<td>
-								@if($d->type == 1)
-								<span>@lang('teacherstaff.teacher')</span>
-								@endif
-								@if($d->type == 2)
-								<span>@lang('teacherstaff.staff')</span>
-								@endif
-								@if($d->type == 3)
-								<span>@lang('teacherstaff.department_head')</span>
-								@endif
-							</td>
+							<td>@if($lang == 'en'){{ $d->department ?: $d->department_name_bn}}@else {{$d->department_name_bn ?: $d->department}}@endif</td>
+							<td>@if($lang == 'en'){{ $d->title ?: $d->title_bn}}@else {{$d->title_bn ?: $d->title}}@endif</td>
 							<td><img src="{{ asset($d->image) }}" style="max-height: 50px;"></td>
 							<td>
 								<div class="btn-group">
-									<a  class="btn btn-info border-0 edit text-light" data-toggle="modal" data-target="#exampleModalCenters" href="{{ route("teacherstaff.edit",$d->id) }}">@lang('common.edit')</a>
-									<form action="{{ route('teacherstaff.destroy',$d->id) }}" method="post">
+									<a  class="btn btn-info border-0 edit text-light" data-toggle="modal" data-target="#exampleModalCenters" href="{{ route("shop_info.edit",$d->id) }}">@lang('common.edit')</a>
+									<form action="{{ route('shop_info.destroy',$d->id) }}" method="post">
 										@csrf
 										@method('DELETE')
 										<button type="submit" class="btn btn-danger" onClick="return confirm('Are You Sure?')">@lang('common.delete')</button>

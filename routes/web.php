@@ -49,6 +49,9 @@ use App\Http\Controllers\StudentAttendanceInfoController;
 use App\Http\Controllers\ClassWiseStudentinfo;
 use App\Http\Controllers\BackupController;
 
+use App\Http\Controllers\ShopInformationController;
+use App\Http\Controllers\AboutDepartmentController;
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -166,6 +169,10 @@ Route::get('/departmenthead/{id}', [FrontendController::class, 'departmenthead']
 Route::get('/departmentstudent/{id}', [FrontendController::class, 'departmentstudent']);
 Route::get('/departmentstudentdetails/{id}', [FrontendController::class, 'departmentstudentdetails']);
 
+Route::get('/shift/{id}', [FrontendController::class, 'shift']);
+Route::get('/shift2/{id}', [FrontendController::class, 'shift2']);
+Route::get('/shiftdetails/{id}', [FrontendController::class, 'shiftdetails']);
+Route::get('/shopInfo/{id}', [FrontendController::class, 'shopInfo']);
 
 Route::get('/principledetails', [FrontendController::class, 'principledetails']);
 Route::get('/viceprincipledetails', [FrontendController::class, 'viceprincipledetails']);
@@ -280,6 +287,8 @@ Route::group(['middleware' => 'auth'], function () {
         'vice_principal_message' => VicePrincipalMessage::class,
         'gender_wise' => GenderWiseController::class,
         'section_wise' => SectionWiseController::class,
+        'shop_info' => ShopInformationController::class,
+        'about_department' => AboutDepartmentController::class,
     ]);
 
     Route::get('retrive_message/{id}', [MessageController::class, 'retrive_message']);

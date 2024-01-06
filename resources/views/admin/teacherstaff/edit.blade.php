@@ -75,8 +75,8 @@
 							<label>@lang('teacherstaff.religion'): <span class="text-danger" style="font-size: 15px;">*</span></label>
 							<div class="input-group -mt-2">
 								<select class="form-control" name="shift" id="shift">
-									<option value="1st Shift" @php $data->religion == "1st Shift" ? 'selected' : '' @endphp>1st Shift</option>
-									<option value="2nd Shift" @php $data->religion == "2nd Shift" ? 'selected' : '' @endphp>2nd Shift</option>
+									<option value="1" @php $data->religion == "1" ? 'selected' : '' @endphp>1st Shift</option>
+									<option value="2" @php $data->religion == "2" ? 'selected' : '' @endphp>2nd Shift</option>
 								</select>
 							</div>
 						</div>

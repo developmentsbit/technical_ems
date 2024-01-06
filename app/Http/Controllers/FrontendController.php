@@ -349,9 +349,10 @@ class FrontendController extends Controller
 	{
 		$data = DB::table("aboutdepartments")
 		->where('aboutdepartments.department_id',$id)
-		->join('departments','departments.id','aboutdepartments.department_id')
-		->select('aboutdepartments.*','departments.department_name_bn')
+		->join('department','department.id','aboutdepartments.department_id')
+		->select('aboutdepartments.*','department.department_name_bn')
 		->first();
+		
 		return view('frontend.aboutdepartment',compact('data'));
 	}
 
@@ -386,7 +387,7 @@ class FrontendController extends Controller
 	{
 		$data = DB::table("teacherstaff")
 		->where('teacherstaff.department_id',$id)
-		->where('teacherstaff.type',3)
+		->where('teacherstaff.type',2)
 		->join('department','department.id','teacherstaff.department_id')
 		->select('teacherstaff.*','department.department_name_bn')
 		->get();
@@ -419,6 +420,37 @@ class FrontendController extends Controller
 		return view('frontend.departmenthead',compact('data'));
 	}
 
+	public function shift($id)
+	{
+		$data = DB::table("teacherstaff")
+		->where('teacherstaff.department_id',$id)
+		->where('teacherstaff.shift',1)
+		->join('department','department.id','teacherstaff.department_id')
+		->select('teacherstaff.*','department.department_name_bn')
+		->get();
+		return view('frontend.shift',compact('data'));
+	}
+
+	public function shift2($id)
+	{
+		$data = DB::table("teacherstaff")
+		->where('teacherstaff.department_id',$id)
+		->where('teacherstaff.shift',2)
+		->join('department','department.id','teacherstaff.department_id')
+		->select('teacherstaff.*','department.department_name_bn')
+		->get();
+		return view('frontend.shift2',compact('data'));
+	}
+
+	public function shiftdetails($id)
+	{
+		$data = DB::table("teacherstaff")
+		->where('teacherstaff.id',$id)
+		->join('department','department.id','teacherstaff.department_id')
+		->select('teacherstaff.*','department.department_name_bn')
+		->first();
+		return view('frontend.shiftdetails',compact('data'));
+	}
 
 
 	public function page($id){
@@ -599,5 +631,14 @@ class FrontendController extends Controller
         return view('frontend.load_date_wise_att_data',compact('class','from_date'));
     }
 
+	public function shopInfo($id)
+	{
+		$data = DB::table("shop_infos")
+		->where('shop_infos.department_id',$id)
+		->join('department','department.id','shop_infos.department_id')
+		->select('shop_infos.*','department.department_name_bn')
+		->first();
+		return view('frontend.shopInfo',compact('data'));
+	}
 
 }

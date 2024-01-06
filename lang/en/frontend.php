@@ -99,6 +99,7 @@ $array = array(
     'syllabus'=>'Syllabus',
     'semesterplan'=>'Semester Plan',
     'studentprojects'=>'Student Projects',
+    'probidhan'=>'Probidhan',
 
     'holidaylists'=>'Holiday Lists',
     'uniform'=>'Uniform',
