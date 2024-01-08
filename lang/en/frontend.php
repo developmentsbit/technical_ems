@@ -189,6 +189,11 @@ $array = array(
     'search'=>'Search',
     'announcement' => 'Announcement',
 
+    'date' => 'Date',
+    'departmentname' => 'Department',
+    'semestername' => 'Semester',
+    'shift' => 'Shift',
+
 
     //tanim
 

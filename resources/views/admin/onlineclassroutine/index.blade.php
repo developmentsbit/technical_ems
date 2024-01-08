@@ -22,7 +22,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 <div class="container mt-2">
 		@component('components.breadcrumb')
             @slot('title')
-                @lang('syllabus.viewtitle')
+                @lang('onlineclassroutine.viewtitle')
             @endslot
             @slot('breadcrumb1')
                 @lang('common.dashboard')
@@ -35,7 +35,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
                     @lang('common.add_new')
                 @endslot
                 @slot('action_button1_link')
-                    {{ route('syllabus.create') }}
+                    {{ route('onlineclassroutine.create') }}
                 @endslot
             @endif
             @slot('action_button1_class')
@@ -47,18 +47,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 		<div class="card">
 			<div class="card-body">
 
-				<h3>@lang('syllabus.managetitle')</h3><br>
+				<h3>@lang('onlineclassroutine.managetitle')</h3><br>
 
 				<table id="datatable-buttons" class="table table-striped dt-responsive nowrap w-100">
 					<thead class="mythead">
 						<tr>
 							<th>#</th>
-							<th>@lang('syllabus.date')</th>
-							<th>@lang('syllabus.title')</th>
-							<th>@lang('syllabus.departmentname')</th>
-							<th>@lang('syllabus.semestername')</th>
-							<th>@lang('syllabus.shift')</th>
-							<th>@lang('syllabus.image')</th>
+							<th>@lang('onlineclassroutine.date')</th>
+							<th>@lang('onlineclassroutine.title')</th>
+							<th>@lang('onlineclassroutine.departmentname')</th>
+							<th>@lang('onlineclassroutine.semestername')</th>
+							<th>@lang('onlineclassroutine.shift')</th>
+							<th>@lang('onlineclassroutine.image')</th>
 							<th>@lang('common.action')</th>
 						</tr>
 					</thead>
@@ -85,8 +85,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 							<td><a href="{{ asset($d->image) }}" download="" class="btn btn-success btn-sm">@lang('common.download')</a></td>
 							<td>
 								<div class="btn-group">
-									<a  class="btn btn-info border-0 edit text-light" data-toggle="modal" data-target="#exampleModalCenters" href="{{ route("syllabus.edit",$d->id) }}">@lang('common.edit')</a>
-									<form action="{{ route('syllabus.destroy',$d->id) }}" method="post">
+									<a  class="btn btn-info border-0 edit text-light" data-toggle="modal" data-target="#exampleModalCenters" href="{{ route("onlineclassroutine.edit",$d->id) }}">@lang('common.edit')</a>
+									<form action="{{ route('onlineclassroutine.destroy',$d->id) }}" method="post">
 										@csrf
 										@method('DELETE')
 										<button type="submit" class="btn btn-danger" onClick="return confirm('Are You Sure?')">@lang('common.delete')</button>

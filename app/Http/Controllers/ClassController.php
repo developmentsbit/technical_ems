@@ -20,33 +20,33 @@ class ClassController extends Controller
      */
     public function index()
     {
-     $data = DB::table("addclass")->get();
-     return view('admin.addclass.index',compact('data'));
- }
+        $data = DB::table("addclass")->get();
+        return view('admin.addclass.index',compact('data'));
+    }
 
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-     return view('admin.addclass.create');
- }
+        return view('admin.addclass.create');
+    }
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-     $data = array();
-     $data['class_name']      = $request->class_name;
-     $data['class_name_bn']      = $request->class_name_bn;
-     $data['status']         = $request->status;
+        $data = array();
+        $data['class_name']      = $request->class_name;
+        $data['class_name_bn']      = $request->class_name_bn;
+        $data['status']         = $request->status;
 
-     DB::table('addclass')->insert($data);
+        DB::table('addclass')->insert($data);
 
-     Toastr::success(__('New Class Added Successfully'));
-     return redirect()->route('addclass.index');
- }
+        Toastr::success(__('New Class Added Successfully'));
+        return redirect()->route('addclass.index');
+    }
 
     /**
      * Display the specified resource.
@@ -76,12 +76,14 @@ class ClassController extends Controller
         $data['status']    = $request->status;
 
         $update = DB::table('addclass')->where('id', $id)->update($data);
-
-        if ($update) {
+        
+        if ($update) 
+        {
             Toastr::success(__('New Class Update Successfully'));
             return redirect()->route('addclass.index');
         }
-        else{
+        else
+        {
             Toastr::error(__('New Class Update Unsuccessfully'));
             return redirect()->route('addclass.index');
         }
@@ -93,17 +95,18 @@ class ClassController extends Controller
     public function destroy(string $id)
     {
        $data = DB::table("addclass")->where('id',$id)->first();
-
-       if ($data) {
+       
+       if ($data) 
+       {
            DB::table("addclass")->where("id",$id)->delete();
            Toastr::success(__('New Class Delete Successfully'));
            return redirect()->route('addclass.index');
-        }
-       else{
-        Toastr::success(__('New Class Delete Unsuccessfully'));
-        return redirect()->route('addclass.index');
+       }
+       
+       else
+        {
+            Toastr::success(__('New Class Delete Unsuccessfully'));
+            return redirect()->route('addclass.index');
         }
     }
-
-
 }

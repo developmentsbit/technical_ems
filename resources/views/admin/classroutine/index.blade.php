@@ -54,8 +54,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 						<tr>
 							<th>#</th>
 							<th>@lang('classroutine.date')</th>
-							<th>@lang('classroutine.classname')</th>
 							<th>@lang('classroutine.title')</th>
+							<th>@lang('classroutine.departmentname')</th>
+							<th>@lang('classroutine.semestername')</th>
+							<th>@lang('classroutine.shift')</th>
 							<th>@lang('classroutine.image')</th>
 							<th>@lang('common.action')</th>
 						</tr>
@@ -69,9 +71,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 						<tr id="tr{{ $d->id }}">
 							<td>{{ $i++ }}</td>
 							<td>{{ $d->date }}</td>
-							<td>
-                                @if($lang == 'en'){{ $d->class_name ?: $d->class_name_bn }}@else {{$d->class_name_bn ?: $d->class_name}}@endif</td>
 							<td>@if($lang == 'en'){{ $d->title ?: $d->title_bn}}@else {{$d->title_bn ?: $d->title}}@endif</td>
+							<td>@if($lang == 'en'){{ $d->department ?: $d->department_name_bn }}@else {{$d->department_name_bn ?: $d->department}}@endif</td>
+							<td>@if($lang == 'en'){{ $d->semester_name ?: $d->semester_name_bn }}@else {{$d->semester_name_bn ?: $d->semester_name}}@endif</td>
+							<td>
+								@if($d->shift == 1)
+								<span>@lang('common.first_shift')</span>
+								@endif
+								@if($d->shift == 2)
+								<span>@lang('common.second_shift')</span>
+								@endif
+							</td>
 							<td><a href="{{ asset($d->image) }}" download="" class="btn btn-success btn-sm">@lang('common.download')</a></td>
 							<td>
 								<div class="btn-group">

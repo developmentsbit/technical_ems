@@ -6,25 +6,19 @@ use Illuminate\Http\Request;
 use DB;
 use Brian2694\Toastr\Facades\Toastr;
 
-
-class SyllabusController extends Controller
+class DigitalClassContentController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data = DB::table("syllabus")
-        ->leftjoin("department",'department.id','syllabus.department_id')
-        ->leftjoin("semesters",'semesters.id','syllabus.semester_id')
-        ->select("syllabus.*",'department.department','semesters.semester_name','department.department_name_bn','semesters.semester_name_bn')
+        $data = DB::table("digital_class_content")
+        ->leftjoin("department",'department.id','digital_class_content.department_id')
+        ->leftjoin("semesters",'semesters.id','digital_class_content.semester_id')
+        ->select("digital_class_content.*",'department.department','semesters.semester_name','department.department_name_bn','semesters.semester_name_bn')
         ->get();
-        return view('admin.syllabus.index',compact('data'));
+        return view('admin.digitalclasscontent.index',compact('data'));
     }
 
     /**
@@ -34,7 +28,7 @@ class SyllabusController extends Controller
     {
         $department = DB::table("department")->get();
         $semester = DB::table("semesters")->get();
-        return view('admin.syllabus.create',compact('department','semester'));
+        return view('admin.digitalclasscontent.create',compact('department','semester'));
     }
 
     /**
@@ -56,19 +50,19 @@ class SyllabusController extends Controller
             $image_name= rand(11111,99999);
             $ext=strtolower($image->getClientOriginalExtension());
             $image_full_name=$image_name.'.'.$ext;
-            $upload_path='syllabus_image/';
+            $upload_path='digital_class_content_image/';
             $image_url=$upload_path.$image_full_name;
             $success=$image->move($upload_path,$image_full_name);
             $data['image']=$image_url;
-            DB::table('syllabus')->insert($data);
+            DB::table('digital_class_content')->insert($data);
         }
         else
         {
-            DB::table('syllabus')->insert($data);
+            DB::table('digital_class_content')->insert($data);
         }
     
-        Toastr::success(__('Class Routine Added Successfully'));
-        return redirect()->route('syllabus.index');
+        Toastr::success(__('Digital Class Content Added Successfully'));
+        return redirect()->route('digitalclasscontent.index');
     }
 
     /**
@@ -84,10 +78,10 @@ class SyllabusController extends Controller
      */
     public function edit(string $id)
     {
-        $data = DB::table("syllabus")->where('id',$id)->first();
+        $data = DB::table("digital_class_content")->where('id',$id)->first();
         $department = DB::table("department")->get();
         $semester = DB::table("semesters")->get();
-        return view('admin.syllabus.edit',compact('data','department','semester'));
+        return view('admin.digitalclasscontent.edit',compact('data','department','semester'));
     }
 
     /**
@@ -106,7 +100,7 @@ class SyllabusController extends Controller
       
         if ($image) 
         {
-            $old_image = DB::table("syllabus")->where('id',$id)->first();
+            $old_image = DB::table("digital_class_content")->where('id',$id)->first();
         
             $path = public_path().'/'.$old_image->image;
 
@@ -118,26 +112,26 @@ class SyllabusController extends Controller
             $image_name= rand(1111,9999);
             $ext=strtolower($image->getClientOriginalExtension());
             $image_full_name=$image_name.'.'.$ext;
-            $upload_path='syllabus_image/';
+            $upload_path='digital_class_content_image/';
             $image_url=$upload_path.$image_full_name;
             $success=$image->move($upload_path,$image_full_name);
             $data['image']=$image_url;
-            $update = DB::table('syllabus')->where('id', $id)->update($data);
+            $update = DB::table('digital_class_content')->where('id', $id)->update($data);
         }
         else
         {
-            $update = DB::table('syllabus')->where('id', $id)->update($data);
+            $update = DB::table('digital_class_content')->where('id', $id)->update($data);
         }
 
         if ($update) 
         {
-            Toastr::success(__('Class Routine Update Successfully'));
-            return redirect()->route('syllabus.index');
+            Toastr::success(__('Digital Class Content Update Successfully'));
+            return redirect()->route('digitalclasscontent.index');
         }
         else
         {
-            Toastr::error(__('Class Routine Update Unsuccessfully'));
-            return redirect()->route('syllabus.index');
+            Toastr::error(__('Digital Class Content Update Unsuccessfully'));
+            return redirect()->route('digitalclasscontent.index');
         }
     }
 
@@ -146,27 +140,27 @@ class SyllabusController extends Controller
      */
     public function destroy(string $id)
     {
-        $data = DB::table("syllabus")->where('id',$id)->first();
+        $data = DB::table("digital_class_content")->where('id',$id)->first();
         
         if ($data) 
         {
-            $old_image = DB::table("syllabus")->where('id',$id)->first();
-        
+            $old_image = DB::table("digital_class_content")->where('id',$id)->first();
+            
             $path = public_path().'/'.$old_image->image;
-        
+
             if(file_exists($path))
             {
                 unlink($path);
             }
-           
-            DB::table("syllabus")->where("id",$id)->delete();
-            Toastr::success(__('Syllabus Delete Successfully'));
-            return redirect()->route('syllabus.index');
+            
+            DB::table("digital_class_content")->where("id",$id)->delete();
+            Toastr::success(__('Digital Class Content Delete Successfully'));
+            return redirect()->route('digitalclasscontent.index');
         }
         else
         {
-            Toastr::error(__('Syllabus Delete Unsuccessfully'));
-            return redirect()->route('syllabus.index');
+            Toastr::error(__('Digital Class Content Delete Unsuccessfully'));
+            return redirect()->route('digitalclasscontent.index');
         }
     }
 }

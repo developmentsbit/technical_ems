@@ -2,10 +2,10 @@
 
 return [
 
-     'managetitle' => 'Manage Routine',
-     'addtitle' => 'Add Routine',
-     'edittitle' => 'Edit Routine',
-     'viewtitle' => 'View Routine',
+     'managetitle' => 'Manage Online Routine',
+     'addtitle' => 'Add Online Routine',
+     'edittitle' => 'Edit Online Routine',
+     'viewtitle' => 'View Online Routine',
      'title' => 'Title',
      'title_en' => 'Title (English)',
      'title_bn'=>'Title (Bangla)',

@@ -6,25 +6,23 @@ use Illuminate\Http\Request;
 use DB;
 use Brian2694\Toastr\Facades\Toastr;
 
-
-class SyllabusController extends Controller
+class OnlineClassRoutineController extends Controller
 {
     public function __construct()
     {
         $this->middleware('auth');
     }
-
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data = DB::table("syllabus")
-        ->leftjoin("department",'department.id','syllabus.department_id')
-        ->leftjoin("semesters",'semesters.id','syllabus.semester_id')
-        ->select("syllabus.*",'department.department','semesters.semester_name','department.department_name_bn','semesters.semester_name_bn')
+        $data = DB::table("online_class_routine")
+        ->leftjoin("department",'department.id','online_class_routine.department_id')
+        ->leftjoin("semesters",'semesters.id','online_class_routine.semester_id')
+        ->select("online_class_routine.*",'department.department','semesters.semester_name','department.department_name_bn','semesters.semester_name_bn')
         ->get();
-        return view('admin.syllabus.index',compact('data'));
+        return view('admin.onlineclassroutine.index',compact('data'));
     }
 
     /**
@@ -34,7 +32,7 @@ class SyllabusController extends Controller
     {
         $department = DB::table("department")->get();
         $semester = DB::table("semesters")->get();
-        return view('admin.syllabus.create',compact('department','semester'));
+        return view('admin.onlineclassroutine.create',compact('department','semester'));
     }
 
     /**
@@ -56,19 +54,19 @@ class SyllabusController extends Controller
             $image_name= rand(11111,99999);
             $ext=strtolower($image->getClientOriginalExtension());
             $image_full_name=$image_name.'.'.$ext;
-            $upload_path='syllabus_image/';
+            $upload_path='online_class_routine_image/';
             $image_url=$upload_path.$image_full_name;
             $success=$image->move($upload_path,$image_full_name);
             $data['image']=$image_url;
-            DB::table('syllabus')->insert($data);
+            DB::table('online_class_routine')->insert($data);
         }
         else
         {
-            DB::table('syllabus')->insert($data);
+            DB::table('online_class_routine')->insert($data);
         }
     
-        Toastr::success(__('Class Routine Added Successfully'));
-        return redirect()->route('syllabus.index');
+        Toastr::success(__('Online Class Routine Added Successfully'));
+        return redirect()->route('onlineclassroutine.index');
     }
 
     /**
@@ -84,10 +82,10 @@ class SyllabusController extends Controller
      */
     public function edit(string $id)
     {
-        $data = DB::table("syllabus")->where('id',$id)->first();
+        $data = DB::table("online_class_routine")->where('id',$id)->first();
         $department = DB::table("department")->get();
         $semester = DB::table("semesters")->get();
-        return view('admin.syllabus.edit',compact('data','department','semester'));
+        return view('admin.onlineclassroutine.edit',compact('data','department','semester'));
     }
 
     /**
@@ -106,7 +104,7 @@ class SyllabusController extends Controller
       
         if ($image) 
         {
-            $old_image = DB::table("syllabus")->where('id',$id)->first();
+            $old_image = DB::table("online_class_routine")->where('id',$id)->first();
         
             $path = public_path().'/'.$old_image->image;
 
@@ -118,26 +116,26 @@ class SyllabusController extends Controller
             $image_name= rand(1111,9999);
             $ext=strtolower($image->getClientOriginalExtension());
             $image_full_name=$image_name.'.'.$ext;
-            $upload_path='syllabus_image/';
+            $upload_path='online_class_routine_image/';
             $image_url=$upload_path.$image_full_name;
             $success=$image->move($upload_path,$image_full_name);
             $data['image']=$image_url;
-            $update = DB::table('syllabus')->where('id', $id)->update($data);
+            $update = DB::table('online_class_routine')->where('id', $id)->update($data);
         }
         else
         {
-            $update = DB::table('syllabus')->where('id', $id)->update($data);
+            $update = DB::table('online_class_routine')->where('id', $id)->update($data);
         }
 
         if ($update) 
         {
-            Toastr::success(__('Class Routine Update Successfully'));
-            return redirect()->route('syllabus.index');
+            Toastr::success(__('Online Class Routine Update Successfully'));
+            return redirect()->route('onlineclassroutine.index');
         }
         else
         {
-            Toastr::error(__('Class Routine Update Unsuccessfully'));
-            return redirect()->route('syllabus.index');
+            Toastr::error(__('Online Class Routine Update Unsuccessfully'));
+            return redirect()->route('onlineclassroutine.index');
         }
     }
 
@@ -146,27 +144,27 @@ class SyllabusController extends Controller
      */
     public function destroy(string $id)
     {
-        $data = DB::table("syllabus")->where('id',$id)->first();
+        $data = DB::table("online_class_routine")->where('id',$id)->first();
         
         if ($data) 
         {
-            $old_image = DB::table("syllabus")->where('id',$id)->first();
-        
+            $old_image = DB::table("online_class_routine")->where('id',$id)->first();
+            
             $path = public_path().'/'.$old_image->image;
-        
+
             if(file_exists($path))
             {
                 unlink($path);
             }
-           
-            DB::table("syllabus")->where("id",$id)->delete();
-            Toastr::success(__('Syllabus Delete Successfully'));
-            return redirect()->route('syllabus.index');
+            
+            DB::table("online_class_routine")->where("id",$id)->delete();
+            Toastr::success(__('Online Class Routine Delete Successfully'));
+            return redirect()->route('onlineclassroutine.index');
         }
         else
         {
-            Toastr::error(__('Syllabus Delete Unsuccessfully'));
-            return redirect()->route('syllabus.index');
+            Toastr::error(__('Online Class Routine Delete Unsuccessfully'));
+            return redirect()->route('onlineclassroutine.index');
         }
     }
 }

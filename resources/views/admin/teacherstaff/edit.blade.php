@@ -72,11 +72,11 @@
 							</div>
 						</div>
 						<div class="form-group mb-3 col-md-4">
-							<label>@lang('teacherstaff.religion'): <span class="text-danger" style="font-size: 15px;">*</span></label>
+							<label>@lang('teacherstaff.shift'): <span class="text-danger" style="font-size: 15px;">*</span></label>
 							<div class="input-group -mt-2">
 								<select class="form-control" name="shift" id="shift">
-									<option value="1" @php $data->religion == "1" ? 'selected' : '' @endphp>1st Shift</option>
-									<option value="2" @php $data->religion == "2" ? 'selected' : '' @endphp>2nd Shift</option>
+									<option value="1" @php $data->shift == "1" ? 'selected' : '' @endphp>1st Shift</option>
+									<option value="2" @php $data->shift == "2" ? 'selected' : '' @endphp>2nd Shift</option>
 								</select>
 							</div>
 						</div>

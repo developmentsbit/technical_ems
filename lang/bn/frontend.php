@@ -171,12 +171,11 @@ $array = array(
     'introduction'=>'পরিচিতি',
     'sl'=>'ক্রমিক',
     'release_date'=>'প্রকাশের তারিখ',
-    'title'=>'টাইটেল',
+    'title'=>'শিরোনাম',
     'download'=>'ডাউনলোড',
     'established'=>'প্রতিষ্ঠাকাল',
 
     'calendar'=>'ক্যালেন্ডার',
-    'class_routine'=>'ক্লাস রুটিন',
     'holiday_list'=>'ছুটির তালিকা',
     'department_info'=>'বিভাগের শিক্ষকদের তথ্য',
     'teaching_permission_recognition'=>'পাঠদানের অনুমতি ও স্বীকৃতি',
@@ -204,6 +203,14 @@ $array = array(
     'absent'=>'উপস্থিত শিক্ষার্থীর সংখ্যা',
     'search'=>'সার্চ করুন',
     'announcement' => 'বিশেষ বিজ্ঞপ্তি',
+
+    'date' => 'তারিখ',
+    'departmentname' => 'ডিপার্টমেন্ট',
+    'semestername' => 'সেমিষ্টার',
+    'shift' => 'শিফট',
+    
+    'class_routine'=>'ক্লাস রুটিন',
+    'online_class_routine'=>'অনলাইন ক্লাস রুটিন',
 
 
     //tanim

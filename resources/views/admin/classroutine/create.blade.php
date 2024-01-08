@@ -48,19 +48,40 @@
 							</div>
 						</div>
 						<div class="form-group mb-3 col-md-6">
-							<label>@lang('classroutine.classname'): <span class="text-danger" style="font-size: 15px;">*</span></label>
+							<label>@lang('classroutine.departmentname'): <span class="text-danger" style="font-size: 15px;">*</span></label>
 							<div class="input-group mt-2">
-								<select class="form-control" name="class_id" id="class_id">
-									@if(isset($class))
-									@foreach($class as $c)
-									<option value="{{ $c->id }}">@if($lang == 'en'){{ $c->class_name }}@else {{$c->class_name_bn}}@endif</option>
+								<select class="form-control" name="department_id" id="department_id">
+									@if(isset($department))
+									@foreach($department as $d)
+									<option value="{{ $d->id }}">@if($lang == 'en'){{ $d->department }}@else {{$d->department_name_bn}}@endif</option>
 									@endforeach
 									@endif
 								</select>
 							</div>
 						</div>
 						<div class="form-group mb-3 col-md-6">
-							<label>@lang('classroutine.title'): <span class="text-danger" style="font-size: 15px;">*</span></label>
+							<label>@lang('classroutine.semestername'): <span class="text-danger" style="font-size: 15px;">*</span></label>
+							<div class="input-group mt-2">
+								<select class="form-control" name="semester_id" id="semester_id">
+									@if(isset($semester))
+									@foreach($semester as $s)
+									<option value="{{ $s->id }}">@if($lang == 'en'){{ $s->semester_name }}@else {{$s->semester_name_bn}}@endif</option>
+									@endforeach
+									@endif
+								</select>
+							</div>
+						</div>
+						<div class="form-group mb-3 col-md-6">
+							<label>@lang('classroutine.shift'): <span class="text-danger" style="font-size: 15px;">*</span></label>
+							<div class="input-group mt-2">
+								<select class="form-control" name="shift" id="shift">
+									<option value="1">@lang('common.first_shift')</option>
+									<option value="2">@lang('common.second_shift')</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group mb-3 col-md-6">
+							<label>@lang('classroutine.title_en'): <span class="text-danger" style="font-size: 15px;">*</span></label>
 							<div class="input-group mt-2">
 								<input class="form-control" type="text" name="title" id="title"  required="">
 							</div>
@@ -74,11 +95,10 @@
 						<div class="form-group mb-3 col-md-12">
 							<label>@lang('classroutine.image'): <span class="text-danger" style="font-size: 15px;">*</span></label>
 							<div class="input-group mt-2">
-								<input class="form-control" type="file" name="image" id="image" required="">
+								<input class="form-control" type="file" name="image" id="image">
 							</div>
 						</div>
 						<div class="modal-footer border-0">
-							<button type="button" class="btn btn-secondary border-0" onClick="window.location.reload();">@lang('common.close')</button>
 							<button type="submit" class="btn btn-success button border-0">@lang('common.save')</button>
 						</div>
 					</div>
