@@ -12,7 +12,7 @@
 <div class="container mt-2">
 		@component('components.breadcrumb')
             @slot('title')
-                @lang('classroutine.edittitle')
+                @lang('onlineclassroutine.edittitle')
             @endslot
             @slot('breadcrumb1')
                 @lang('common.dashboard')
@@ -25,7 +25,7 @@
                     @lang('common.view')
                 @endslot
                 @slot('action_button1_link')
-                    {{ route('classroutine.index') }}
+                    {{ route('onlineclassroutine.index') }}
                 @endslot
             @endif
             @slot('action_button1_class')
@@ -37,19 +37,19 @@
 		<div class="card">
 			<div class="card-body">
 
-				<h3>@lang('classroutine.edittitle')</h3><br>
-				<form method="post" class="btn-submit" action="{{ route('classroutine.update',$data->id) }}" enctype="multipart/form-data">
+				<h3>@lang('onlineclassroutine.edittitle')</h3><br>
+				<form method="post" class="btn-submit" action="{{ route('onlineclassroutine.update',$data->id) }}" enctype="multipart/form-data">
 					@csrf
 					@method('PUT')
 					<div class="row myinput">
 						<div class="form-group mb-3 col-md-6">
-							<label>@lang('classroutine.date'): <span class="text-danger" style="font-size: 15px;">*</span></label>
+							<label>@lang('onlineclassroutine.date'): <span class="text-danger" style="font-size: 15px;">*</span></label>
 							<div class="input-group mt-2">
 								<input class="form-control" type="date" name="date" id="date"  required="" value="{{ $data->date }}">
 							</div>
 						</div>
 						<div class="form-group mb-3 col-md-6">
-							<label>@lang('classroutine.departmentname'): <span class="text-danger" style="font-size: 15px;">*</span></label>
+							<label>@lang('onlineclassroutine.departmentname'): <span class="text-danger" style="font-size: 15px;">*</span></label>
 							<div class="input-group mt-2">
 								<select class="form-control" name="department_id" id="department_id">
 									@if(isset($department))
@@ -63,7 +63,7 @@
 							</div>
 						</div>
 						<div class="form-group mb-3 col-md-6">
-							<label>@lang('classroutine.semestername'): <span class="text-danger" style="font-size: 15px;">*</span></label>
+							<label>@lang('onlineclassroutine.semestername'): <span class="text-danger" style="font-size: 15px;">*</span></label>
 							<div class="input-group mt-2">
 								<select class="form-control" name="semester_id" id="semester_id">
 									@if(isset($semester))
@@ -77,7 +77,7 @@
 							</div>
 						</div>
 						<div class="form-group mb-3 col-md-6">
-							<label>@lang('classroutine.shift'): <span class="text-danger" style="font-size: 15px;">*</span></label>
+							<label>@lang('onlineclassroutine.shift'): <span class="text-danger" style="font-size: 15px;">*</span></label>
 							<div class="input-group mt-2">
 								<select class="form-control" name="shift" id="shift">
 									<option @if($data->shift == 1) selected @endif value="1">@lang('common.first_shift')</option>
@@ -86,24 +86,24 @@
 							</div>
 						</div>
 						<div class="form-group mb-3 col-md-6">
-							<label>@lang('classroutine.title_en'): <span class="text-danger" style="font-size: 15px;">*</span></label>
+							<label>@lang('onlineclassroutine.title_en'): <span class="text-danger" style="font-size: 15px;">*</span></label>
 							<div class="input-group mt-2">
 								<input class="form-control" type="text" name="title" id="title"  required="" value="{{ $data->title }}">
 							</div>
 						</div>
 						<div class="form-group mb-3 col-md-6">
-							<label>@lang('classroutine.title_bn'): </label>
+							<label>@lang('onlineclassroutine.title_bn'): </label>
 							<div class="input-group mt-2">
 								<input class="form-control" type="text" name="title_bn" id="title_bn"  value="{{ $data->title_bn }}">
 							</div>
 						</div>
 						<div class="form-group mb-3 col-md-12">
-							<label>@lang('classroutine.image'):</label>
+							<label>@lang('onlineclassroutine.image'):</label>
 							<div class="input-group mt-2">
 								<input class="form-control" type="file" name="image" id="image">
 								<br>
 							</div>
-							<a href="{{ asset($data->image) }}" download="" class="btn btn-info">@lang('classroutine.download')</a>
+							<a href="{{ asset($data->image) }}" download="" class="btn btn-info">@lang('onlineclassroutine.download')</a>
 						</div>
 						<div class="modal-footer border-0">
 							<button type="submit" class="btn btn-success button border-0">@lang('common.update')</button>

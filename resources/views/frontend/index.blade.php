@@ -606,7 +606,7 @@ right:0;
                   <ul class="dropdown-menu bg-white">
                     @if($department)
                     @foreach($department as $dept)
-                    <li><a class="dropdown-item" href="{{url('class_Routine')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;{{$dept->department_name_bn}}</a></li>
+                    <li><a class="dropdown-item" href="{{url('class_routine')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;{{$dept->department_name_bn}}</a></li>
                     @endforeach
                     @endif
                   </ul>
@@ -616,7 +616,7 @@ right:0;
                   <ul class="dropdown-menu bg-white">
                     @if($department)
                     @foreach($department as $dept)
-                    <li><a class="dropdown-item" href="{{url('class_Routine')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;{{$dept->department_name_bn}}</a></li>
+                    <li><a class="dropdown-item" href="{{url('online_class_routine')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;{{$dept->department_name_bn}}</a></li>
                     @endforeach
                     @endif
                   </ul>
@@ -626,7 +626,7 @@ right:0;
                   <ul class="dropdown-menu bg-white">
                     @if($department)
                     @foreach($department as $dept)
-                    <li><a class="dropdown-item" href="{{url('class_Routine')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;{{$dept->department_name_bn}}</a></li>
+                    <li><a class="dropdown-item" href="{{url('digital_class_content')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;{{$dept->department_name_bn}}</a></li>
                     @endforeach
                     @endif
                   </ul>
@@ -636,7 +636,7 @@ right:0;
                   <ul class="dropdown-menu bg-white">
                     @if($department)
                     @foreach($department as $dept)
-                    <li><a class="dropdown-item" href="{{url('class_Routine')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;{{$dept->department_name_bn}}</a></li>
+                    <li><a class="dropdown-item" href="{{url('Syllabus')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;{{$dept->department_name_bn}}</a></li>
                     @endforeach
                     @endif
                   </ul>

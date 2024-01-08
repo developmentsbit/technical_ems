@@ -22,7 +22,7 @@
             @endslot
             @if (\App\Traits\RolePermissionTrait::checkRoleHasPermission('role', 'create'))
                 @slot('action_button1')
-                   <i class="fa fa-eye"></i> @lang('common.view')
+                    @lang('common.view')
                 @endslot
                 @slot('action_button1_link')
                     {{ route('syllabus.index') }}
@@ -36,6 +36,7 @@
 
 		<div class="card">
 			<div class="card-body">
+
 				<h3>@lang('syllabus.addtitle')</h3><br>
 				<form method="post" class="btn-submit" action="{{ route('syllabus.store') }}" enctype="multipart/form-data">
 					@csrf
@@ -47,19 +48,40 @@
 							</div>
 						</div>
 						<div class="form-group mb-3 col-md-6">
-							<label>@lang('syllabus.classname'): <span class="text-danger" style="font-size: 15px;">*</span></label>
+							<label>@lang('syllabus.departmentname'): <span class="text-danger" style="font-size: 15px;">*</span></label>
 							<div class="input-group mt-2">
-								<select class="form-control" name="class_id" id="class_id">
-									@if(isset($class))
-									@foreach($class as $c)
-									<option value="{{ $c->id }}">@if($lang == 'en'){{ $c->class_name }}@else {{$c->class_name_bn}}@endif</option>
+								<select class="form-control" name="department_id" id="department_id">
+									@if(isset($department))
+									@foreach($department as $d)
+									<option value="{{ $d->id }}">@if($lang == 'en'){{ $d->department }}@else {{$d->department_name_bn}}@endif</option>
 									@endforeach
 									@endif
 								</select>
 							</div>
 						</div>
 						<div class="form-group mb-3 col-md-6">
-							<label>@lang('syllabus.title'): <span class="text-danger" style="font-size: 15px;">*</span></label>
+							<label>@lang('syllabus.semestername'): <span class="text-danger" style="font-size: 15px;">*</span></label>
+							<div class="input-group mt-2">
+								<select class="form-control" name="semester_id" id="semester_id">
+									@if(isset($semester))
+									@foreach($semester as $s)
+									<option value="{{ $s->id }}">@if($lang == 'en'){{ $s->semester_name }}@else {{$s->semester_name_bn}}@endif</option>
+									@endforeach
+									@endif
+								</select>
+							</div>
+						</div>
+						<div class="form-group mb-3 col-md-6">
+							<label>@lang('syllabus.shift'): <span class="text-danger" style="font-size: 15px;">*</span></label>
+							<div class="input-group mt-2">
+								<select class="form-control" name="shift" id="shift">
+									<option value="1">@lang('common.first_shift')</option>
+									<option value="2">@lang('common.second_shift')</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group mb-3 col-md-6">
+							<label>@lang('syllabus.title_en'): <span class="text-danger" style="font-size: 15px;">*</span></label>
 							<div class="input-group mt-2">
 								<input class="form-control" type="text" name="title" id="title"  required="">
 							</div>
@@ -67,17 +89,16 @@
 						<div class="form-group mb-3 col-md-6">
 							<label>@lang('syllabus.title_bn'): </label>
 							<div class="input-group mt-2">
-								<input class="form-control" type="text" name="title_bn" id="title_bn" >
+								<input class="form-control" type="text" name="title_bn" id="title_bn">
 							</div>
 						</div>
 						<div class="form-group mb-3 col-md-12">
 							<label>@lang('syllabus.image'): <span class="text-danger" style="font-size: 15px;">*</span></label>
 							<div class="input-group mt-2">
-								<input class="form-control" type="file" name="image" id="image" required="">
+								<input class="form-control" type="file" name="image" id="image">
 							</div>
 						</div>
 						<div class="modal-footer border-0">
-							<button type="button" class="btn btn-secondary border-0" onClick="window.location.reload();">@lang('common.close')</button>
 							<button type="submit" class="btn btn-success button border-0">@lang('common.save')</button>
 						</div>
 					</div>

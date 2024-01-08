@@ -9,7 +9,7 @@
 
    <div class="col-sm-12 col-12 p-0"  data-aos="fade-in" data-aos-duration="2000" >
     <ul class="list-group p-0">
-      <li class="list-group-item font-weight-bold bg-success text-light" id="about">@lang('frontend.onlineclassroutines')</li>
+      <li class="list-group-item font-weight-bold bg-success text-light" id="about">@lang('frontend.digitalclassroomcontent')</li>
       <li class="list-group-item">
 
         <div class="table table-responsive">

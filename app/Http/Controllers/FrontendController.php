@@ -288,9 +288,9 @@ class FrontendController extends Controller
 		$data = DB::table("result")
 		->orderBy('result.id','DESC')
 		->where('result.department_id',$id)
-		->join('semesters','semesters.id','result.semester_id')
-		->join('departments','departments.id','result.department_id')
-		->select('result.*','semesters.semester_name_bn','departments.department_name_bn')
+		->join('semester','semesters.id','result.semester_id')
+		->join('department','department.id','result.department_id')
+		->select('result.*','semesters.semester_name_bn','department.department_name_bn')
 		->get();
 		return view('frontend.internalresult',compact('data'));
 	}
@@ -303,23 +303,47 @@ class FrontendController extends Controller
 		->orderBy('classroutine.id','DESC')
 		->where('classroutine.department_id',$id)
 		->join('semesters','semesters.id','classroutine.semester_id')
-		->join('departments','departments.id','classroutine.department_id')
-		->select('classroutine.*','semesters.semester_name_bn','departments.department_name_bn')
+		->join('department','department.id','classroutine.department_id')
+		->select('classroutine.*','semesters.semester_name_bn','department.department_name_bn')
 		->get();
 		return view('frontend.class_routine',compact('data'));
 	}
+	
+	public function online_class_routine($id)
+	{
+		$data = DB::table("online_class_routine")
+		->orderBy('online_class_routine.id','DESC')
+		->where('online_class_routine.department_id',$id)
+		->join('semesters','semesters.id','online_class_routine.semester_id')
+		->join('department','department.id','online_class_routine.department_id')
+		->select('online_class_routine.*','semesters.semester_name_bn','department.department_name_bn')
+		->get();
+		return view('frontend.online_class_routine',compact('data'));
+	}
+	
+	public function digital_class_content($id)
+	{
+		$data = DB::table("digital_class_content")
+		->orderBy('digital_class_content.id','DESC')
+		->where('digital_class_content.department_id',$id)
+		->join('semesters','semesters.id','digital_class_content.semester_id')
+		->join('department','department.id','digital_class_content.department_id')
+		->select('digital_class_content.*','semesters.semester_name_bn','department.department_name_bn')
+		->get();
+		return view('frontend.digital_class_content',compact('data'));
+	}
 
 
-	public function syllabus($id)
+	public function Syllabus($id)
 	{
 		$data = DB::table("syllabus")
 		->orderBy('syllabus.id','DESC')
 		->where('syllabus.department_id',$id)
 		->join('semesters','semesters.id','syllabus.semester_id')
-		->join('departments','departments.id','syllabus.department_id')
-		->select('syllabus.*','semesters.semester_name_bn','departments.department_name_bn')
+		->join('department','department.id','syllabus.department_id')
+		->select('syllabus.*','semesters.semester_name_bn','department.department_name_bn')
 		->get();
-		return view('frontend.syllabus',compact('data'));
+		return view('frontend.Syllabus',compact('data'));
 	}
 
 
@@ -347,10 +371,10 @@ class FrontendController extends Controller
 
 	public function aboutdepartment($id)
 	{
-		$data = DB::table("aboutdepartments")
-		->where('aboutdepartments.department_id',$id)
-		->join('department','department.id','aboutdepartments.department_id')
-		->select('aboutdepartments.*','department.department_name_bn')
+		$data = DB::table("about_departments")
+		->where('about_departments.department_id',$id)
+		->join('department','department.id','about_departments.department_id')
+		->select('about_departments.*','department.department_name_bn')
 		->first();
 		
 		return view('frontend.aboutdepartment',compact('data'));

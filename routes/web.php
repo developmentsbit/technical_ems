@@ -51,6 +51,9 @@ use App\Http\Controllers\BackupController;
 
 use App\Http\Controllers\ShopInformationController;
 use App\Http\Controllers\AboutDepartmentController;
+use App\Http\Controllers\SemesterController;
+use App\Http\Controllers\OnlineClassRoutineController;
+use App\Http\Controllers\DigitalClassContentController;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -146,11 +149,13 @@ Route::get('/nearindustries', [FrontendController::class, 'nearindustries']);
 Route::get('/internalresult/{id}', [FrontendController::class, 'internalresult']);
 
 Route::get('/class_routine/{id}', [FrontendController::class, 'class_routine']);
-Route::get('/syllabuss/{id}', [FrontendController::class, 'syllabus']);
+Route::get('/online_class_routine/{id}', [FrontendController::class, 'online_class_routine']);
+Route::get('/digital_class_content/{id}', [FrontendController::class, 'digital_class_content']);
+Route::get('/Syllabus/{id}', [FrontendController::class, 'Syllabus']);
 Route::get('/semesterplans/{id}', [FrontendController::class, 'semesterplan']);
 Route::get('/probidhans', [FrontendController::class, 'probidhan']);
 
-Route::get('/aboutdepartments/{id}', [FrontendController::class, 'aboutdepartment']);
+Route::get('/aboutdepartment/{id}', [FrontendController::class, 'aboutdepartment']);
 Route::get('/departmentteacher/{id}', [FrontendController::class, 'departmentteacher']);
 Route::get('/departmentteacherdetails/{id}', [FrontendController::class, 'departmentteacherdetails']);
 
@@ -289,6 +294,10 @@ Route::group(['middleware' => 'auth'], function () {
         'section_wise' => SectionWiseController::class,
         'shop_info' => ShopInformationController::class,
         'about_department' => AboutDepartmentController::class,
+        'semester' => SemesterController::class,
+        'classroutine' => RoutineController::class,
+        'onlineclassroutine' => OnlineClassRoutineController::class,
+        'digitalclasscontent' => DigitalClassContentController::class,
     ]);
 
     Route::get('retrive_message/{id}', [MessageController::class, 'retrive_message']);
@@ -372,8 +381,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('addgroup', GroupController::class);
     Route::resource('addsection', SectionController::class);
     Route::get('getgroup/{class_id}', [SectionController::class, 'getgroup']);
-
-    Route::resource('classroutine', RoutineController::class);
 
     Route::resource('examroutine', ExamroutineController::class);
     Route::resource('syllabus', SyllabusController::class);

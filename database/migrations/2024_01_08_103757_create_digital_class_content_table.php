@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('classroutine', function (Blueprint $table) {
+        Schema::create('digital_class_content', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('department_id')->unsigned();
             $table->foreign('department_id')->references('id')->on('department');
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('classroutine');
+        Schema::dropIfExists('digital_class_content');
     }
 };

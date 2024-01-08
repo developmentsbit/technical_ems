@@ -114,4 +114,7 @@ return [
     "title_bn" => "শিরোনাম বাংলায়",
 
     "image_text" => "১৮০০*৩৩০ Pixel (width*height) এবং সাইজ সর্বোচ্চ ২০০ kb এর মধ্যে থাকতে হবে",
+    
+    'first_shift' => '১ম শিফট',
+    'second_shift' => '২য় শিফট',
 ];

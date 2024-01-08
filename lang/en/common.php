@@ -113,4 +113,7 @@ return [
     "title_bn" => "Title Bangla",
     
     "image_text" => "300*80 Pixel (width*height) and size should be maximum 60 kb.",
+    
+    'first_shift' => '1st Shift',
+    'second_shift' => '2nd Shift',
 ];

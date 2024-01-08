@@ -2,10 +2,10 @@
 
 return [
 
-     'managetitle' => 'Manage Routine',
-     'addtitle' => 'Add Routine',
-     'edittitle' => 'Edit Routine',
-     'viewtitle' => 'View Routine',
+     'managetitle' => 'Manage Digital Class Content',
+     'addtitle' => 'Add Digital Class Content',
+     'edittitle' => 'Edit Digital Class Content',
+     'viewtitle' => 'View Digital Class Content',
      'title' => 'Title',
      'title_en' => 'Title (English)',
      'title_bn'=>'Title (Bangla)',
