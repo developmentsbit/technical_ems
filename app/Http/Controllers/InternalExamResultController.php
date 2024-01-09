@@ -6,19 +6,18 @@ use Illuminate\Http\Request;
 use DB;
 use Brian2694\Toastr\Facades\Toastr;
 
-class SemesterPlanController extends Controller
+class InternalExamResultController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data = DB::table("semester_plan")
-        ->leftjoin("department",'department.id','semester_plan.department_id')
-        ->leftjoin("semesters",'semesters.id','semester_plan.semester_id')
-        ->select("semester_plan.*",'department.department','semesters.semester_name','department.department_name_bn','semesters.semester_name_bn')
+        $data = DB::table("internal_result")
+        ->leftjoin("department",'department.id','internal_result.department_id')
+        ->select("internal_result.*",'department.department','department.department_name_bn')
         ->get();
-        return view('admin.semesterplan.index',compact('data'));
+        return view('admin.internal_result.index',compact('data'));
     }
 
     /**
@@ -27,8 +26,7 @@ class SemesterPlanController extends Controller
     public function create()
     {
         $department = DB::table("department")->get();
-        $semester = DB::table("semesters")->get();
-        return view('admin.semesterplan.create',compact('department','semester'));
+        return view('admin.internal_result.create',compact('department'));
     }
 
     /**
@@ -38,11 +36,10 @@ class SemesterPlanController extends Controller
     {
         $data = array();
         $data['department_id']      = $request->department_id;
-        $data['semester_id']      = $request->semester_id;
-        $data['shift']      = $request->shift;
         $data['title']      = $request->title;
         $data['title_bn']      = $request->title_bn;
-        $data['subject']      = $request->subject;
+        $data['details']      = $request->details;
+        $data['details_bn']      = $request->details_bn;
         $data['date']       = $request->date;
         $image              = $request->file('image');
      
@@ -51,19 +48,19 @@ class SemesterPlanController extends Controller
             $image_name= rand(11111,99999);
             $ext=strtolower($image->getClientOriginalExtension());
             $image_full_name=$image_name.'.'.$ext;
-            $upload_path='semester_plan_image/';
+            $upload_path='internal_result_image/';
             $image_url=$upload_path.$image_full_name;
             $success=$image->move($upload_path,$image_full_name);
             $data['image']=$image_url;
-            DB::table('semester_plan')->insert($data);
+            DB::table('internal_result')->insert($data);
         }
         else
         {
-            DB::table('semester_plan')->insert($data);
+            DB::table('internal_result')->insert($data);
         }
     
-        Toastr::success(__('Semester Plan Added Successfully'));
-        return redirect()->route('semesterplan.index');
+        Toastr::success(__('Internal Exam Result Added Successfully'));
+        return redirect()->route('internal_result.index');
     }
 
     /**
@@ -71,7 +68,7 @@ class SemesterPlanController extends Controller
      */
     public function show(string $id)
     {
-        // 
+        //
     }
 
     /**
@@ -79,10 +76,9 @@ class SemesterPlanController extends Controller
      */
     public function edit(string $id)
     {
-        $data = DB::table("semester_plan")->where('id',$id)->first();
+        $data = DB::table("internal_result")->where('id',$id)->first();
         $department = DB::table("department")->get();
-        $semester = DB::table("semesters")->get();
-        return view('admin.semesterplan.edit',compact('data','department','semester'));
+        return view('admin.internal_result.edit',compact('data','department'));
     }
 
     /**
@@ -92,17 +88,16 @@ class SemesterPlanController extends Controller
     {
         $data = array();
         $data['department_id']      = $request->department_id;
-        $data['semester_id']      = $request->semester_id;
-        $data['shift']      = $request->shift;
         $data['title']      = $request->title;
         $data['title_bn']      = $request->title_bn;
-        $data['subject']      = $request->subject;
+        $data['details']      = $request->details;
+        $data['details_bn']      = $request->details_bn;
         $data['date']       = $request->date;
         $image              = $request->file('image');
       
         if ($image) 
         {
-            $old_image = DB::table("semester_plan")->where('id',$id)->first();
+            $old_image = DB::table("internal_result")->where('id',$id)->first();
         
             $path = public_path().'/'.$old_image->image;
 
@@ -114,26 +109,26 @@ class SemesterPlanController extends Controller
             $image_name= rand(1111,9999);
             $ext=strtolower($image->getClientOriginalExtension());
             $image_full_name=$image_name.'.'.$ext;
-            $upload_path='semester_plan_image/';
+            $upload_path='internal_result_image/';
             $image_url=$upload_path.$image_full_name;
             $success=$image->move($upload_path,$image_full_name);
             $data['image']=$image_url;
-            $update = DB::table('semester_plan')->where('id', $id)->update($data);
+            $update = DB::table('internal_result')->where('id', $id)->update($data);
         }
         else
         {
-            $update = DB::table('semester_plan')->where('id', $id)->update($data);
+            $update = DB::table('internal_result')->where('id', $id)->update($data);
         }
 
         if ($update) 
         {
-            Toastr::success(__('Semester Plan Update Successfully'));
-            return redirect()->route('semesterplan.index');
+            Toastr::success(__('Internal Exam Result Update Successfully'));
+            return redirect()->route('internal_result.index');
         }
         else
         {
-            Toastr::error(__('Semester Plan Update Unsuccessfully'));
-            return redirect()->route('semesterplan.index');
+            Toastr::error(__('Internal Exam Result Update Unsuccessfully'));
+            return redirect()->route('internal_result.index');
         }
     }
 
@@ -142,11 +137,11 @@ class SemesterPlanController extends Controller
      */
     public function destroy(string $id)
     {
-        $data = DB::table("semester_plan")->where('id',$id)->first();
+        $data = DB::table("internal_result")->where('id',$id)->first();
         
         if ($data) 
         {
-            $old_image = DB::table("semester_plan")->where('id',$id)->first();
+            $old_image = DB::table("internal_result")->where('id',$id)->first();
             
             $path = public_path().'/'.$old_image->image;
 
@@ -155,14 +150,14 @@ class SemesterPlanController extends Controller
                 unlink($path);
             }
             
-            DB::table("semester_plan")->where("id",$id)->delete();
-            Toastr::success(__('Semester Plan Delete Successfully'));
-            return redirect()->route('semesterplan.index');
+            DB::table("internal_result")->where("id",$id)->delete();
+            Toastr::success(__('Internal Exam Result Delete Successfully'));
+            return redirect()->route('internal_result.index');
         }
         else
         {
-            Toastr::error(__('Semester Plan Delete Unsuccessfully'));
-            return redirect()->route('semesterplan.index');
+            Toastr::error(__('Internal Exam Result Delete Unsuccessfully'));
+            return redirect()->route('internal_result.index');
         }
     }
 }

@@ -22,7 +22,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 <div class="container mt-2">
 		@component('components.breadcrumb')
             @slot('title')
-                @lang('digitalclasscontent.viewtitle')
+                @lang('semesterplan.viewtitle')
             @endslot
             @slot('breadcrumb1')
                 @lang('common.dashboard')
@@ -35,7 +35,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
                     @lang('common.add_new')
                 @endslot
                 @slot('action_button1_link')
-                    {{ route('digitalclasscontent.create') }}
+                    {{ route('semesterplan.create') }}
                 @endslot
             @endif
             @slot('action_button1_class')
@@ -47,18 +47,19 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 		<div class="card">
 			<div class="card-body">
 
-				<h3>@lang('digitalclasscontent.managetitle')</h3><br>
+				<h3>@lang('semesterplan.managetitle')</h3><br>
 
 				<table id="datatable-buttons" class="table table-striped dt-responsive nowrap w-100">
 					<thead class="mythead">
 						<tr>
 							<th>#</th>
-							<th>@lang('digitalclasscontent.date')</th>
-							<th>@lang('digitalclasscontent.title')</th>
-							<th>@lang('digitalclasscontent.departmentname')</th>
-							<th>@lang('digitalclasscontent.semestername')</th>
-							<th>@lang('digitalclasscontent.shift')</th>
-							<th>@lang('digitalclasscontent.image')</th>
+							<th>@lang('semesterplan.date')</th>
+							<th>@lang('semesterplan.title')</th>
+							<th>@lang('semesterplan.departmentname')</th>
+							<th>@lang('semesterplan.semestername')</th>
+							<th>@lang('semesterplan.shift')</th>
+							<th>@lang('semesterplan.subject')</th>
+							<th>@lang('semesterplan.image')</th>
 							<th>@lang('common.action')</th>
 						</tr>
 					</thead>
@@ -80,11 +81,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 								<span>@lang('common.second_shift')</span>
 								@endif
 							</td>
+                            <td>{{$d->subject}}</td>
 							<td><a href="{{ asset($d->image) }}" download="" class="btn btn-success btn-sm">@lang('common.download')</a></td>
 							<td>
 								<div class="btn-group">
-									<a  class="btn btn-info border-0 edit text-light" data-toggle="modal" data-target="#exampleModalCenters" href="{{ route("digitalclasscontent.edit",$d->id) }}">@lang('common.edit')</a>
-									<form action="{{ route('digitalclasscontent.destroy',$d->id) }}" method="post">
+									<a  class="btn btn-info border-0 edit text-light" data-toggle="modal" data-target="#exampleModalCenters" href="{{ route("semesterplan.edit",$d->id) }}">@lang('common.edit')</a>
+									<form action="{{ route('semesterplan.destroy',$d->id) }}" method="post">
 										@csrf
 										@method('DELETE')
 										<button type="submit" class="btn btn-danger" onClick="return confirm('Are You Sure?')">@lang('common.delete')</button>

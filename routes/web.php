@@ -54,6 +54,13 @@ use App\Http\Controllers\AboutDepartmentController;
 use App\Http\Controllers\SemesterController;
 use App\Http\Controllers\OnlineClassRoutineController;
 use App\Http\Controllers\DigitalClassContentController;
+use App\Http\Controllers\SemesterPlanController;
+use App\Http\Controllers\StudentProjectController;
+use App\Http\Controllers\ProbidhanController;
+use App\Http\Controllers\InternalExamResultController;
+use App\Http\Controllers\BoardResultController;
+use App\Http\Controllers\EmploymentInformationController;
+use App\Http\Controllers\RecruitmentNoticesController;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -147,13 +154,21 @@ Route::get('/industrialattachment', [FrontendController::class, 'industrialattac
 Route::get('/industriesvisit', [FrontendController::class, 'industriesvisit']);
 Route::get('/nearindustries', [FrontendController::class, 'nearindustries']);
 Route::get('/internalresult/{id}', [FrontendController::class, 'internalresult']);
+Route::get('/view_internal_result/{id}', [FrontendController::class, 'view_internal_result']);
+Route::get('/nearindustries', [FrontendController::class, 'nearindustries']);
+Route::get('/boardresult', [FrontendController::class, 'boardresult']);
+Route::get('/view_board_result/{id}', [FrontendController::class, 'view_board_result']);
 
 Route::get('/class_routine/{id}', [FrontendController::class, 'class_routine']);
 Route::get('/online_class_routine/{id}', [FrontendController::class, 'online_class_routine']);
 Route::get('/digital_class_content/{id}', [FrontendController::class, 'digital_class_content']);
 Route::get('/Syllabus/{id}', [FrontendController::class, 'Syllabus']);
-Route::get('/semesterplans/{id}', [FrontendController::class, 'semesterplan']);
-Route::get('/probidhans', [FrontendController::class, 'probidhan']);
+Route::get('/semester_plan/{id}', [FrontendController::class, 'semester_plan']);
+Route::get('/student_project/{id}', [FrontendController::class, 'student_project']);
+Route::get('/Probidhan', [FrontendController::class, 'Probidhan']);
+
+Route::get('/employmentinformation', [FrontendController::class, 'employmentinformation']);
+Route::get('/view_employment_information/{id}', [FrontendController::class, 'view_employment_information']);
 
 Route::get('/aboutdepartment/{id}', [FrontendController::class, 'aboutdepartment']);
 Route::get('/departmentteacher/{id}', [FrontendController::class, 'departmentteacher']);
@@ -298,6 +313,13 @@ Route::group(['middleware' => 'auth'], function () {
         'classroutine' => RoutineController::class,
         'onlineclassroutine' => OnlineClassRoutineController::class,
         'digitalclasscontent' => DigitalClassContentController::class,
+        'semesterplan' => SemesterPlanController::class,
+        'studentproject' => StudentProjectController::class,
+        'probidhan' => ProbidhanController::class,
+        'internal_result' => InternalExamResultController::class,
+        'board_result' => BoardResultController::class,
+        'employment_information' => EmploymentInformationController::class,
+        'recruitment_notices' => RecruitmentNoticesController::class,
     ]);
 
     Route::get('retrive_message/{id}', [MessageController::class, 'retrive_message']);

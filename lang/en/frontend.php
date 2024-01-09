@@ -64,10 +64,14 @@ $array = array(
     'gpa'=>'GPA',
     'select_menu'=>'Select Menu',
     'golden_jubilee_and_bangabandhu_corner'=>'Golden Jubilee and Bangabandhu Corner',
+    'working_alumni_database'=>'Working Alumni Database',
+    'attached_cv'=>'Attached Cv',
+
     'home'=>'Home',
     'institute_introduction'=>'Institute Introduction',
     'about_institute'=>'About Institute',
     'infrastructure'=>'Infrastructure',
+    'position'=>'Position',
     'yearly_working_plan'=>'Yearly Working Plan',
     'contact'=>'Contact Us',
     'about_us'=>'About Us',
@@ -100,6 +104,10 @@ $array = array(
     'semesterplan'=>'Semester Plan',
     'studentprojects'=>'Student Projects',
     'probidhan'=>'Probidhan',
+    'structure'=>'Structure',
+    'info'=>'Info',
+    'integrity'=>'Integrity',
+    'ongoingeducation'=>'On Going Education',
 
     'holidaylists'=>'Holiday Lists',
     'uniform'=>'Uniform',
@@ -127,13 +135,17 @@ $array = array(
     'examsyllabus'=>'Exam Syllabus',
     'examsuggession'=>'Exam Suggession',
     'result'=>'Result',
-    'internal_results'=>'Internal Results',
-    'public_exam_result'=>'Public Exam Result',
+    'internal_results'=>'Internal Exam',
+    'boardresult'=>'Public Exam',
     'scholarship'=>'Scholarship Exam Result',
     'gallery'=>'Gallery',
     'photogallery'=>'Photo Gallery',
     'videogallery'=>'Video Gallery',
     'complainbox'=>'Complain Box',
+    'department_wise'=>'Department Wise',
+    'academic_works'=>'Academic Works',
+    'job_placement'=>'Job Placement',
+    'industries_linkes'=>'Industries Linkes',
 
     'events'=>'Events',
     'library'=>'Library information',
@@ -193,12 +205,24 @@ $array = array(
     'departmentname' => 'Department',
     'semestername' => 'Semester',
     'shift' => 'Shift',
+    'subject' => 'Subject',
 
+    'about' => 'About',
+    'department_head' => 'Department Head Info',
+    'teacherinfofirst' => 'First Shift Teacher Info',
+    'teacherinfosecond' => 'Second Shift Teacher Info',
+    'student_info'=>'Student Information',
+    'lab'=>'Lab/ Shop',
+
+    'employment_information'=>'Employment Information',
+    'recruitment_notices'=>'Recruitment Notices',
+    'alumni_success'=>'Alumni Success',
 
     //tanim
 
     'read_more'=>'Read More...',
     'details' => 'Details...',
+    'detailss' => 'Details',
 
 );
 

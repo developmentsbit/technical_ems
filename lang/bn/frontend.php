@@ -138,8 +138,8 @@ $array = array(
     'examsyllabus'=>'পরীক্ষার সিলেবাস',
     'examsuggession'=>'পরীক্ষার সাজেশন্স',
     'result'=>'ফলাফল',
-    'internal_results'=>'অভ্যন্তরীণ ফলাফল',
-    'public_exam_result'=>'বোর্ড পরীক্ষার ফলাফল',
+    'internal_results'=>'অভ্যন্তরীণ পরীক্ষা',
+    'boardresult'=>'বোর্ড ফাইনাল পরীক্ষা',
     'scholarship'=>'বৃত্তি পরীক্ষার ফলাফল',
     'gallery'=>'গ্যালারি',
     'photogallery'=>'ফটোগ্যালারি',
@@ -208,15 +208,24 @@ $array = array(
     'departmentname' => 'ডিপার্টমেন্ট',
     'semestername' => 'সেমিষ্টার',
     'shift' => 'শিফট',
-    
-    'class_routine'=>'ক্লাস রুটিন',
-    'online_class_routine'=>'অনলাইন ক্লাস রুটিন',
+    'subject' => 'বিষয়',
 
+    'about' => 'সম্পর্কে',
+    'department_head' => 'বিভাগীয় প্রধান পরিচিতি',
+    'teacherinfofirst' => 'প্রথম শিফটের শিক্ষকবৃন্দের তথ্য',
+    'teacherinfosecond' => 'দ্বিতীয় শিফটের শিক্ষকবৃন্দের তথ্য',
+    'student_info'=>'শিক্ষার্থী তথ্য',
+    'lab'=>'ল্যাব/ সপ',
+
+    'employment_information'=>'কর্মসংস্থান সংক্রান্ত তথ্যাবলী',
+    'recruitment_notices'=>'নিয়োগ বিজ্ঞপ্তিসমূহ',
+    'alumni_success'=>'পুরাতন শিক্ষাথীদের সাফল্য',
 
     //tanim
 
     'read_more'=>'আরো পড়ুন...',
     'details' => 'বিস্তারিত...',
+    'detailss' => 'বিস্তারিত',
 
 );
 
