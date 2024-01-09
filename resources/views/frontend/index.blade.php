@@ -580,16 +580,16 @@ right:0;
             <ul class="dropdown-menu bg-white" aria-labelledby="navbarDropdownMenuLink">
                 @if($department)
                 @foreach($department as $dept)
-                <li><a class="dropdown-item dropdown-toggle" href="#">{{$dept->department_name_bn}}</a>
+                <li><a class="dropdown-item dropdown-toggle" href="#">@if($lang == 'en'){{ $d->department ?: $d->department_name_bn }}@else {{$d->department_name_bn ?: $d->department}}@endif</a>
                   <ul class="dropdown-menu bg-white">
-                    <li><a class="dropdown-item" href="{{url('aboutdepartment')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;{{$dept->department_name_bn}} সম্পর্কে</a></li>
-                    <li><a class="dropdown-item" href="{{url('departmenthead')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;বিভাগীয় প্রধান পরিচিতি </a></li>
-                    <li><a class="dropdown-item" href="{{url('departmentteacher')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;শিক্ষকবৃন্দের তথ্য</a></li>
-                    <li><a class="dropdown-item" href="{{url('shift')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;প্রথম শিফটের শিক্ষকবৃন্দের তথ্য</a></li>
-                    <li><a class="dropdown-item" href="{{url('shift2')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;দ্বিতীয় শিফটের শিক্ষকবৃন্দের তথ্য</a></li>
-                    <li><a class="dropdown-item" href="{{url('departmentemployee')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;কর্মচারীদের তথ্য</a></li>
-                    <li><a class="dropdown-item" href="{{url('Student_infos')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;শিক্ষার্থী তথ্য </a></li>
-                    <li><a class="dropdown-item" href="{{url('shopInfo')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp; ল্যাব/ সপ  </a></li>
+                    <li><a class="dropdown-item" href="{{url('aboutdepartment')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;@if($lang == 'en'){{ $d->department ?: $d->department_name_bn }}@else {{$d->department_name_bn ?: $d->department}}@endif @lang('frontend.about')</a></li>
+                    <li><a class="dropdown-item" href="{{url('departmenthead')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;@lang('frontend.department_head') </a></li>
+                    <li><a class="dropdown-item" href="{{url('departmentteacher')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;@lang('frontend.teacherinfo')</a></li>
+                    <li><a class="dropdown-item" href="{{url('shift')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;@lang('frontend.teacherinfofirst')</a></li>
+                    <li><a class="dropdown-item" href="{{url('shift2')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;@lang('frontend.teacherinfosecond')</a></li>
+                    <li><a class="dropdown-item" href="{{url('departmentemployee')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;@lang('frontend.staffinfo')</a></li>
+                    <li><a class="dropdown-item" href="{{url('Student_infos')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;@lang('frontend.student_info')</a></li>
+                    <li><a class="dropdown-item" href="{{url('shopInfo')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;@lang('frontend.lab')</a></li>
                   </ul>
                 </li>
                 @endforeach
@@ -602,11 +602,11 @@ right:0;
               @lang('frontend.academic_works')</a>
             <ul class="dropdown-menu bg-white" aria-labelledby="navbarDropdownMenuLink">
                 
-                <li><a class="dropdown-item dropdown-toggle" href="#">@lang('frontend.class_routine')</a>
+                <li><a class="dropdown-item dropdown-toggle" href="#">@lang('frontend.classroutines')</a>
                   <ul class="dropdown-menu bg-white">
                     @if($department)
                     @foreach($department as $dept)
-                    <li><a class="dropdown-item" href="{{url('class_routine')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;{{$dept->department_name_bn}}</a></li>
+                    <li><a class="dropdown-item" href="{{url('class_routine')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;@if($lang == 'en'){{ $d->department ?: $d->department_name_bn }}@else {{$d->department_name_bn ?: $d->department}}@endif</a></li>
                     @endforeach
                     @endif
                   </ul>
@@ -616,7 +616,7 @@ right:0;
                   <ul class="dropdown-menu bg-white">
                     @if($department)
                     @foreach($department as $dept)
-                    <li><a class="dropdown-item" href="{{url('online_class_routine')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;{{$dept->department_name_bn}}</a></li>
+                    <li><a class="dropdown-item" href="{{url('online_class_routine')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;@if($lang == 'en'){{ $d->department ?: $d->department_name_bn }}@else {{$d->department_name_bn ?: $d->department}}@endif</a></li>
                     @endforeach
                     @endif
                   </ul>
@@ -626,7 +626,7 @@ right:0;
                   <ul class="dropdown-menu bg-white">
                     @if($department)
                     @foreach($department as $dept)
-                    <li><a class="dropdown-item" href="{{url('digital_class_content')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;{{$dept->department_name_bn}}</a></li>
+                    <li><a class="dropdown-item" href="{{url('digital_class_content')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;@if($lang == 'en'){{ $d->department ?: $d->department_name_bn }}@else {{$d->department_name_bn ?: $d->department}}@endif</a></li>
                     @endforeach
                     @endif
                   </ul>
@@ -636,7 +636,7 @@ right:0;
                   <ul class="dropdown-menu bg-white">
                     @if($department)
                     @foreach($department as $dept)
-                    <li><a class="dropdown-item" href="{{url('Syllabus')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;{{$dept->department_name_bn}}</a></li>
+                    <li><a class="dropdown-item" href="{{url('Syllabus')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;@if($lang == 'en'){{ $d->department ?: $d->department_name_bn }}@else {{$d->department_name_bn ?: $d->department}}@endif</a></li>
                     @endforeach
                     @endif
                   </ul>
@@ -646,7 +646,7 @@ right:0;
                   <ul class="dropdown-menu bg-white">
                     @if($department)
                     @foreach($department as $dept)
-                    <li><a class="dropdown-item" href="{{url('class_Routine')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;{{$dept->department_name_bn}}</a></li>
+                    <li><a class="dropdown-item" href="{{url('semester_plan')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;@if($lang == 'en'){{ $d->department ?: $d->department_name_bn }}@else {{$d->department_name_bn ?: $d->department}}@endif</a></li>
                     @endforeach
                     @endif
                   </ul>
@@ -656,13 +656,13 @@ right:0;
                   <ul class="dropdown-menu bg-white">
                     @if($department)
                     @foreach($department as $dept)
-                    <li><a class="dropdown-item" href="{{url('class_Routine')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;{{$dept->department_name_bn}}</a></li>
+                    <li><a class="dropdown-item" href="{{url('student_project')}}/{{$dept->id}}"><span uk-icon="icon:  chevron-right; ratio: 0.8"></span>&nbsp;&nbsp;@if($lang == 'en'){{ $d->department ?: $d->department_name_bn }}@else {{$d->department_name_bn ?: $d->department}}@endif</a></li>
                     @endforeach
                     @endif
                   </ul>
                 </li>
                 
-                <li><a class="dropdown-item dropdown-toggle" href="{{url('probidhan')}}">@lang('frontend.probidhan')</a>
+                <li><a class="dropdown-item dropdown-toggle" href="{{url('Probidhan')}}">@lang('frontend.probidhan')</a>
                 </li>
 
             </ul>
@@ -674,17 +674,14 @@ right:0;
             <ul class="dropdown-menu bg-white" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item dropdown-toggle" href="#">@lang('frontend.internal_results')</a>
                   <ul class="dropdown-menu bg-white">
-                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;ইলেকট্রনিক্স টেকনোলজি</a></li>
-                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;ইলেকট্রোমেডিকেল টেকনোলজি</a></li>
-                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;সিভিল টেকনোলজি</a></li>
-                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;ইলেকট্রিক্যাল টেকনোলজি</a></li>
-                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;মেকানিক্যাল টেকনোলজি</a></li>
-                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;পাওয়ার টেকনোলজি</a></li>
-                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;কম্পিউটার টেকনোলজি</a></li>
-                    <li><a class="dropdown-item" href="#">&nbsp;&nbsp;নন-টেক</a></li>
+                    @if($department)
+                    @foreach($department as $dept)
+                    <li><a class="dropdown-item" href="{{url('internalresult')}}/{{$dept->id}}">&nbsp;&nbsp;@if($lang == 'en'){{ $d->department ?: $d->department_name_bn }}@else {{$d->department_name_bn ?: $d->department}}@endif</a></li>
+                    @endforeach
+                    @endif
                   </ul>
                 </li>
-                <li><a class="dropdown-item dropdown-toggle" href="#">@lang('frontend.public_exam_result')</a>
+                <li><a class="dropdown-item dropdown-toggle" href="{{url('boardresult')}}">@lang('frontend.boardresult')</a>
             </ul>
         </li>
 
@@ -694,11 +691,11 @@ right:0;
           </a>
           <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink">
             <div class="col-md-12 col-12 dmenu mt-3" style="padding-left: 4%;">
-              <li><a href="#">কর্মসংস্থান সংক্রান্ত তথ্যাবলী </a></li>
+              <li><a href="{{url('employmentinformation')}}">@lang('frontend.employment_information')</a></li>
               <li><a href="#">কর্মরত প্রাক্তন ছাত্র-ছাত্রীদের ডাটাবেজ</a></li>
               <li><a href="#">কর্ম প্রত্যাশীদের বায়োডাটা সংযুক্তকরণ</a></li>
-              <li><a href="#">নিয়োগ বিজ্ঞপ্তিসমূহ</a></li>
-              <li><a href="#">প্রাক্তন ছাত্র-ছাত্রীদের সাফল্য</a></li>
+              <li><a href="{{url('recruitmentnotices')}}">@lang('frontend.recruitment_notices')</a></li>
+              <li><a href="{{url('alumnisuccess')}}">@lang('frontend.alumni_success')</a></li>
             </div>
           </ul>
         </li>

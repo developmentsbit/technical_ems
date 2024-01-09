@@ -285,14 +285,49 @@ class FrontendController extends Controller
 
 	public function internalresult($id)
 	{
-		$data = DB::table("result")
-		->orderBy('result.id','DESC')
-		->where('result.department_id',$id)
-		->join('semester','semesters.id','result.semester_id')
-		->join('department','department.id','result.department_id')
-		->select('result.*','semesters.semester_name_bn','department.department_name_bn')
+		$data = DB::table("internal_result")
+		->orderBy('internal_result.id','DESC')
+		->where('internal_result.department_id',$id)
+		->join('department','department.id','internal_result.department_id')
+		->select('internal_result.*','department.department','department.department_name_bn')
 		->get();
 		return view('frontend.internalresult',compact('data'));
+	}
+	
+	public function view_internal_result($id)
+	{
+		$data = DB::table("internal_result")
+		->where('internal_result.id',$id)
+		->join('department','department.id','internal_result.department_id')
+		->select('internal_result.*','department.department_name_bn')
+		->first();
+		return view('frontend.view_internal_result',compact('data'));
+	}
+
+
+	public function boardresult()
+	{
+		$data = DB::table("board_result")->orderBy('id','DESC')->get();
+		return view('frontend.boardresult',compact('data'));
+	}
+	
+	public function view_board_result($id)
+	{
+		$data = DB::table("board_result")->where('id',$id)->first();
+		return view('frontend.view_board_result',compact('data'));
+	}
+
+
+	public function employmentinformation()
+	{
+		$data = DB::table("employment_information")->orderBy('id','DESC')->get();
+		return view('frontend.employmentinformation',compact('data'));
+	}
+	
+	public function view_employment_information($id)
+	{
+		$data = DB::table("employment_information")->where('id',$id)->first();
+		return view('frontend.view_employment_information',compact('data'));
 	}
 
 
@@ -348,23 +383,36 @@ class FrontendController extends Controller
 
 
 
-	public function semesterplan($id)
+	public function semester_plan($id)
 	{
-		$data = DB::table("semesterplan")
-		->orderBy('semesterplan.id','DESC')
-		->where('semesterplan.department_id',$id)
-		->join('semesters','semesters.id','semesterplan.semester_id')
-		->join('departments','departments.id','semesterplan.department_id')
-		->select('semesterplan.*','semesters.semester_name_bn','departments.department_name_bn')
+		$data = DB::table("semester_plan")
+		->orderBy('semester_plan.id','DESC')
+		->where('semester_plan.department_id',$id)
+		->join('semesters','semesters.id','semester_plan.semester_id')
+		->join('department','department.id','semester_plan.department_id')
+		->select('semester_plan.*','semesters.semester_name_bn','department.department_name_bn')
 		->get();
-		return view('frontend.semesterplan',compact('data'));
+		return view('frontend.semester_plan',compact('data'));
 	}
 
 
-	public function probidhan()
+
+	public function student_project($id)
 	{
-		$data = DB::table("probidhan")->orderBy('id','DESC')->get();
-		return view('frontend.probidhan',compact('data'));
+		$data = DB::table("student_project")
+		->orderBy('student_project.id','DESC')
+		->where('student_project.department_id',$id)
+		->join('department','department.id','student_project.department_id')
+		->select('student_project.*','department.department','department.department_name_bn')
+		->get();
+		return view('frontend.student_project',compact('data'));
+	}
+
+
+	public function Probidhan()
+	{
+		$data = DB::table("Probidhan")->orderBy('id','DESC')->get();
+		return view('frontend.Probidhan',compact('data'));
 	}
 
 

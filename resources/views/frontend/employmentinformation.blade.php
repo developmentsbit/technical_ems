@@ -9,7 +9,7 @@
 
    <div class="col-sm-12 col-12 p-0"  data-aos="fade-in" data-aos-duration="2000" >
     <ul class="list-group p-0">
-      <li class="list-group-item font-weight-bold bg-success text-light" id="about">@lang('frontend.probidhan')</li>
+      <li class="list-group-item font-weight-bold bg-success text-light" id="about">@lang('frontend.employment_information')</li>
       <li class="list-group-item">
 
         <div class="table table-responsive">
@@ -18,7 +18,6 @@
               <tr style="font-size: 15px;">
                 <th>@lang('frontend.sl')</th>
                 <th>@lang('frontend.title')</th>
-                <th>@lang('frontend.year')</th>
                 <th>@lang('frontend.download')</th>
               </tr>
             </thead>
@@ -34,8 +33,10 @@
               <tr style="font-size: 12px;">
                 <td>{{ $i++ }}</td>
                 <td>@if($lang == 'en'){{ $d->title ?: $d->title_bn}}@else {{$d->title_bn ?: $d->title}}@endif</td>
-				        <td>{{ $d->year }}</td>
-                <td><a href="{{ asset($d->image) }}" class="btn btn-sm btn-danger" download=""><span uk-icon="icon: file-pdf; ratio: 1"></span></a></td>
+                <td>
+                  <a href="{{ url('view_employment_information',$d->id) }}" class="btn btn-sm btn-danger" target="_blank"><span uk-icon="icon: file-pdf; ratio: 1"></span>Open</a>
+                  <a href="{{ asset($d->image) }}" class="btn btn-sm btn-danger" download="" ><span uk-icon="icon: download; ratio: 1"></span>Download</a>
+                </td>
               </tr>
 
 

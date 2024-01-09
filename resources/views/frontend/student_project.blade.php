@@ -9,7 +9,7 @@
 
    <div class="col-sm-12 col-12 p-0"  data-aos="fade-in" data-aos-duration="2000" >
     <ul class="list-group p-0">
-      <li class="list-group-item font-weight-bold bg-success text-light" id="about">@lang('frontend.probidhan')</li>
+      <li class="list-group-item font-weight-bold bg-success text-light" id="about">@lang('frontend.studentprojects')</li>
       <li class="list-group-item">
 
         <div class="table table-responsive">
@@ -17,8 +17,10 @@
             <thead>
               <tr style="font-size: 15px;">
                 <th>@lang('frontend.sl')</th>
+                <th>@lang('frontend.date')</th>
                 <th>@lang('frontend.title')</th>
-                <th>@lang('frontend.year')</th>
+                <th>@lang('frontend.detailss')</th>
+                <th>@lang('frontend.departmentname')</th>
                 <th>@lang('frontend.download')</th>
               </tr>
             </thead>
@@ -33,8 +35,10 @@
 
               <tr style="font-size: 12px;">
                 <td>{{ $i++ }}</td>
-                <td>@if($lang == 'en'){{ $d->title ?: $d->title_bn}}@else {{$d->title_bn ?: $d->title}}@endif</td>
-				        <td>{{ $d->year }}</td>
+				        <td>{{ $d->date }}</td>
+                <td><a href="{{ asset($d->image) }}" target="blank" style="text-decoration: none;color: black">@if($lang == 'en'){{ $d->title ?: $d->title_bn}}@else {{$d->title_bn ?: $d->title}}@endif</a></td>
+                <td>@if($lang == 'en'){{ $d->department ?: $d->department_name_bn }}@else {{$d->department_name_bn ?: $d->department}}@endif</td>
+                <td>@if($lang == 'en'){!! $d->details ?: $d->details_bn !!}@elseif($lang == 'bn'){!! $d->details_bn ?: $d->details !!}@endif</td>
                 <td><a href="{{ asset($d->image) }}" class="btn btn-sm btn-danger" download=""><span uk-icon="icon: file-pdf; ratio: 1"></span></a></td>
               </tr>
 

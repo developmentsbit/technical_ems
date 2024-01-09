@@ -50,7 +50,7 @@
               </tr>
 
               <tr>
-                <td colspan="3"><center><a href="{{ url('shiftdetails',$d->id) }}" class="btn btn-warning text-white btn-sm float-end">বিস্তারিত দেখুন</a></center></td> 
+                <td colspan="3"><center><a href="{{ url('shiftdetails',$d->id) }}" class="btn btn-warning text-white btn-sm float-end">@lang('frontend.details')</a></center></td> 
               </tr>               
             </table>
           </div><!-----------End Teacher Information----------------------->

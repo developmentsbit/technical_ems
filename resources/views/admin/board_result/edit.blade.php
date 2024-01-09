@@ -12,7 +12,7 @@
 <div class="container mt-2">
 		@component('components.breadcrumb')
             @slot('title')
-                @lang('page.edittitle')
+                @lang('board_result.edittitle')
             @endslot
             @slot('breadcrumb1')
                 @lang('common.dashboard')
@@ -22,10 +22,10 @@
             @endslot
             @if (\App\Traits\RolePermissionTrait::checkRoleHasPermission('role', 'create'))
                 @slot('action_button1')
-                    <i class="fa fa-eye"></i> @lang('common.view')
+                    @lang('common.view')
                 @endslot
                 @slot('action_button1_link')
-                    {{ route('pages.index') }}
+                    {{ route('board_result.index') }}
                 @endslot
             @endif
             @slot('action_button1_class')
@@ -36,66 +36,43 @@
 
 		<div class="card">
 			<div class="card-body">
-				<h3>@lang('page.edittitle')</h3><br>
 
-				<form method="post" class="btn-submit mt-3" action="{{ route('pages.update',$data->id) }}" enctype="multipart/form-data">
+				<h3>@lang('board_result.edittitle')</h3><br>
+				<form method="post" class="btn-submit" action="{{ route('board_result.update',$data->id) }}" enctype="multipart/form-data">
 					@csrf
 					@method('PUT')
-
 					<div class="row myinput">
-
 						<div class="form-group mb-3 col-md-6">
-							<label>@lang('page.title'): <span class="text-danger" style="font-size: 15px;">*</span></label>
+							<label>@lang('board_result.date'): <span class="text-danger" style="font-size: 15px;">*</span></label>
+							<div class="input-group mt-2">
+								<input class="form-control" type="date" name="date" id="date"  required="" value="{{ $data->date }}">
+							</div>
+						</div>
+						<div class="form-group mb-3 col-md-6">
+							<label>@lang('board_result.title_en'): <span class="text-danger" style="font-size: 15px;">*</span></label>
 							<div class="input-group mt-2">
 								<input class="form-control" type="text" name="title" id="title"  required="" value="{{ $data->title }}">
 							</div>
 						</div>
 						<div class="form-group mb-3 col-md-6">
-							<label>@lang('page.title_bn'): </label>
+							<label>@lang('board_result.title_bn'): </label>
 							<div class="input-group mt-2">
 								<input class="form-control" type="text" name="title_bn" id="title_bn"  value="{{ $data->title_bn }}">
 							</div>
 						</div>
-
 						<div class="form-group mb-3 col-md-6">
-							<label>@lang('page.details'): <span class="text-danger" style="font-size: 15px;">*</span></label>
-							<div class="input-group mt-2">
-								<textarea id="summernote"  class="form-control w-100" rows="10" type="text" name="details" required="">{{ $data->details }}</textarea>
-							</div>
-						</div>
-						<div class="form-group mb-3 col-md-6">
-							<label>@lang('page.details_bn'):</label>
-							<div class="input-group mt-2">
-								<textarea id="summernote1"  class="form-control w-100" rows="10" type="text" name="details_bn" >{{ $data->details_bn }}</textarea>
-							</div>
-						</div>
-						
-						<div class="form-group mb-3 col-md-12">
-							<label>@lang('page.image'):</label>
+							<label>@lang('board_result.image'):</label>
 							<div class="input-group mt-2">
 								<input class="form-control" type="file" name="image" id="image">
 								<br>
 							</div>
-							<a href="{{ asset($data->image) }}" download="" class="btn btn-info">@lang('page.download')</a>
+							<a href="{{ asset($data->image) }}" download="" class="btn btn-info">@lang('board_result.download')</a>
 						</div>
-
-
-
-
 						<div class="modal-footer border-0">
-							<button type="button" class="btn btn-secondary border-0" onClick="window.location.reload();">@lang('common.close')</button>
 							<button type="submit" class="btn btn-success button border-0">@lang('common.update')</button>
 						</div>
-
-
-
-
-
 					</div>
 				</form>
-
-
-
 			</div> <!-- end card body-->
 		</div> <!-- end card -->
 	</div><!-- end col-->

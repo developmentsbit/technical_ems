@@ -11,16 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('semester_plan', function (Blueprint $table) {
+        Schema::create('student_project', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('department_id')->unsigned();
             $table->foreign('department_id')->references('id')->on('department');
-            $table->bigInteger('semester_id')->unsigned();
-            $table->foreign('semester_id')->references('id')->on('semesters');
-            $table->string('shift')->nullable();
-            $table->text('title');
-            $table->text('title_bn')->nullable();
-            $table->text('subject')->nullable();
+            $table->string('title',200)->nullable();
+            $table->string('title_bn',200)->nullable();
+            $table->text('details')->nullable();
+            $table->text('details_bn')->nullable();
             $table->string('date');
             $table->string('image')->default('0');
             $table->timestamps();
@@ -32,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('semester_plan');
+        Schema::dropIfExists('student_project');
     }
 };
