@@ -220,6 +220,12 @@ $array = array(
     'employment_information'=>'কর্মসংস্থান সংক্রান্ত তথ্যাবলী',
     'recruitment_notices'=>'নিয়োগ বিজ্ঞপ্তিসমূহ',
     'alumni_success'=>'পুরাতন শিক্ষাথীদের সাফল্য',
+    'agreement'=>'সম্পাদিত চুক্তিসমূহ',
+    'industrial_attachment'=>'ইন্ডাস্ট্রিয়াল এটাচমেন্ট',
+    'industries_visit'=>'ইন্ডাস্ট্রি ভিজিট',
+    'near_industries'=>'নিকটস্থ ইন্ডাস্ট্রিসমূহ',
+    'working_alumni'=>'কর্মরত প্রাক্তন ছাত্র-ছাত্রীদের ডাটাবেজ',
+    'cv_attachment'=>'কর্ম প্রত্যাশীদের বায়োডাটা সংযুক্তকরণ',
 
     //tanim
 

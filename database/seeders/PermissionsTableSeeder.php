@@ -978,61 +978,6 @@ class PermissionsTableSeeder extends Seeder
             ),
             87 => 
             array (
-                'id' => 160,
-                'name' => 'Vice Principal Message List',
-                'parent' => 'Vice Principal Message',
-                'guard_name' => 'web',
-                'status' => 1,
-                'created_at' => '2023-07-16 05:09:11',
-                'updated_at' => '2023-07-16 05:09:11',
-                'deleted_at' => NULL,
-            ),
-            88 => 
-            array (
-                'id' => 161,
-                'name' => 'Vice Principal Message Create',
-                'parent' => 'Vice Principal Message',
-                'guard_name' => 'web',
-                'status' => 1,
-                'created_at' => '2023-07-16 05:09:11',
-                'updated_at' => '2023-07-16 05:09:11',
-                'deleted_at' => NULL,
-            ),
-            89 => 
-            array (
-                'id' => 162,
-                'name' => 'Vice Principal Message Edit',
-                'parent' => 'Vice Principal Message',
-                'guard_name' => 'web',
-                'status' => 1,
-                'created_at' => '2023-07-16 05:09:11',
-                'updated_at' => '2023-07-16 05:09:11',
-                'deleted_at' => NULL,
-            ),
-            90 => 
-            array (
-                'id' => 163,
-                'name' => 'Vice Principal Message Delete',
-                'parent' => 'Vice Principal Message',
-                'guard_name' => 'web',
-                'status' => 1,
-                'created_at' => '2023-07-16 05:09:11',
-                'updated_at' => '2023-07-16 05:09:11',
-                'deleted_at' => NULL,
-            ),
-            91 => 
-            array (
-                'id' => 164,
-                'name' => 'Vice Principal Message View',
-                'parent' => 'Vice Principal Message',
-                'guard_name' => 'web',
-                'status' => 1,
-                'created_at' => '2023-07-16 05:09:11',
-                'updated_at' => '2023-07-16 05:09:11',
-                'deleted_at' => NULL,
-            ),
-            92 => 
-            array (
                 'id' => 165,
                 'name' => 'Teaching permission and recognition List',
                 'parent' => 'Teaching permission and recognition',
@@ -1042,7 +987,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-10 09:47:13',
                 'deleted_at' => NULL,
             ),
-            93 => 
+            88 => 
             array (
                 'id' => 166,
                 'name' => 'Teaching permission and recognition Create',
@@ -1053,7 +998,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-10 09:47:13',
                 'deleted_at' => NULL,
             ),
-            94 => 
+            89 => 
             array (
                 'id' => 167,
                 'name' => 'Teaching permission and recognition Edit',
@@ -1064,7 +1009,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-10 09:47:13',
                 'deleted_at' => NULL,
             ),
-            95 => 
+            90 => 
             array (
                 'id' => 168,
                 'name' => 'Teaching permission and recognition Delete',
@@ -1075,7 +1020,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-10 09:47:14',
                 'deleted_at' => NULL,
             ),
-            96 => 
+            91 => 
             array (
                 'id' => 169,
                 'name' => 'Teaching permission and recognition View',
@@ -1086,7 +1031,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-10 09:47:14',
                 'deleted_at' => NULL,
             ),
-            97 => 
+            92 => 
             array (
                 'id' => 170,
                 'name' => 'Teaching permission and recognition Print',
@@ -1097,7 +1042,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-10 09:47:14',
                 'deleted_at' => NULL,
             ),
-            98 => 
+            93 => 
             array (
                 'id' => 171,
                 'name' => 'Teaching permission and recognition Edit_history',
@@ -1108,7 +1053,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-10 09:47:14',
                 'deleted_at' => NULL,
             ),
-            99 => 
+            94 => 
             array (
                 'id' => 172,
                 'name' => 'Teaching permission and recognition Deleted_list',
@@ -1119,7 +1064,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-10 09:47:14',
                 'deleted_at' => NULL,
             ),
-            100 => 
+            95 => 
             array (
                 'id' => 173,
                 'name' => 'Teaching permission and recognition Restore',
@@ -1130,7 +1075,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-10 09:47:14',
                 'deleted_at' => NULL,
             ),
-            101 => 
+            96 => 
             array (
                 'id' => 174,
                 'name' => 'Teaching permission and recognition Permanent_delete',
@@ -1141,7 +1086,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-10 09:47:14',
                 'deleted_at' => NULL,
             ),
-            102 => 
+            97 => 
             array (
                 'id' => 175,
                 'name' => 'MPO_Nationalization Info List',
@@ -1152,7 +1097,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-10 09:48:59',
                 'deleted_at' => NULL,
             ),
-            103 => 
+            98 => 
             array (
                 'id' => 176,
                 'name' => 'MPO_Nationalization Info Create',
@@ -1163,7 +1108,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-10 09:48:59',
                 'deleted_at' => NULL,
             ),
-            104 => 
+            99 => 
             array (
                 'id' => 177,
                 'name' => 'MPO_Nationalization Info Edit',
@@ -1174,7 +1119,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-10 09:48:59',
                 'deleted_at' => NULL,
             ),
-            105 => 
+            100 => 
             array (
                 'id' => 178,
                 'name' => 'MPO_Nationalization Info Delete',
@@ -1185,7 +1130,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-10 09:48:59',
                 'deleted_at' => NULL,
             ),
-            106 => 
+            101 => 
             array (
                 'id' => 179,
                 'name' => 'MPO_Nationalization Info View',
@@ -1196,7 +1141,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-10 09:48:59',
                 'deleted_at' => NULL,
             ),
-            107 => 
+            102 => 
             array (
                 'id' => 180,
                 'name' => 'MPO_Nationalization Info Print',
@@ -1207,7 +1152,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-10 09:48:59',
                 'deleted_at' => NULL,
             ),
-            108 => 
+            103 => 
             array (
                 'id' => 181,
                 'name' => 'MPO_Nationalization Info Edit_history',
@@ -1218,7 +1163,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-10 09:48:59',
                 'deleted_at' => NULL,
             ),
-            109 => 
+            104 => 
             array (
                 'id' => 182,
                 'name' => 'MPO_Nationalization Info Deleted_list',
@@ -1229,7 +1174,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-10 09:48:59',
                 'deleted_at' => NULL,
             ),
-            110 => 
+            105 => 
             array (
                 'id' => 183,
                 'name' => 'MPO_Nationalization Info Restore',
@@ -1240,7 +1185,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-10 09:48:59',
                 'deleted_at' => NULL,
             ),
-            111 => 
+            106 => 
             array (
                 'id' => 184,
                 'name' => 'MPO_Nationalization Info Permanent_delete',
@@ -1251,7 +1196,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-10 09:48:59',
                 'deleted_at' => NULL,
             ),
-            112 => 
+            107 => 
             array (
                 'id' => 199,
                 'name' => 'Student Attendance Information List',
@@ -1262,7 +1207,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-14 11:47:58',
                 'deleted_at' => NULL,
             ),
-            113 => 
+            108 => 
             array (
                 'id' => 200,
                 'name' => 'Student Attendance Information Create',
@@ -1273,7 +1218,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-14 11:47:58',
                 'deleted_at' => NULL,
             ),
-            114 => 
+            109 => 
             array (
                 'id' => 201,
                 'name' => 'Student Attendance Information Edit',
@@ -1284,7 +1229,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-14 11:47:58',
                 'deleted_at' => NULL,
             ),
-            115 => 
+            110 => 
             array (
                 'id' => 202,
                 'name' => 'Student Attendance Information Delete',
@@ -1295,7 +1240,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-14 11:47:58',
                 'deleted_at' => NULL,
             ),
-            116 => 
+            111 => 
             array (
                 'id' => 203,
                 'name' => 'Student Attendance Information View',
@@ -1306,7 +1251,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-14 11:47:58',
                 'deleted_at' => NULL,
             ),
-            117 => 
+            112 => 
             array (
                 'id' => 204,
                 'name' => 'Student Attendance Information Print',
@@ -1317,7 +1262,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-14 11:47:58',
                 'deleted_at' => NULL,
             ),
-            118 => 
+            113 => 
             array (
                 'id' => 205,
                 'name' => 'Student Attendance Information Edit_history',
@@ -1328,7 +1273,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-14 11:47:58',
                 'deleted_at' => NULL,
             ),
-            119 => 
+            114 => 
             array (
                 'id' => 206,
                 'name' => 'Student Attendance Information Deleted_list',
@@ -1339,7 +1284,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-14 11:47:58',
                 'deleted_at' => NULL,
             ),
-            120 => 
+            115 => 
             array (
                 'id' => 207,
                 'name' => 'Student Attendance Information Restore',
@@ -1350,7 +1295,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-14 11:47:58',
                 'deleted_at' => NULL,
             ),
-            121 => 
+            116 => 
             array (
                 'id' => 208,
                 'name' => 'Student Attendance Information Permanent_delete',
@@ -1361,7 +1306,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-14 11:47:58',
                 'deleted_at' => NULL,
             ),
-            122 => 
+            117 => 
             array (
                 'id' => 209,
                 'name' => 'Gender Wise Student List List',
@@ -1372,7 +1317,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-19 17:48:54',
                 'deleted_at' => NULL,
             ),
-            123 => 
+            118 => 
             array (
                 'id' => 210,
                 'name' => 'Gender Wise Student List Create',
@@ -1383,7 +1328,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-19 17:48:54',
                 'deleted_at' => NULL,
             ),
-            124 => 
+            119 => 
             array (
                 'id' => 211,
                 'name' => 'Gender Wise Student List Edit',
@@ -1394,7 +1339,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-19 17:48:54',
                 'deleted_at' => NULL,
             ),
-            125 => 
+            120 => 
             array (
                 'id' => 212,
                 'name' => 'Gender Wise Student List Delete',
@@ -1405,7 +1350,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-19 17:48:54',
                 'deleted_at' => NULL,
             ),
-            126 => 
+            121 => 
             array (
                 'id' => 213,
                 'name' => 'Gender Wise Student List View',
@@ -1416,7 +1361,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-19 17:48:54',
                 'deleted_at' => NULL,
             ),
-            127 => 
+            122 => 
             array (
                 'id' => 214,
                 'name' => 'Gender Wise Student List Print',
@@ -1427,7 +1372,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-19 17:48:54',
                 'deleted_at' => NULL,
             ),
-            128 => 
+            123 => 
             array (
                 'id' => 215,
                 'name' => 'Gender Wise Student List Edit_history',
@@ -1438,7 +1383,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-19 17:48:54',
                 'deleted_at' => NULL,
             ),
-            129 => 
+            124 => 
             array (
                 'id' => 216,
                 'name' => 'Gender Wise Student List Deleted_list',
@@ -1449,7 +1394,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-19 17:48:54',
                 'deleted_at' => NULL,
             ),
-            130 => 
+            125 => 
             array (
                 'id' => 217,
                 'name' => 'Gender Wise Student List Restore',
@@ -1460,7 +1405,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-19 17:48:54',
                 'deleted_at' => NULL,
             ),
-            131 => 
+            126 => 
             array (
                 'id' => 218,
                 'name' => 'Gender Wise Student List Permanent_delete',
@@ -1471,7 +1416,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-19 17:48:54',
                 'deleted_at' => NULL,
             ),
-            132 => 
+            127 => 
             array (
                 'id' => 219,
                 'name' => 'Section Wise Student List List',
@@ -1482,7 +1427,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-19 17:59:47',
                 'deleted_at' => NULL,
             ),
-            133 => 
+            128 => 
             array (
                 'id' => 220,
                 'name' => 'Section Wise Student List Create',
@@ -1493,7 +1438,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-19 17:59:47',
                 'deleted_at' => NULL,
             ),
-            134 => 
+            129 => 
             array (
                 'id' => 221,
                 'name' => 'Section Wise Student List Edit',
@@ -1504,7 +1449,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-19 17:59:47',
                 'deleted_at' => NULL,
             ),
-            135 => 
+            130 => 
             array (
                 'id' => 222,
                 'name' => 'Section Wise Student List Delete',
@@ -1515,7 +1460,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-19 17:59:47',
                 'deleted_at' => NULL,
             ),
-            136 => 
+            131 => 
             array (
                 'id' => 223,
                 'name' => 'Section Wise Student List View',
@@ -1526,7 +1471,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-19 17:59:47',
                 'deleted_at' => NULL,
             ),
-            137 => 
+            132 => 
             array (
                 'id' => 224,
                 'name' => 'Section Wise Student List Print',
@@ -1537,7 +1482,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-19 17:59:47',
                 'deleted_at' => NULL,
             ),
-            138 => 
+            133 => 
             array (
                 'id' => 225,
                 'name' => 'Section Wise Student List Edit_history',
@@ -1548,7 +1493,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-19 17:59:47',
                 'deleted_at' => NULL,
             ),
-            139 => 
+            134 => 
             array (
                 'id' => 226,
                 'name' => 'Section Wise Student List Deleted_list',
@@ -1559,7 +1504,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-19 17:59:47',
                 'deleted_at' => NULL,
             ),
-            140 => 
+            135 => 
             array (
                 'id' => 227,
                 'name' => 'Section Wise Student List Restore',
@@ -1570,7 +1515,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-19 17:59:47',
                 'deleted_at' => NULL,
             ),
-            141 => 
+            136 => 
             array (
                 'id' => 228,
                 'name' => 'Section Wise Student List Permanent_delete',
@@ -1581,7 +1526,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-19 17:59:47',
                 'deleted_at' => NULL,
             ),
-            142 => 
+            137 => 
             array (
                 'id' => 229,
                 'name' => 'Class Wise Student Information List',
@@ -1592,7 +1537,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-21 07:28:43',
                 'deleted_at' => NULL,
             ),
-            143 => 
+            138 => 
             array (
                 'id' => 230,
                 'name' => 'Class Wise Student Information Create',
@@ -1603,7 +1548,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-21 07:28:43',
                 'deleted_at' => NULL,
             ),
-            144 => 
+            139 => 
             array (
                 'id' => 231,
                 'name' => 'Class Wise Student Information Edit',
@@ -1614,7 +1559,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-21 07:28:43',
                 'deleted_at' => NULL,
             ),
-            145 => 
+            140 => 
             array (
                 'id' => 232,
                 'name' => 'Class Wise Student Information Delete',
@@ -1625,7 +1570,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-21 07:28:43',
                 'deleted_at' => NULL,
             ),
-            146 => 
+            141 => 
             array (
                 'id' => 233,
                 'name' => 'Class Wise Student Information View',
@@ -1636,7 +1581,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-21 07:28:43',
                 'deleted_at' => NULL,
             ),
-            147 => 
+            142 => 
             array (
                 'id' => 234,
                 'name' => 'Class Wise Student Information Print',
@@ -1647,7 +1592,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-21 07:28:43',
                 'deleted_at' => NULL,
             ),
-            148 => 
+            143 => 
             array (
                 'id' => 235,
                 'name' => 'Class Wise Student Information Edit_history',
@@ -1658,7 +1603,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-21 07:28:43',
                 'deleted_at' => NULL,
             ),
-            149 => 
+            144 => 
             array (
                 'id' => 236,
                 'name' => 'Class Wise Student Information Deleted_list',
@@ -1669,7 +1614,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-21 07:28:43',
                 'deleted_at' => NULL,
             ),
-            150 => 
+            145 => 
             array (
                 'id' => 237,
                 'name' => 'Class Wise Student Information Restore',
@@ -1680,7 +1625,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-21 07:28:43',
                 'deleted_at' => NULL,
             ),
-            151 => 
+            146 => 
             array (
                 'id' => 238,
                 'name' => 'Class Wise Student Information Permanent_delete',
@@ -1691,7 +1636,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-21 07:28:43',
                 'deleted_at' => NULL,
             ),
-            152 => 
+            147 => 
             array (
                 'id' => 240,
                 'name' => 'Backup List',
@@ -1702,7 +1647,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-23 09:56:24',
                 'deleted_at' => NULL,
             ),
-            153 => 
+            148 => 
             array (
                 'id' => 241,
                 'name' => 'Backup Create',
@@ -1713,7 +1658,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-23 09:56:24',
                 'deleted_at' => NULL,
             ),
-            154 => 
+            149 => 
             array (
                 'id' => 242,
                 'name' => 'Backup View',
@@ -1724,7 +1669,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-09-23 09:56:24',
                 'deleted_at' => NULL,
             ),
-            155 => 
+            150 => 
             array (
                 'id' => 243,
                 'name' => 'Notices List',
@@ -1735,7 +1680,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-10-04 05:33:50',
                 'deleted_at' => NULL,
             ),
-            156 => 
+            151 => 
             array (
                 'id' => 244,
                 'name' => 'Notices Create',
@@ -1746,7 +1691,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-10-04 05:33:50',
                 'deleted_at' => NULL,
             ),
-            157 => 
+            152 => 
             array (
                 'id' => 245,
                 'name' => 'Notices Edit',
@@ -1757,7 +1702,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-10-04 05:33:50',
                 'deleted_at' => NULL,
             ),
-            158 => 
+            153 => 
             array (
                 'id' => 246,
                 'name' => 'Notices Delete',
@@ -1768,7 +1713,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-10-04 05:33:50',
                 'deleted_at' => NULL,
             ),
-            159 => 
+            154 => 
             array (
                 'id' => 247,
                 'name' => 'Notices View',
@@ -1779,7 +1724,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-10-04 05:33:50',
                 'deleted_at' => NULL,
             ),
-            160 => 
+            155 => 
             array (
                 'id' => 248,
                 'name' => 'Notices Print',
@@ -1790,7 +1735,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-10-04 05:33:50',
                 'deleted_at' => NULL,
             ),
-            161 => 
+            156 => 
             array (
                 'id' => 249,
                 'name' => 'Notices Edit_history',
@@ -1801,7 +1746,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-10-04 05:33:50',
                 'deleted_at' => NULL,
             ),
-            162 => 
+            157 => 
             array (
                 'id' => 250,
                 'name' => 'Notices Deleted_list',
@@ -1812,7 +1757,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-10-04 05:33:50',
                 'deleted_at' => NULL,
             ),
-            163 => 
+            158 => 
             array (
                 'id' => 251,
                 'name' => 'Notices Restore',
@@ -1823,7 +1768,7 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-10-04 05:33:50',
                 'deleted_at' => NULL,
             ),
-            164 => 
+            159 => 
             array (
                 'id' => 252,
                 'name' => 'Notices Permanent_delete',
@@ -1832,6 +1777,1744 @@ class PermissionsTableSeeder extends Seeder
                 'status' => 1,
                 'created_at' => '2023-10-04 05:33:50',
                 'updated_at' => '2023-10-04 05:33:50',
+                'deleted_at' => NULL,
+            ),
+            160 => 
+            array (
+                'id' => 259,
+                'name' => 'About Department Edit_history',
+                'parent' => 'About Department',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-30 04:43:24',
+                'updated_at' => '2023-12-30 04:43:24',
+                'deleted_at' => NULL,
+            ),
+            161 => 
+            array (
+                'id' => 260,
+                'name' => 'About Department Deleted_list',
+                'parent' => 'About Department',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-30 04:43:24',
+                'updated_at' => '2023-12-30 04:43:24',
+                'deleted_at' => NULL,
+            ),
+            162 => 
+            array (
+                'id' => 262,
+                'name' => 'About Department Permanent_delete',
+                'parent' => 'About Department',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-30 04:43:24',
+                'updated_at' => '2023-12-30 04:43:24',
+                'deleted_at' => NULL,
+            ),
+            163 => 
+            array (
+                'id' => 263,
+                'name' => 'Shop Information List',
+                'parent' => 'Shop Information',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-31 06:21:09',
+                'updated_at' => '2023-12-31 06:21:09',
+                'deleted_at' => NULL,
+            ),
+            164 => 
+            array (
+                'id' => 264,
+                'name' => 'Shop Information Create',
+                'parent' => 'Shop Information',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-31 06:21:09',
+                'updated_at' => '2023-12-31 06:21:09',
+                'deleted_at' => NULL,
+            ),
+            165 => 
+            array (
+                'id' => 265,
+                'name' => 'Shop Information Edit',
+                'parent' => 'Shop Information',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-31 06:21:09',
+                'updated_at' => '2023-12-31 06:21:09',
+                'deleted_at' => NULL,
+            ),
+            166 => 
+            array (
+                'id' => 266,
+                'name' => 'Shop Information Delete',
+                'parent' => 'Shop Information',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-31 06:21:09',
+                'updated_at' => '2023-12-31 06:21:09',
+                'deleted_at' => NULL,
+            ),
+            167 => 
+            array (
+                'id' => 267,
+                'name' => 'Shop Information View',
+                'parent' => 'Shop Information',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-31 06:21:09',
+                'updated_at' => '2023-12-31 06:21:09',
+                'deleted_at' => NULL,
+            ),
+            168 => 
+            array (
+                'id' => 268,
+                'name' => 'Shop Information Print',
+                'parent' => 'Shop Information',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-31 06:21:09',
+                'updated_at' => '2023-12-31 06:21:09',
+                'deleted_at' => NULL,
+            ),
+            169 => 
+            array (
+                'id' => 269,
+                'name' => 'Shop Information Edit_history',
+                'parent' => 'Shop Information',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-31 06:21:09',
+                'updated_at' => '2023-12-31 06:21:09',
+                'deleted_at' => NULL,
+            ),
+            170 => 
+            array (
+                'id' => 270,
+                'name' => 'Shop Information Deleted_list',
+                'parent' => 'Shop Information',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-31 06:21:09',
+                'updated_at' => '2023-12-31 06:21:09',
+                'deleted_at' => NULL,
+            ),
+            171 => 
+            array (
+                'id' => 271,
+                'name' => 'Shop Information Restore',
+                'parent' => 'Shop Information',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-31 06:21:09',
+                'updated_at' => '2023-12-31 06:21:09',
+                'deleted_at' => NULL,
+            ),
+            172 => 
+            array (
+                'id' => 272,
+                'name' => 'Shop Information Permanent_delete',
+                'parent' => 'Shop Information',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-31 06:21:09',
+                'updated_at' => '2023-12-31 06:21:09',
+                'deleted_at' => NULL,
+            ),
+            173 => 
+            array (
+                'id' => 273,
+                'name' => 'Semester List',
+                'parent' => 'Semester',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-31 06:44:44',
+                'updated_at' => '2023-12-31 06:44:44',
+                'deleted_at' => NULL,
+            ),
+            174 => 
+            array (
+                'id' => 274,
+                'name' => 'Semester Create',
+                'parent' => 'Semester',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-31 06:44:44',
+                'updated_at' => '2023-12-31 06:44:44',
+                'deleted_at' => NULL,
+            ),
+            175 => 
+            array (
+                'id' => 275,
+                'name' => 'Semester Edit',
+                'parent' => 'Semester',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-31 06:44:44',
+                'updated_at' => '2023-12-31 06:44:44',
+                'deleted_at' => NULL,
+            ),
+            176 => 
+            array (
+                'id' => 276,
+                'name' => 'Semester Delete',
+                'parent' => 'Semester',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-31 06:44:44',
+                'updated_at' => '2023-12-31 06:44:44',
+                'deleted_at' => NULL,
+            ),
+            177 => 
+            array (
+                'id' => 277,
+                'name' => 'Semester View',
+                'parent' => 'Semester',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-31 06:44:44',
+                'updated_at' => '2023-12-31 06:44:44',
+                'deleted_at' => NULL,
+            ),
+            178 => 
+            array (
+                'id' => 278,
+                'name' => 'Semester Print',
+                'parent' => 'Semester',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-31 06:44:44',
+                'updated_at' => '2023-12-31 06:44:44',
+                'deleted_at' => NULL,
+            ),
+            179 => 
+            array (
+                'id' => 279,
+                'name' => 'Semester Edit_history',
+                'parent' => 'Semester',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-31 06:44:44',
+                'updated_at' => '2023-12-31 06:44:44',
+                'deleted_at' => NULL,
+            ),
+            180 => 
+            array (
+                'id' => 280,
+                'name' => 'Semester Deleted_list',
+                'parent' => 'Semester',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-31 06:44:44',
+                'updated_at' => '2023-12-31 06:44:44',
+                'deleted_at' => NULL,
+            ),
+            181 => 
+            array (
+                'id' => 281,
+                'name' => 'Semester Restore',
+                'parent' => 'Semester',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-31 06:44:44',
+                'updated_at' => '2023-12-31 06:44:44',
+                'deleted_at' => NULL,
+            ),
+            182 => 
+            array (
+                'id' => 282,
+                'name' => 'Semester Permanent_delete',
+                'parent' => 'Semester',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-31 06:44:44',
+                'updated_at' => '2023-12-31 06:44:44',
+                'deleted_at' => NULL,
+            ),
+            183 => 
+            array (
+                'id' => 283,
+                'name' => 'About Department List',
+                'parent' => 'About Department',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-31 11:19:14',
+                'updated_at' => '2023-12-31 11:19:14',
+                'deleted_at' => NULL,
+            ),
+            184 => 
+            array (
+                'id' => 284,
+                'name' => 'About Department Create',
+                'parent' => 'About Department',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-31 11:19:14',
+                'updated_at' => '2023-12-31 11:19:14',
+                'deleted_at' => NULL,
+            ),
+            185 => 
+            array (
+                'id' => 285,
+                'name' => 'About Department Edit',
+                'parent' => 'About Department',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-31 11:19:15',
+                'updated_at' => '2023-12-31 11:19:15',
+                'deleted_at' => NULL,
+            ),
+            186 => 
+            array (
+                'id' => 286,
+                'name' => 'About Department Delete',
+                'parent' => 'About Department',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-31 11:19:15',
+                'updated_at' => '2023-12-31 11:19:15',
+                'deleted_at' => NULL,
+            ),
+            187 => 
+            array (
+                'id' => 287,
+                'name' => 'About Department View',
+                'parent' => 'About Department',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-31 11:19:15',
+                'updated_at' => '2023-12-31 11:19:15',
+                'deleted_at' => NULL,
+            ),
+            188 => 
+            array (
+                'id' => 288,
+                'name' => 'About Department Print',
+                'parent' => 'About Department',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-12-31 11:19:15',
+                'updated_at' => '2023-12-31 11:19:15',
+                'deleted_at' => NULL,
+            ),
+            189 => 
+            array (
+                'id' => 290,
+                'name' => 'Online Class Routine List',
+                'parent' => 'Online Class Routine',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 07:22:53',
+                'updated_at' => '2024-01-08 07:22:53',
+                'deleted_at' => NULL,
+            ),
+            190 => 
+            array (
+                'id' => 291,
+                'name' => 'Online Class Routine Create',
+                'parent' => 'Online Class Routine',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 07:22:53',
+                'updated_at' => '2024-01-08 07:22:53',
+                'deleted_at' => NULL,
+            ),
+            191 => 
+            array (
+                'id' => 292,
+                'name' => 'Online Class Routine Edit',
+                'parent' => 'Online Class Routine',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 07:22:53',
+                'updated_at' => '2024-01-08 07:22:53',
+                'deleted_at' => NULL,
+            ),
+            192 => 
+            array (
+                'id' => 293,
+                'name' => 'Online Class Routine Delete',
+                'parent' => 'Online Class Routine',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 07:22:53',
+                'updated_at' => '2024-01-08 07:22:53',
+                'deleted_at' => NULL,
+            ),
+            193 => 
+            array (
+                'id' => 294,
+                'name' => 'Online Class Routine View',
+                'parent' => 'Online Class Routine',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 07:22:53',
+                'updated_at' => '2024-01-08 07:22:53',
+                'deleted_at' => NULL,
+            ),
+            194 => 
+            array (
+                'id' => 295,
+                'name' => 'Online Class Routine Print',
+                'parent' => 'Online Class Routine',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 07:22:53',
+                'updated_at' => '2024-01-08 07:22:53',
+                'deleted_at' => NULL,
+            ),
+            195 => 
+            array (
+                'id' => 296,
+                'name' => 'Online Class Routine Edit_history',
+                'parent' => 'Online Class Routine',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 07:22:53',
+                'updated_at' => '2024-01-08 07:22:53',
+                'deleted_at' => NULL,
+            ),
+            196 => 
+            array (
+                'id' => 297,
+                'name' => 'Online Class Routine Deleted_list',
+                'parent' => 'Online Class Routine',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 07:22:53',
+                'updated_at' => '2024-01-08 07:22:53',
+                'deleted_at' => NULL,
+            ),
+            197 => 
+            array (
+                'id' => 298,
+                'name' => 'Online Class Routine Restore',
+                'parent' => 'Online Class Routine',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 07:22:53',
+                'updated_at' => '2024-01-08 07:22:53',
+                'deleted_at' => NULL,
+            ),
+            198 => 
+            array (
+                'id' => 299,
+                'name' => 'Online Class Routine Permanent_delete',
+                'parent' => 'Online Class Routine',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 07:22:53',
+                'updated_at' => '2024-01-08 07:22:53',
+                'deleted_at' => NULL,
+            ),
+            199 => 
+            array (
+                'id' => 300,
+                'name' => 'Digital Class Content List',
+                'parent' => 'Digital Class Content',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 10:32:31',
+                'updated_at' => '2024-01-08 10:32:31',
+                'deleted_at' => NULL,
+            ),
+            200 => 
+            array (
+                'id' => 301,
+                'name' => 'Digital Class Content Create',
+                'parent' => 'Digital Class Content',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 10:32:31',
+                'updated_at' => '2024-01-08 10:32:31',
+                'deleted_at' => NULL,
+            ),
+            201 => 
+            array (
+                'id' => 302,
+                'name' => 'Digital Class Content Edit',
+                'parent' => 'Digital Class Content',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 10:32:31',
+                'updated_at' => '2024-01-08 10:32:31',
+                'deleted_at' => NULL,
+            ),
+            202 => 
+            array (
+                'id' => 303,
+                'name' => 'Digital Class Content Delete',
+                'parent' => 'Digital Class Content',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 10:32:31',
+                'updated_at' => '2024-01-08 10:32:31',
+                'deleted_at' => NULL,
+            ),
+            203 => 
+            array (
+                'id' => 304,
+                'name' => 'Digital Class Content View',
+                'parent' => 'Digital Class Content',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 10:32:31',
+                'updated_at' => '2024-01-08 10:32:31',
+                'deleted_at' => NULL,
+            ),
+            204 => 
+            array (
+                'id' => 305,
+                'name' => 'Digital Class Content Print',
+                'parent' => 'Digital Class Content',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 10:32:31',
+                'updated_at' => '2024-01-08 10:32:31',
+                'deleted_at' => NULL,
+            ),
+            205 => 
+            array (
+                'id' => 306,
+                'name' => 'Digital Class Content Edit_history',
+                'parent' => 'Digital Class Content',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 10:32:31',
+                'updated_at' => '2024-01-08 10:32:31',
+                'deleted_at' => NULL,
+            ),
+            206 => 
+            array (
+                'id' => 307,
+                'name' => 'Digital Class Content Deleted_list',
+                'parent' => 'Digital Class Content',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 10:32:31',
+                'updated_at' => '2024-01-08 10:32:31',
+                'deleted_at' => NULL,
+            ),
+            207 => 
+            array (
+                'id' => 308,
+                'name' => 'Digital Class Content Restore',
+                'parent' => 'Digital Class Content',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 10:32:31',
+                'updated_at' => '2024-01-08 10:32:31',
+                'deleted_at' => NULL,
+            ),
+            208 => 
+            array (
+                'id' => 309,
+                'name' => 'Digital Class Content Permanent_delete',
+                'parent' => 'Digital Class Content',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 10:32:31',
+                'updated_at' => '2024-01-08 10:32:31',
+                'deleted_at' => NULL,
+            ),
+            209 => 
+            array (
+                'id' => 310,
+                'name' => 'Student Project List',
+                'parent' => 'Student Project',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 18:58:19',
+                'updated_at' => '2024-01-08 18:58:19',
+                'deleted_at' => NULL,
+            ),
+            210 => 
+            array (
+                'id' => 311,
+                'name' => 'Student Project Create',
+                'parent' => 'Student Project',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 18:58:19',
+                'updated_at' => '2024-01-08 18:58:19',
+                'deleted_at' => NULL,
+            ),
+            211 => 
+            array (
+                'id' => 312,
+                'name' => 'Student Project Edit',
+                'parent' => 'Student Project',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 18:58:19',
+                'updated_at' => '2024-01-08 18:58:19',
+                'deleted_at' => NULL,
+            ),
+            212 => 
+            array (
+                'id' => 313,
+                'name' => 'Student Project Delete',
+                'parent' => 'Student Project',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 18:58:19',
+                'updated_at' => '2024-01-08 18:58:19',
+                'deleted_at' => NULL,
+            ),
+            213 => 
+            array (
+                'id' => 314,
+                'name' => 'Student Project View',
+                'parent' => 'Student Project',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 18:58:19',
+                'updated_at' => '2024-01-08 18:58:19',
+                'deleted_at' => NULL,
+            ),
+            214 => 
+            array (
+                'id' => 315,
+                'name' => 'Student Project Print',
+                'parent' => 'Student Project',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 18:58:19',
+                'updated_at' => '2024-01-08 18:58:19',
+                'deleted_at' => NULL,
+            ),
+            215 => 
+            array (
+                'id' => 316,
+                'name' => 'Student Project Edit_history',
+                'parent' => 'Student Project',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 18:58:19',
+                'updated_at' => '2024-01-08 18:58:19',
+                'deleted_at' => NULL,
+            ),
+            216 => 
+            array (
+                'id' => 317,
+                'name' => 'Student Project Deleted_list',
+                'parent' => 'Student Project',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 18:58:19',
+                'updated_at' => '2024-01-08 18:58:19',
+                'deleted_at' => NULL,
+            ),
+            217 => 
+            array (
+                'id' => 318,
+                'name' => 'Student Project Restore',
+                'parent' => 'Student Project',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 18:58:19',
+                'updated_at' => '2024-01-08 18:58:19',
+                'deleted_at' => NULL,
+            ),
+            218 => 
+            array (
+                'id' => 319,
+                'name' => 'Student Project Permanent_delete',
+                'parent' => 'Student Project',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-08 18:58:19',
+                'updated_at' => '2024-01-08 18:58:19',
+                'deleted_at' => NULL,
+            ),
+            219 => 
+            array (
+                'id' => 320,
+                'name' => 'Probidhan List',
+                'parent' => 'Probidhan',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 05:15:20',
+                'updated_at' => '2024-01-09 05:15:20',
+                'deleted_at' => NULL,
+            ),
+            220 => 
+            array (
+                'id' => 321,
+                'name' => 'Probidhan Create',
+                'parent' => 'Probidhan',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 05:15:20',
+                'updated_at' => '2024-01-09 05:15:20',
+                'deleted_at' => NULL,
+            ),
+            221 => 
+            array (
+                'id' => 322,
+                'name' => 'Probidhan Edit',
+                'parent' => 'Probidhan',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 05:15:20',
+                'updated_at' => '2024-01-09 05:15:20',
+                'deleted_at' => NULL,
+            ),
+            222 => 
+            array (
+                'id' => 323,
+                'name' => 'Probidhan Delete',
+                'parent' => 'Probidhan',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 05:15:20',
+                'updated_at' => '2024-01-09 05:15:20',
+                'deleted_at' => NULL,
+            ),
+            223 => 
+            array (
+                'id' => 324,
+                'name' => 'Probidhan View',
+                'parent' => 'Probidhan',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 05:15:20',
+                'updated_at' => '2024-01-09 05:15:20',
+                'deleted_at' => NULL,
+            ),
+            224 => 
+            array (
+                'id' => 325,
+                'name' => 'Probidhan Print',
+                'parent' => 'Probidhan',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 05:15:20',
+                'updated_at' => '2024-01-09 05:15:20',
+                'deleted_at' => NULL,
+            ),
+            225 => 
+            array (
+                'id' => 326,
+                'name' => 'Probidhan Edit_history',
+                'parent' => 'Probidhan',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 05:15:20',
+                'updated_at' => '2024-01-09 05:15:20',
+                'deleted_at' => NULL,
+            ),
+            226 => 
+            array (
+                'id' => 327,
+                'name' => 'Probidhan Deleted_list',
+                'parent' => 'Probidhan',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 05:15:20',
+                'updated_at' => '2024-01-09 05:15:20',
+                'deleted_at' => NULL,
+            ),
+            227 => 
+            array (
+                'id' => 328,
+                'name' => 'Probidhan Restore',
+                'parent' => 'Probidhan',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 05:15:20',
+                'updated_at' => '2024-01-09 05:15:20',
+                'deleted_at' => NULL,
+            ),
+            228 => 
+            array (
+                'id' => 329,
+                'name' => 'Probidhan Permanent_delete',
+                'parent' => 'Probidhan',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 05:15:20',
+                'updated_at' => '2024-01-09 05:15:20',
+                'deleted_at' => NULL,
+            ),
+            229 => 
+            array (
+                'id' => 330,
+                'name' => 'Internal Exam Result List',
+                'parent' => 'Internal Exam Result',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 06:16:31',
+                'updated_at' => '2024-01-09 06:16:31',
+                'deleted_at' => NULL,
+            ),
+            230 => 
+            array (
+                'id' => 331,
+                'name' => 'Internal Exam Result Create',
+                'parent' => 'Internal Exam Result',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 06:16:31',
+                'updated_at' => '2024-01-09 06:16:31',
+                'deleted_at' => NULL,
+            ),
+            231 => 
+            array (
+                'id' => 332,
+                'name' => 'Internal Exam Result Edit',
+                'parent' => 'Internal Exam Result',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 06:16:31',
+                'updated_at' => '2024-01-09 06:16:31',
+                'deleted_at' => NULL,
+            ),
+            232 => 
+            array (
+                'id' => 333,
+                'name' => 'Internal Exam Result Delete',
+                'parent' => 'Internal Exam Result',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 06:16:31',
+                'updated_at' => '2024-01-09 06:16:31',
+                'deleted_at' => NULL,
+            ),
+            233 => 
+            array (
+                'id' => 334,
+                'name' => 'Internal Exam Result View',
+                'parent' => 'Internal Exam Result',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 06:16:31',
+                'updated_at' => '2024-01-09 06:16:31',
+                'deleted_at' => NULL,
+            ),
+            234 => 
+            array (
+                'id' => 335,
+                'name' => 'Internal Exam Result Print',
+                'parent' => 'Internal Exam Result',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 06:16:31',
+                'updated_at' => '2024-01-09 06:16:31',
+                'deleted_at' => NULL,
+            ),
+            235 => 
+            array (
+                'id' => 336,
+                'name' => 'Internal Exam Result Edit_history',
+                'parent' => 'Internal Exam Result',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 06:16:31',
+                'updated_at' => '2024-01-09 06:16:31',
+                'deleted_at' => NULL,
+            ),
+            236 => 
+            array (
+                'id' => 337,
+                'name' => 'Internal Exam Result Deleted_list',
+                'parent' => 'Internal Exam Result',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 06:16:31',
+                'updated_at' => '2024-01-09 06:16:31',
+                'deleted_at' => NULL,
+            ),
+            237 => 
+            array (
+                'id' => 338,
+                'name' => 'Internal Exam Result Restore',
+                'parent' => 'Internal Exam Result',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 06:16:31',
+                'updated_at' => '2024-01-09 06:16:31',
+                'deleted_at' => NULL,
+            ),
+            238 => 
+            array (
+                'id' => 339,
+                'name' => 'Internal Exam Result Permanent_delete',
+                'parent' => 'Internal Exam Result',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 06:16:31',
+                'updated_at' => '2024-01-09 06:16:31',
+                'deleted_at' => NULL,
+            ),
+            239 => 
+            array (
+                'id' => 340,
+                'name' => 'Employment Information List',
+                'parent' => 'Employment Information',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 10:58:31',
+                'updated_at' => '2024-01-09 10:58:31',
+                'deleted_at' => NULL,
+            ),
+            240 => 
+            array (
+                'id' => 341,
+                'name' => 'Employment Information Create',
+                'parent' => 'Employment Information',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 10:58:31',
+                'updated_at' => '2024-01-09 10:58:31',
+                'deleted_at' => NULL,
+            ),
+            241 => 
+            array (
+                'id' => 342,
+                'name' => 'Employment Information Edit',
+                'parent' => 'Employment Information',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 10:58:31',
+                'updated_at' => '2024-01-09 10:58:31',
+                'deleted_at' => NULL,
+            ),
+            242 => 
+            array (
+                'id' => 343,
+                'name' => 'Employment Information Delete',
+                'parent' => 'Employment Information',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 10:58:31',
+                'updated_at' => '2024-01-09 10:58:31',
+                'deleted_at' => NULL,
+            ),
+            243 => 
+            array (
+                'id' => 344,
+                'name' => 'Employment Information View',
+                'parent' => 'Employment Information',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 10:58:31',
+                'updated_at' => '2024-01-09 10:58:31',
+                'deleted_at' => NULL,
+            ),
+            244 => 
+            array (
+                'id' => 345,
+                'name' => 'Employment Information Print',
+                'parent' => 'Employment Information',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 10:58:31',
+                'updated_at' => '2024-01-09 10:58:31',
+                'deleted_at' => NULL,
+            ),
+            245 => 
+            array (
+                'id' => 346,
+                'name' => 'Employment Information Edit_history',
+                'parent' => 'Employment Information',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 10:58:31',
+                'updated_at' => '2024-01-09 10:58:31',
+                'deleted_at' => NULL,
+            ),
+            246 => 
+            array (
+                'id' => 347,
+                'name' => 'Employment Information Deleted_list',
+                'parent' => 'Employment Information',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 10:58:31',
+                'updated_at' => '2024-01-09 10:58:31',
+                'deleted_at' => NULL,
+            ),
+            247 => 
+            array (
+                'id' => 348,
+                'name' => 'Employment Information Restore',
+                'parent' => 'Employment Information',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 10:58:31',
+                'updated_at' => '2024-01-09 10:58:31',
+                'deleted_at' => NULL,
+            ),
+            248 => 
+            array (
+                'id' => 349,
+                'name' => 'Employment Information Permanent_delete',
+                'parent' => 'Employment Information',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 10:58:31',
+                'updated_at' => '2024-01-09 10:58:31',
+                'deleted_at' => NULL,
+            ),
+            249 => 
+            array (
+                'id' => 350,
+                'name' => 'Recruitment Notices List',
+                'parent' => 'Recruitment Notices',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 11:52:50',
+                'updated_at' => '2024-01-09 11:52:50',
+                'deleted_at' => NULL,
+            ),
+            250 => 
+            array (
+                'id' => 351,
+                'name' => 'Recruitment Notices Create',
+                'parent' => 'Recruitment Notices',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 11:52:50',
+                'updated_at' => '2024-01-09 11:52:50',
+                'deleted_at' => NULL,
+            ),
+            251 => 
+            array (
+                'id' => 352,
+                'name' => 'Recruitment Notices Edit',
+                'parent' => 'Recruitment Notices',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 11:52:50',
+                'updated_at' => '2024-01-09 11:52:50',
+                'deleted_at' => NULL,
+            ),
+            252 => 
+            array (
+                'id' => 353,
+                'name' => 'Recruitment Notices Delete',
+                'parent' => 'Recruitment Notices',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 11:52:50',
+                'updated_at' => '2024-01-09 11:52:50',
+                'deleted_at' => NULL,
+            ),
+            253 => 
+            array (
+                'id' => 354,
+                'name' => 'Recruitment Notices Print',
+                'parent' => 'Recruitment Notices',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 11:52:50',
+                'updated_at' => '2024-01-09 11:52:50',
+                'deleted_at' => NULL,
+            ),
+            254 => 
+            array (
+                'id' => 355,
+                'name' => 'Recruitment Notices Edit_history',
+                'parent' => 'Recruitment Notices',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 11:52:50',
+                'updated_at' => '2024-01-09 11:52:50',
+                'deleted_at' => NULL,
+            ),
+            255 => 
+            array (
+                'id' => 356,
+                'name' => 'Recruitment Notices Deleted_list',
+                'parent' => 'Recruitment Notices',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 11:52:50',
+                'updated_at' => '2024-01-09 11:52:50',
+                'deleted_at' => NULL,
+            ),
+            256 => 
+            array (
+                'id' => 357,
+                'name' => 'Recruitment Notices Restore',
+                'parent' => 'Recruitment Notices',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 11:52:50',
+                'updated_at' => '2024-01-09 11:52:50',
+                'deleted_at' => NULL,
+            ),
+            257 => 
+            array (
+                'id' => 358,
+                'name' => 'Recruitment Notices Permanent_delete',
+                'parent' => 'Recruitment Notices',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-09 11:52:50',
+                'updated_at' => '2024-01-09 11:52:50',
+                'deleted_at' => NULL,
+            ),
+            258 => 
+            array (
+                'id' => 359,
+                'name' => 'Old Student Success List',
+                'parent' => 'Old Student Success',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 05:10:13',
+                'updated_at' => '2024-01-10 05:10:13',
+                'deleted_at' => NULL,
+            ),
+            259 => 
+            array (
+                'id' => 360,
+                'name' => 'Old Student Success Create',
+                'parent' => 'Old Student Success',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 05:10:13',
+                'updated_at' => '2024-01-10 05:10:13',
+                'deleted_at' => NULL,
+            ),
+            260 => 
+            array (
+                'id' => 361,
+                'name' => 'Old Student Success Edit',
+                'parent' => 'Old Student Success',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 05:10:13',
+                'updated_at' => '2024-01-10 05:10:13',
+                'deleted_at' => NULL,
+            ),
+            261 => 
+            array (
+                'id' => 362,
+                'name' => 'Old Student Success Delete',
+                'parent' => 'Old Student Success',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 05:10:13',
+                'updated_at' => '2024-01-10 05:10:13',
+                'deleted_at' => NULL,
+            ),
+            262 => 
+            array (
+                'id' => 363,
+                'name' => 'Old Student Success View',
+                'parent' => 'Old Student Success',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 05:10:13',
+                'updated_at' => '2024-01-10 05:10:13',
+                'deleted_at' => NULL,
+            ),
+            263 => 
+            array (
+                'id' => 364,
+                'name' => 'Old Student Success Print',
+                'parent' => 'Old Student Success',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 05:10:13',
+                'updated_at' => '2024-01-10 05:10:13',
+                'deleted_at' => NULL,
+            ),
+            264 => 
+            array (
+                'id' => 365,
+                'name' => 'Old Student Success Edit_history',
+                'parent' => 'Old Student Success',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 05:10:13',
+                'updated_at' => '2024-01-10 05:10:13',
+                'deleted_at' => NULL,
+            ),
+            265 => 
+            array (
+                'id' => 366,
+                'name' => 'Old Student Success Deleted_list',
+                'parent' => 'Old Student Success',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 05:10:13',
+                'updated_at' => '2024-01-10 05:10:13',
+                'deleted_at' => NULL,
+            ),
+            266 => 
+            array (
+                'id' => 367,
+                'name' => 'Old Student Success Restore',
+                'parent' => 'Old Student Success',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 05:10:13',
+                'updated_at' => '2024-01-10 05:10:13',
+                'deleted_at' => NULL,
+            ),
+            267 => 
+            array (
+                'id' => 368,
+                'name' => 'Old Student Success Permanent_delete',
+                'parent' => 'Old Student Success',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 05:10:13',
+                'updated_at' => '2024-01-10 05:10:13',
+                'deleted_at' => NULL,
+            ),
+            268 => 
+            array (
+                'id' => 369,
+                'name' => 'Agreements List',
+                'parent' => 'Agreements',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 06:02:06',
+                'updated_at' => '2024-01-10 06:02:06',
+                'deleted_at' => NULL,
+            ),
+            269 => 
+            array (
+                'id' => 370,
+                'name' => 'Agreements Create',
+                'parent' => 'Agreements',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 06:02:06',
+                'updated_at' => '2024-01-10 06:02:06',
+                'deleted_at' => NULL,
+            ),
+            270 => 
+            array (
+                'id' => 371,
+                'name' => 'Agreements Edit',
+                'parent' => 'Agreements',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 06:02:06',
+                'updated_at' => '2024-01-10 06:02:06',
+                'deleted_at' => NULL,
+            ),
+            271 => 
+            array (
+                'id' => 372,
+                'name' => 'Agreements Delete',
+                'parent' => 'Agreements',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 06:02:06',
+                'updated_at' => '2024-01-10 06:02:06',
+                'deleted_at' => NULL,
+            ),
+            272 => 
+            array (
+                'id' => 373,
+                'name' => 'Agreements View',
+                'parent' => 'Agreements',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 06:02:06',
+                'updated_at' => '2024-01-10 06:02:06',
+                'deleted_at' => NULL,
+            ),
+            273 => 
+            array (
+                'id' => 374,
+                'name' => 'Agreements Print',
+                'parent' => 'Agreements',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 06:02:06',
+                'updated_at' => '2024-01-10 06:02:06',
+                'deleted_at' => NULL,
+            ),
+            274 => 
+            array (
+                'id' => 375,
+                'name' => 'Agreements Edit_history',
+                'parent' => 'Agreements',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 06:02:06',
+                'updated_at' => '2024-01-10 06:02:06',
+                'deleted_at' => NULL,
+            ),
+            275 => 
+            array (
+                'id' => 376,
+                'name' => 'Agreements Deleted_list',
+                'parent' => 'Agreements',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 06:02:06',
+                'updated_at' => '2024-01-10 06:02:06',
+                'deleted_at' => NULL,
+            ),
+            276 => 
+            array (
+                'id' => 377,
+                'name' => 'Agreements Restore',
+                'parent' => 'Agreements',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 06:02:06',
+                'updated_at' => '2024-01-10 06:02:06',
+                'deleted_at' => NULL,
+            ),
+            277 => 
+            array (
+                'id' => 378,
+                'name' => 'Agreements Permanent_delete',
+                'parent' => 'Agreements',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 06:02:06',
+                'updated_at' => '2024-01-10 06:02:06',
+                'deleted_at' => NULL,
+            ),
+            278 => 
+            array (
+                'id' => 379,
+                'name' => 'Industrial Attachment List',
+                'parent' => 'Industrial Attachment',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 11:27:31',
+                'updated_at' => '2024-01-10 11:27:31',
+                'deleted_at' => NULL,
+            ),
+            279 => 
+            array (
+                'id' => 380,
+                'name' => 'Industrial Attachment Create',
+                'parent' => 'Industrial Attachment',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 11:27:31',
+                'updated_at' => '2024-01-10 11:27:31',
+                'deleted_at' => NULL,
+            ),
+            280 => 
+            array (
+                'id' => 381,
+                'name' => 'Industrial Attachment Edit',
+                'parent' => 'Industrial Attachment',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 11:27:31',
+                'updated_at' => '2024-01-10 11:27:31',
+                'deleted_at' => NULL,
+            ),
+            281 => 
+            array (
+                'id' => 382,
+                'name' => 'Industrial Attachment Delete',
+                'parent' => 'Industrial Attachment',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 11:27:31',
+                'updated_at' => '2024-01-10 11:27:31',
+                'deleted_at' => NULL,
+            ),
+            282 => 
+            array (
+                'id' => 383,
+                'name' => 'Industrial Attachment View',
+                'parent' => 'Industrial Attachment',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 11:27:31',
+                'updated_at' => '2024-01-10 11:27:31',
+                'deleted_at' => NULL,
+            ),
+            283 => 
+            array (
+                'id' => 384,
+                'name' => 'Industrial Attachment Print',
+                'parent' => 'Industrial Attachment',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 11:27:31',
+                'updated_at' => '2024-01-10 11:27:31',
+                'deleted_at' => NULL,
+            ),
+            284 => 
+            array (
+                'id' => 385,
+                'name' => 'Industrial Attachment Edit_history',
+                'parent' => 'Industrial Attachment',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 11:27:31',
+                'updated_at' => '2024-01-10 11:27:31',
+                'deleted_at' => NULL,
+            ),
+            285 => 
+            array (
+                'id' => 386,
+                'name' => 'Industrial Attachment Deleted_list',
+                'parent' => 'Industrial Attachment',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 11:27:31',
+                'updated_at' => '2024-01-10 11:27:31',
+                'deleted_at' => NULL,
+            ),
+            286 => 
+            array (
+                'id' => 387,
+                'name' => 'Industrial Attachment Restore',
+                'parent' => 'Industrial Attachment',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 11:27:31',
+                'updated_at' => '2024-01-10 11:27:31',
+                'deleted_at' => NULL,
+            ),
+            287 => 
+            array (
+                'id' => 388,
+                'name' => 'Industrial Attachment Permanent_delete',
+                'parent' => 'Industrial Attachment',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-10 11:27:31',
+                'updated_at' => '2024-01-10 11:27:31',
+                'deleted_at' => NULL,
+            ),
+            288 => 
+            array (
+                'id' => 389,
+                'name' => 'Industries Links Menus List',
+                'parent' => 'Industries Links Menus',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-11 05:02:59',
+                'updated_at' => '2024-01-11 05:02:59',
+                'deleted_at' => NULL,
+            ),
+            289 => 
+            array (
+                'id' => 390,
+                'name' => 'Industries Links Menus Create',
+                'parent' => 'Industries Links Menus',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-11 05:02:59',
+                'updated_at' => '2024-01-11 05:02:59',
+                'deleted_at' => NULL,
+            ),
+            290 => 
+            array (
+                'id' => 391,
+                'name' => 'Industries Links Menus Edit',
+                'parent' => 'Industries Links Menus',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-11 05:02:59',
+                'updated_at' => '2024-01-11 05:02:59',
+                'deleted_at' => NULL,
+            ),
+            291 => 
+            array (
+                'id' => 392,
+                'name' => 'Industries Links Menus Delete',
+                'parent' => 'Industries Links Menus',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-11 05:02:59',
+                'updated_at' => '2024-01-11 05:02:59',
+                'deleted_at' => NULL,
+            ),
+            292 => 
+            array (
+                'id' => 393,
+                'name' => 'Industries Links Menus View',
+                'parent' => 'Industries Links Menus',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-11 05:02:59',
+                'updated_at' => '2024-01-11 05:02:59',
+                'deleted_at' => NULL,
+            ),
+            293 => 
+            array (
+                'id' => 394,
+                'name' => 'Industries Links Menus Print',
+                'parent' => 'Industries Links Menus',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-11 05:02:59',
+                'updated_at' => '2024-01-11 05:02:59',
+                'deleted_at' => NULL,
+            ),
+            294 => 
+            array (
+                'id' => 395,
+                'name' => 'Industries Links Menus Edit_history',
+                'parent' => 'Industries Links Menus',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-11 05:02:59',
+                'updated_at' => '2024-01-11 05:02:59',
+                'deleted_at' => NULL,
+            ),
+            295 => 
+            array (
+                'id' => 396,
+                'name' => 'Industries Links Menus Deleted_list',
+                'parent' => 'Industries Links Menus',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-11 05:02:59',
+                'updated_at' => '2024-01-11 05:02:59',
+                'deleted_at' => NULL,
+            ),
+            296 => 
+            array (
+                'id' => 397,
+                'name' => 'Industries Links Menus Restore',
+                'parent' => 'Industries Links Menus',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-11 05:02:59',
+                'updated_at' => '2024-01-11 05:02:59',
+                'deleted_at' => NULL,
+            ),
+            297 => 
+            array (
+                'id' => 398,
+                'name' => 'Industries Links Menus Permanent_delete',
+                'parent' => 'Industries Links Menus',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-11 05:02:59',
+                'updated_at' => '2024-01-11 05:02:59',
+                'deleted_at' => NULL,
+            ),
+            298 => 
+            array (
+                'id' => 399,
+                'name' => 'Working Alumni Database List',
+                'parent' => 'Working Alumni Database',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-13 10:08:47',
+                'updated_at' => '2024-01-13 10:08:47',
+                'deleted_at' => NULL,
+            ),
+            299 => 
+            array (
+                'id' => 400,
+                'name' => 'Working Alumni Database Create',
+                'parent' => 'Working Alumni Database',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-13 10:08:47',
+                'updated_at' => '2024-01-13 10:08:47',
+                'deleted_at' => NULL,
+            ),
+            300 => 
+            array (
+                'id' => 401,
+                'name' => 'Working Alumni Database Edit',
+                'parent' => 'Working Alumni Database',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-13 10:08:47',
+                'updated_at' => '2024-01-13 10:08:47',
+                'deleted_at' => NULL,
+            ),
+            301 => 
+            array (
+                'id' => 402,
+                'name' => 'Working Alumni Database Delete',
+                'parent' => 'Working Alumni Database',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-13 10:08:47',
+                'updated_at' => '2024-01-13 10:08:47',
+                'deleted_at' => NULL,
+            ),
+            302 => 
+            array (
+                'id' => 403,
+                'name' => 'Working Alumni Database View',
+                'parent' => 'Working Alumni Database',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-13 10:08:47',
+                'updated_at' => '2024-01-13 10:08:47',
+                'deleted_at' => NULL,
+            ),
+            303 => 
+            array (
+                'id' => 404,
+                'name' => 'Working Alumni Database Print',
+                'parent' => 'Working Alumni Database',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-13 10:08:47',
+                'updated_at' => '2024-01-13 10:08:47',
+                'deleted_at' => NULL,
+            ),
+            304 => 
+            array (
+                'id' => 405,
+                'name' => 'Working Alumni Database Edit_history',
+                'parent' => 'Working Alumni Database',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-13 10:08:47',
+                'updated_at' => '2024-01-13 10:08:47',
+                'deleted_at' => NULL,
+            ),
+            305 => 
+            array (
+                'id' => 406,
+                'name' => 'Working Alumni Database Deleted_list',
+                'parent' => 'Working Alumni Database',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-13 10:08:47',
+                'updated_at' => '2024-01-13 10:08:47',
+                'deleted_at' => NULL,
+            ),
+            306 => 
+            array (
+                'id' => 407,
+                'name' => 'Working Alumni Database Restore',
+                'parent' => 'Working Alumni Database',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-13 10:08:47',
+                'updated_at' => '2024-01-13 10:08:47',
+                'deleted_at' => NULL,
+            ),
+            307 => 
+            array (
+                'id' => 408,
+                'name' => 'Working Alumni Database Permanent_delete',
+                'parent' => 'Working Alumni Database',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-13 10:08:47',
+                'updated_at' => '2024-01-13 10:08:47',
+                'deleted_at' => NULL,
+            ),
+            308 => 
+            array (
+                'id' => 409,
+                'name' => 'Attachment Of CV Of Job Aspirants List',
+                'parent' => 'Attachment Of CV Of Job Aspirants',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-14 07:02:21',
+                'updated_at' => '2024-01-14 07:02:21',
+                'deleted_at' => NULL,
+            ),
+            309 => 
+            array (
+                'id' => 410,
+                'name' => 'Attachment Of CV Of Job Aspirants Create',
+                'parent' => 'Attachment Of CV Of Job Aspirants',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-14 07:02:21',
+                'updated_at' => '2024-01-14 07:02:21',
+                'deleted_at' => NULL,
+            ),
+            310 => 
+            array (
+                'id' => 411,
+                'name' => 'Attachment Of CV Of Job Aspirants Edit',
+                'parent' => 'Attachment Of CV Of Job Aspirants',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-14 07:02:21',
+                'updated_at' => '2024-01-14 07:02:21',
+                'deleted_at' => NULL,
+            ),
+            311 => 
+            array (
+                'id' => 412,
+                'name' => 'Attachment Of CV Of Job Aspirants Delete',
+                'parent' => 'Attachment Of CV Of Job Aspirants',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-14 07:02:21',
+                'updated_at' => '2024-01-14 07:02:21',
+                'deleted_at' => NULL,
+            ),
+            312 => 
+            array (
+                'id' => 413,
+                'name' => 'Attachment Of CV Of Job Aspirants View',
+                'parent' => 'Attachment Of CV Of Job Aspirants',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-14 07:02:21',
+                'updated_at' => '2024-01-14 07:02:21',
+                'deleted_at' => NULL,
+            ),
+            313 => 
+            array (
+                'id' => 414,
+                'name' => 'Attachment Of CV Of Job Aspirants Print',
+                'parent' => 'Attachment Of CV Of Job Aspirants',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-14 07:02:21',
+                'updated_at' => '2024-01-14 07:02:21',
+                'deleted_at' => NULL,
+            ),
+            314 => 
+            array (
+                'id' => 415,
+                'name' => 'Attachment Of CV Of Job Aspirants Edit_history',
+                'parent' => 'Attachment Of CV Of Job Aspirants',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-14 07:02:21',
+                'updated_at' => '2024-01-14 07:02:21',
+                'deleted_at' => NULL,
+            ),
+            315 => 
+            array (
+                'id' => 416,
+                'name' => 'Attachment Of CV Of Job Aspirants Deleted_list',
+                'parent' => 'Attachment Of CV Of Job Aspirants',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-14 07:02:21',
+                'updated_at' => '2024-01-14 07:02:21',
+                'deleted_at' => NULL,
+            ),
+            316 => 
+            array (
+                'id' => 417,
+                'name' => 'Attachment Of CV Of Job Aspirants Restore',
+                'parent' => 'Attachment Of CV Of Job Aspirants',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-14 07:02:21',
+                'updated_at' => '2024-01-14 07:02:21',
+                'deleted_at' => NULL,
+            ),
+            317 => 
+            array (
+                'id' => 418,
+                'name' => 'Attachment Of CV Of Job Aspirants Permanent_delete',
+                'parent' => 'Attachment Of CV Of Job Aspirants',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2024-01-14 07:02:21',
+                'updated_at' => '2024-01-14 07:02:21',
                 'deleted_at' => NULL,
             ),
         ));

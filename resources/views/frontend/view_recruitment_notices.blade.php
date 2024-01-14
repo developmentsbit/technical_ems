@@ -12,7 +12,7 @@
 
       <ul class="list-group p-0">
         <li class="list-group-item bg-success text-white">
-          <span class="student"><span uk-icon="icon: info; ratio: 1.2"></span>&nbsp;&nbsp;@lang('frontend.boardresult') @lang('frontend.detailss')</span>
+          <span class="student"><span uk-icon="icon: info; ratio: 1.2"></span>&nbsp;&nbsp;@lang('frontend.recruitment_notices') @lang('frontend.detailss')</span>
         </li>
         <br>
         <h5>@if($lang == 'en'){{ $data->title ?: $data->title_bn}}@else {{$data->title_bn ?: $data->title}}@endif<a href="{{ asset($data->image) }}" class="btn btn-sm btn-dark float-end" download=""> Download</a></h5>
