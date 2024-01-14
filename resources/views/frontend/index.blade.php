@@ -272,8 +272,8 @@ right:0;
           
           <div class="col-sm-8 col-12 text-center text-sm-center text-lg-right" id="email">
             <div class="btn-group" role="group" aria-label="Basic example">
-              <label><a href="{{url('/time_line')}}"  class="btn btn-danger btn-md" target="_blank" style="margin-right: 8px;">@lang('frontend.working_alumni_database')  </a></label>
-              <label><a href="{{url('/time_line')}}"  class="btn btn-info btn-md" target="_blank" style="margin-right: 8px;">@lang('frontend.attached_cv')  </a></label>
+              <label><a href="{{url('/job_placement')}}"  class="btn btn-danger btn-md" target="_blank" style="margin-right: 8px;">@lang('frontend.working_alumni_database')  </a></label>
+              <label><a href="{{url('/attached_cv')}}"  class="btn btn-info btn-md" target="_blank" style="margin-right: 8px;">@lang('frontend.attached_cv')  </a></label>
             {{--<label><a id="top_button" target="_blank" href="https://fgc.gov.bd/showResult.php" style="text-decoration:none;color:white;margin-right:10px" class="btn btn-outline-danger btn-sm">@lang('frontend.internal_results')</a></label>
             <label><a id="top_button" target="_blank" href="/ems/admission/" style="text-decoration:none;color:white;margin-right:10px" class="btn btn-outline-warning btn-sm"> <i class="fa fa-users"></i>&nbsp; @lang('frontend.admission_form')</a></label>
             <label><a id="top_button" target="_blank" href="#" style="text-decoration:none;color:white;margin-right:10px" class="btn btn-outline-info btn-sm">@lang('frontend.student_login')</a></label>--}}
@@ -692,10 +692,10 @@ right:0;
           <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink">
             <div class="col-md-12 col-12 dmenu mt-3" style="padding-left: 4%;">
               <li><a href="{{url('employmentinformation')}}">@lang('frontend.employment_information')</a></li>
-              <li><a href="#">কর্মরত প্রাক্তন ছাত্র-ছাত্রীদের ডাটাবেজ</a></li>
-              <li><a href="#">কর্ম প্রত্যাশীদের বায়োডাটা সংযুক্তকরণ</a></li>
+              <li><a href="{{url('job_placement')}}">@lang('frontend.working_alumni')</a></li>
+              <li><a href="{{url('attached_cv')}}">@lang('frontend.cv_attachment')</a></li>
               <li><a href="{{url('recruitmentnotices')}}">@lang('frontend.recruitment_notices')</a></li>
-              <li><a href="{{url('alumnisuccess')}}">@lang('frontend.alumni_success')</a></li>
+              <li><a href="{{url('alumni_success')}}">@lang('frontend.alumni_success')</a></li>
             </div>
           </ul>
         </li>
@@ -706,10 +706,10 @@ right:0;
           </a>
           <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink">
             <div class="col-md-12 col-12 dmenu mt-3">
-              <li><a href="#">সম্পাদিত চুক্তিসমূহ</a></li>
-              <li><a href="#">ইন্ডাস্ট্রিয়াল এটাচমেন্ট</a></li>
-              <li><a href="#">ইন্ডাস্ট্রি ভিজিট</a></li>
-              <li><a href="#">নিকটস্থ ইন্ডাস্ট্রিসমূহ</a></li>
+              <li><a href="{{url('agreements')}}">@lang('frontend.agreement')</a></li>
+              <li><a href="{{url('industrialattachment')}}">@lang('frontend.industrial_attachment')</a></li>
+              <li><a href="{{url('industriesvisit')}}">@lang('frontend.industries_visit')</a></li>
+              <li><a href="{{url('nearindustries')}}">@lang('frontend.near_industries')</a></li>
             </div>
           </ul>
         </li>
@@ -869,17 +869,20 @@ right:0;
      <li class="uk-parent">
       <a href="#"><span uk-icon="icon: chevron-right; ratio: 0.9"></span>&nbsp;&nbsp;@lang('frontend.institute_introduction')</a>
       <ul class="uk-nav-sub">
-        <li><a href="{{ url('page/6') }}">@lang('frontend.infrastructure')</a></li>
-        <li><a href="{{ url('page/7') }}">@lang('frontend.yearly_working_plan')</a></li>
-        <li><a href="{{ url('page/8') }}">@lang('frontend.contact')</a></li>
         <li><a href="{{ url('page/1') }}">@lang('frontend.about_us')</a></li>
         <li><a href="{{ url('page/2') }}">@lang('frontend.mission_vision')</a></li>
         <li><a href="{{ url('page/3') }}">@lang('frontend.history')</a></li>
+        <li><a href="{{ url('page/7') }}">@lang('frontend.position') </a></li>
         <li><a href="{{ url('page/4') }}">@lang('frontend.citizen_charter')</a></li>
-        @if($setting->type == 'school')
-        <li><a href="#">@lang('frontend.teaching_permission_recognition')</a></li>
-        <li><a href="#">@lang('frontend.mpo_nationalization_info')</a></li>
-        @endif
+        <li><a href="{{ url('page/6') }}">@lang('frontend.infrastructure')</a></li>
+        <li><a href="{{ url('page/8') }}">@lang('frontend.contact')</a></li>
+        
+        {{--<li><a href="{{url('teacher_permission')}}">@lang('frontend.teaching_permission_recognition')</a></li>
+        <li><a href="{{url('mpo_nationalizations')}}">@lang('frontend.mpo_nationalization_info')</a></li>--}}
+
+        <li><a href="{{ url('page/28') }}">@lang('frontend.structure')</a></li>
+        <li><a href="{{ url('page/29') }}">@lang('frontend.info')</a></li>
+        <li><a href="{{ url('page/30') }}">@lang('frontend.ongoingeducation')</a></li>
       </ul>
     </li>
 
@@ -890,17 +893,16 @@ right:0;
     <li class="uk-parent">
       <a href="#"><span uk-icon="icon: chevron-right; ratio: 0.9"></span>&nbsp;&nbsp;@lang('frontend.administrative_information') </a>
       <ul class="uk-nav-sub">
-      <li><a href="{{ url('principal_message') }}">@lang('frontend.principal_message')
-        </a></li>
-
-        <!-- <li><a href="{{ url('presidentmessage') }}">@lang('frontend.presidentmessage') </a></li>
-        <li><a href="{{ url('managing_comitte') }}">@lang('frontend.managing_comitte')</a></li>
-        <li><a href="{{ url('presidents') }}">@lang('frontend.presidents')</a></li>
-        <li><a href="{{ url('donar') }}">@lang('frontend.donar')</a></li>
-        <li><a href="{{ url('ex_member') }}">@lang('frontend.ex_member')</a></li> -->
-        
-        <li><a href="{{ url('vice_prinicpalmessage') }}">@lang('frontend.vice_principal_message') </a></li>
-        <li><a href="{{ url('principles') }}">@lang('frontend.principles')</a></li>
+        @php
+        $president_check = DB::table('principles')->where('type',2)->count();
+        @endphp
+          <li><a href="{{ url('principal_message') }}">@lang('frontend.principal_message')</a></li>
+          <li><a href="{{ url('vice_prinicpalmessage') }}">@lang('frontend.vice_principal_message') </a></li>
+          <li><a href="{{ url('principles') }}">@lang('frontend.principles')</a></li>
+          <li><a href="{{ url('councilmembers') }}">@lang('frontend.councilmembers')</a></li>
+          <li><a href="{{ url('comitteemembers') }}">@lang('frontend.comitteemembers')</a></li>
+          <li><a href="{{ url('teacherinfo') }}">@lang('frontend.teacherinfo')</a></li>
+          <li><a href="{{ url('staffinfo') }}">@lang('frontend.staffinfo')</a></li>
       </ul>
     </li>
 
@@ -908,7 +910,7 @@ right:0;
 
 
 
-    <li class="uk-parent">
+    <!-- <li class="uk-parent">
       <a href="#"><span uk-icon="icon: chevron-right; ratio: 0.9"></span>&nbsp;&nbsp;@lang('frontend.teachers_and_staff') </a>
       <ul class="uk-nav-sub">
         <li><a href="{{ url('teacherinfo') }}">@lang('frontend.teacherinfo')</a></li>
@@ -963,6 +965,27 @@ right:0;
        <li><a href="{{ url('page/11') }}">@lang('frontend.fees')</a></li>
        <li><a href="{{ url('page/5') }}">@lang('frontend.studentinfochart')</a></li>
      </ul>
+   </li> -->
+
+   <li class="uk-parent">
+      <a href="#"><span uk-icon="icon: chevron-right; ratio: 0.9"></span>&nbsp;&nbsp;@lang('frontend.job_placement')</a>
+      <ul class="uk-nav-sub">
+        <li><a href="{{url('employmentinformation')}}">@lang('frontend.employment_information')</a></li>
+        <li><a href="{{url('job_placement')}}">@lang('frontend.working_alumni')</a></li>
+        <li><a href="{{url('attached_cv')}}">@lang('frontend.cv_attachment')</a></li>
+        <li><a href="{{url('recruitmentnotices')}}">@lang('frontend.recruitment_notices')</a></li>
+        <li><a href="{{url('alumni_success')}}">@lang('frontend.alumni_success')</a></li>
+     </ul>
+   </li>
+   
+   <li class="uk-parent">
+      <a href="#"><span uk-icon="icon: chevron-right; ratio: 0.9"></span>&nbsp;&nbsp;@lang('frontend.industries_linkes')</a>
+      <ul class="uk-nav-sub">
+        <li><a href="{{url('agreements')}}">@lang('frontend.agreement')</a></li>
+        <li><a href="{{url('industrialattachment')}}">@lang('frontend.industrial_attachment')</a></li>
+        <li><a href="{{url('industriesvisit')}}">@lang('frontend.industries_visit')</a></li>
+        <li><a href="{{url('nearindustries')}}">@lang('frontend.near_industries')</a></li>
+     </ul>
    </li>
 
 
@@ -986,7 +1009,7 @@ right:0;
 
 
 
-  <li class="uk-parent">
+  <!-- <li class="uk-parent">
     <a href="#"><span uk-icon="icon: chevron-right; ratio: 0.9"></span>&nbsp;&nbsp;@lang('frontend.admission_information')</a>
     <ul class="uk-nav-sub">
 
@@ -1014,9 +1037,9 @@ right:0;
      <li><a href="{{ url('page/12') }}">@lang('frontend.exam_rules')</a></li>
      <li><a href="{{ url('examroutines') }}">@lang('frontend.examroutines')</a></li>
      <li><a href="{{ url('examsyllabus') }}">@lang('frontend.examsyllabus')</a></li>
-     <!--<li><a href="{{ url('examsuggession') }}">@lang('frontend.examsuggession')</a></li>-->
+     <li><a href="{{ url('examsuggession') }}">@lang('frontend.examsuggession')</a></li>
    </ul>
- </li>
+ </li> -->
 
 
  <li class="uk-parent">

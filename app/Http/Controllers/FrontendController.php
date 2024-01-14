@@ -10,6 +10,7 @@ use App\Models\gender_wise;
 use App\Models\section_wise;
 use PDF;
 use App;
+use Session;
 
 class FrontendController extends Controller
 {
@@ -257,29 +258,35 @@ class FrontendController extends Controller
 
 	public function agreements()
 	{
-		$data = DB::table("industrylinkages")->orderBy('id','DESC')->where('type',1)->get();
+		$data = DB::table("industry_linkages")->orderBy('id','DESC')->where('type',1)->get();
 		return view('frontend.agreements',compact('data'));
 	}
 
 
 	public function industrialattachment()
 	{
-		$data = DB::table("industrylinkages")->orderBy('id','DESC')->where('type',2)->get();
+		$data = DB::table("industry_linkages")->orderBy('id','DESC')->where('type',2)->get();
 		return view('frontend.industrialattachment',compact('data'));
 	}
 
 
 	public function industriesvisit()
 	{
-		$data = DB::table("industrylinkages")->orderBy('id','DESC')->where('type',3)->get();
+		$data = DB::table("industry_linkages")->orderBy('id','DESC')->where('type',3)->get();
 		return view('frontend.industriesvisit',compact('data'));
 	}
 
 
 	public function nearindustries()
 	{
-		$data = DB::table("industrylinkages")->orderBy('id','DESC')->where('type',3)->get();
+		$data = DB::table("industry_linkages")->orderBy('id','DESC')->where('type',4)->get();
 		return view('frontend.nearindustries',compact('data'));
+	}
+	
+	public function view_industry_linkages($id)
+	{
+		$data = DB::table("industry_linkages")->where('id',$id)->first();
+		return view('frontend.view_industry_linkages',compact('data'));
 	}
 
 
@@ -331,6 +338,29 @@ class FrontendController extends Controller
 	}
 
 
+	public function recruitmentnotices()
+	{
+		$data = DB::table("recruitment_notices")->orderBy('id','DESC')->get();
+		return view('frontend.recruitmentnotices',compact('data'));
+	}
+	
+	public function view_recruitment_notices($id)
+	{
+		$data = DB::table("recruitment_notices")->where('id',$id)->first();
+		return view('frontend.view_recruitment_notices',compact('data'));
+	}
+	
+	public function alumni_success()
+	{
+		$data = DB::table("alumni_success")->orderBy('id','DESC')->get();
+		return view('frontend.alumni_success',compact('data'));
+	}
+	
+	public function view_alumni_success($id)
+	{
+		$data = DB::table("alumni_success")->where('id',$id)->first();
+		return view('frontend.view_alumni_success',compact('data'));
+	}
 
 	public function class_routine($id)
 	{
@@ -711,6 +741,101 @@ class FrontendController extends Controller
 		->select('shop_infos.*','department.department_name_bn')
 		->first();
 		return view('frontend.shopInfo',compact('data'));
+	}
+
+	public function job_replace_add(Request $request)
+	{
+		$data=array();
+		$data['name']=$request->name;
+		$data['roll']=$request->roll;
+		$data['session']=$request->session;
+		$data['job_title']=$request->job_title;
+		$data['institute']=$request->institute;
+		$data['details']=$request->details;
+		$data['phone']=$request->phone;
+		$data['department_id']= $request->department_id;
+		$data['img']=$request->image->getClientOriginalExtension();
+		$data['approve']='0';
+
+
+		$insert=DB::table('job_placement')->insert($data);
+		if ($insert) {
+			Session::flash('success','job Palacement Successfully');
+		}
+
+		$file=$request->file('image');
+		if (isset($file)) {
+			$fileName=$request->roll.'.'.$file->getClientOriginalExtension();
+			$file->move(public_path('/job_replacement_img/'),$fileName);
+		}
+
+		return redirect()->back()->with('success','Successfully');
+	}
+
+
+	public function job_placementmethod(){
+		$data=DB::table('job_placement')
+		->join('department','department.id','job_placement.department_id')
+		->where('job_placement.approve','1')
+		->orderBy('job_placement.id','DESC')
+		->select('job_placement.*','department.department','department.department_name_bn')
+		->get();
+		$department=DB::table('department')->get();
+		return view('frontend.job_placement',compact('data','department'));
+	}
+
+	public function jobplacementdata($id){
+		$showdata=DB::table('job_placement')
+		->join('department','department.id','job_placement.department_id')
+		->where('job_placement.approve','1')
+		->where('job_placement.roll',$id)
+		->select('job_placement.*','department.department','department.department_name_bn')
+		->first();
+		
+		return view('frontend.job_placement_single',compact('showdata'));
+	}
+
+	public function cvadd(Request $request)
+	{
+		$data=array();
+		$data['name']=$request->name;
+		$data['roll']=$request->roll;
+		$data['session']=$request->session;
+		$data['department_id'] = $request->department_id;
+		$data['img']=$request->img->getClientOriginalExtension();
+		$data['CV']=$request->cv->getClientOriginalExtension();
+		$data['approve']='0';
+
+
+		$insert=DB::table('cv_attachement')->insert($data);
+		if ($insert) {
+			Session::flash('success','CV Send Successfully');
+		}
+
+		$file=$request->file('img');
+		if (isset($file)) {
+			$fileName=$request->roll.'.'.$file->getClientOriginalExtension();
+			$file->move(public_path('/cv_img/'),$fileName);
+		}
+		$filecv=$request->file('cv');
+		if (isset($filecv)) {
+			$fileName=$request->roll.'cv.'.$filecv->getClientOriginalExtension();
+			$filecv->move(public_path('/cv_img/'),$fileName);
+		}
+
+		return redirect()->back();
+	}
+
+	public function attached_cvmethod(){
+		$data=DB::table('cv_attachement')
+		->join('department','department.id','cv_attachement.department_id')
+		->where('cv_attachement.approve','1')
+		->select('cv_attachement.*','department.department','department.department_name_bn')
+		->where('cv_attachement.approve','1')
+		->get();
+
+		$department=DB::table('department')->get();
+		return view('frontend.attached_cv',compact('data','department'));
 	}
 
 }

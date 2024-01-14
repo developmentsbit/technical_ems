@@ -61,6 +61,11 @@ use App\Http\Controllers\InternalExamResultController;
 use App\Http\Controllers\BoardResultController;
 use App\Http\Controllers\EmploymentInformationController;
 use App\Http\Controllers\RecruitmentNoticesController;
+use App\Http\Controllers\AlumniSuccessController;
+use App\Http\Controllers\AgreementsController;
+use App\Http\Controllers\IndustrialAttachmentController;
+use App\Http\Controllers\JobplacementCVController;
+use App\Http\Controllers\CVAttachementController;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -153,6 +158,8 @@ Route::get('/agreements', [FrontendController::class, 'agreements']);
 Route::get('/industrialattachment', [FrontendController::class, 'industrialattachment']);
 Route::get('/industriesvisit', [FrontendController::class, 'industriesvisit']);
 Route::get('/nearindustries', [FrontendController::class, 'nearindustries']);
+Route::get('/view_industry_linkages/{id}', [FrontendController::class, 'view_industry_linkages']);
+
 Route::get('/internalresult/{id}', [FrontendController::class, 'internalresult']);
 Route::get('/view_internal_result/{id}', [FrontendController::class, 'view_internal_result']);
 Route::get('/nearindustries', [FrontendController::class, 'nearindustries']);
@@ -169,6 +176,10 @@ Route::get('/Probidhan', [FrontendController::class, 'Probidhan']);
 
 Route::get('/employmentinformation', [FrontendController::class, 'employmentinformation']);
 Route::get('/view_employment_information/{id}', [FrontendController::class, 'view_employment_information']);
+Route::get('/recruitmentnotices', [FrontendController::class, 'recruitmentnotices']);
+Route::get('/view_recruitment_notices/{id}', [FrontendController::class, 'view_recruitment_notices']);
+Route::get('/alumni_success', [FrontendController::class, 'alumni_success']);
+Route::get('/view_alumni_success/{id}', [FrontendController::class, 'view_alumni_success']);
 
 Route::get('/aboutdepartment/{id}', [FrontendController::class, 'aboutdepartment']);
 Route::get('/departmentteacher/{id}', [FrontendController::class, 'departmentteacher']);
@@ -202,6 +213,14 @@ Route::get('/class_student_info/{id}',[FrontendController::class,'class_student_
 Route::post('/loadSearchStudent',[FrontendController::class,'loadSearchStudent']);
 Route::get('/view_student_details/{student_id}',[FrontendController::class,'view_student_details']);
 Route::post('/getDateAttData',[FrontendController::class,'getDateAttData']);
+
+// job placement
+
+Route::get('/job_placement',[FrontendController::class,'job_placementmethod']);
+Route::get('/job-placement-data/{id}',[FrontendController::class,'jobplacementdata']);
+Route::get('/attached_cv',[FrontendController::class,'attached_cvmethod']);
+Route::post('/cv_add',[FrontendController::class,'cvadd']);
+Route::post('/job_replace',[FrontendController::class,'job_replace_add']);
 
 //admission_form
 
@@ -320,11 +339,21 @@ Route::group(['middleware' => 'auth'], function () {
         'board_result' => BoardResultController::class,
         'employment_information' => EmploymentInformationController::class,
         'recruitment_notices' => RecruitmentNoticesController::class,
+        'old_student_success' => AlumniSuccessController::class,
+        'agreement' => AgreementsController::class,
+        'industry_linkages' => IndustrialAttachmentController::class,
+        'jobplacement' => JobplacementCVController::class,
+        'cvattached' => CVAttachementController::class,
     ]);
 
     Route::get('retrive_message/{id}', [MessageController::class, 'retrive_message']);
     Route::get('permenantMessageDelete/{id}', [MessageController::class, 'permenantMessageDelete']);
 
+    Route::get('Inactivejobplacement/{id}', [JobplacementCVController::class, 'Inactivejobplacement']);
+    Route::get('Activejobplacement/{id}', [JobplacementCVController::class, 'Activejobplacement']);
+
+    Route::get('Inactivecvattached/{id}', [CVAttachementController::class, 'Inactivecvattached']);
+    Route::get('Activecvattached/{id}', [CVAttachementController::class, 'Activecvattached']);
 
     Route::post('photoGalleryStatusChange', [PhotoGallery::class, 'photoGalleryStatusChange']);
     Route::get('retrive_photo/{id}', [PhotoGallery::class, 'retrive_photo']);

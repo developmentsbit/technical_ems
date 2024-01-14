@@ -41,51 +41,52 @@ class TeacherstaffController extends Controller
      */
     public function store(Request $request)
     {
-
-
-       $data = array();
-       $data['department_id']        = $request->department_id;
-       $data['sl']        = $request->sl;
-       $data['name']                 = $request->name;
-       $data['designation']          = $request->designation;
-       $data['nid']                  = $request->nid;
-       $data['shift']                  = $request->shift;
-       $data['dob']                  = $request->dob;
-       $data['blood']                = $request->blood;
-       $data['religion']             = $request->religion;
-       $data['relationship']         = $request->relationship;
-       $data['father_name']          = $request->father_name;
-       $data['mother_name']          = $request->mother_name;
-       $data['mobile']               = $request->mobile;
-       $data['email']                = $request->email;
-       $data['join_date']            = $request->join_date;
-       $data['mpo_date']             = $request->mpo_date;
-       $data['present_address']      = $request->present_address;
-       $data['parmanent_address']    = $request->parmanent_address;
-       $data['education']            = $request->education;
-       $data['gender']               = $request->gender;
-       $data['type']                 = $request->type;
-       $data['image'] = '0';
-       $image                        = $request->file('image');
-
-       if ($image) {
-        $image_name= rand(11111,99999);
-        $ext=strtolower($image->getClientOriginalExtension());
-        $image_full_name=$image_name.'.'.$ext;
-        $upload_path='teacherstaff_image/';
-        $image_url=$upload_path.$image_full_name;
-        $success=$image->move($upload_path,$image_full_name);
-        $data['image']=$image_url;
-        DB::table('teacherstaff')->insert($data);
-
-    }else{
-        DB::table('teacherstaff')->insert($data);
-    }
-
-    Toastr::success(__('Teacher/Staff Added Successfully'));
+        $data = array();
+        $data['department_id']        = $request->department_id;
+        $data['sl']        = $request->sl;
+        $data['name']                 = $request->name;
+        $data['designation']          = $request->designation;
+        $data['nid']                  = $request->nid;
+        $data['shift']                  = $request->shift;
+        $data['dob']                  = $request->dob;
+        $data['blood']                = $request->blood;
+        $data['religion']             = $request->religion;
+        $data['relationship']         = $request->relationship;
+        $data['father_name']          = $request->father_name;
+        $data['mother_name']          = $request->mother_name;
+        $data['mobile']               = $request->mobile;
+        $data['email']                = $request->email;
+        $data['join_date']            = $request->join_date;
+        $data['mpo_date']             = $request->mpo_date;
+        $data['present_address']      = $request->present_address;
+        $data['parmanent_address']    = $request->parmanent_address;
+        $data['education']            = $request->education;
+        $data['gender']               = $request->gender;
+        $data['type']                 = $request->type;
+        $data['password'] = Hash::make($request->password);
+	    $data['show_password']      = $request->password;
+        $data['image'] = '0';
+        $image                        = $request->file('image');
+       
+        if ($image) 
+        {
+            $image_name= rand(11111,99999);
+            $ext=strtolower($image->getClientOriginalExtension());
+            $image_full_name=$image_name.'.'.$ext;
+            $upload_path='teacherstaff_image/';
+            $image_url=$upload_path.$image_full_name;
+            $success=$image->move($upload_path,$image_full_name);
+            $data['image']=$image_url;
+            DB::table('teacherstaff')->insert($data);
+        }
+        else
+        {
+            DB::table('teacherstaff')->insert($data);
+        }
+    
+        Toastr::success(__('Teacher/Staff Added Successfully'));
         return redirect()->back();
-
-}
+    }
 
     /**
      * Display the specified resource.
@@ -110,7 +111,6 @@ class TeacherstaffController extends Controller
      */
     public function update(Request $request, string $id)
     {
-
         $data = array();
         $data['department_id']        = $request->department_id;
         $data['sl']        = $request->sl;
@@ -133,6 +133,8 @@ class TeacherstaffController extends Controller
         $data['education']            = $request->education;
         $data['gender']               = $request->gender;
         $data['type']                 = $request->type;
+		$data['password']          = Hash::make($request->password);
+		$data['show_password']      = $request->password;
         $image              = $request->file('image');
 
 

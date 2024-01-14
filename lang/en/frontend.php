@@ -216,7 +216,13 @@ $array = array(
 
     'employment_information'=>'Employment Information',
     'recruitment_notices'=>'Recruitment Notices',
-    'alumni_success'=>'Alumni Success',
+    'alumni_success'=>'Old Student Success',
+    'agreement'=>'Agreements',
+    'industrial_attachment'=>'Industrial Attachment',
+    'industries_visit'=>'Industries Visit',
+    'near_industries'=>'Near Industries',
+    'working_alumni'=>'Working Alumni Database',
+    'cv_attachment'=>'CV Attachment',
 
     //tanim
 

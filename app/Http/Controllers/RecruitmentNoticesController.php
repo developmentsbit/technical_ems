@@ -68,7 +68,8 @@ class RecruitmentNoticesController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $data = DB::table("recruitment_notices")->where('id',$id)->first();
+        return view('admin.recruitment_notices.edit',compact('data'));
     }
 
     /**
@@ -76,7 +77,46 @@ class RecruitmentNoticesController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data = array();
+        $data['title']      = $request->title;
+        $data['title_bn']      = $request->title_bn;
+        $image              = $request->file('image');
+       
+        if ($image) 
+        {
+            $old_image = DB::table("recruitment_notices")->where('id',$id)->first();
+        
+            $path = public_path().'/'.$old_image->image;
+
+            if(file_exists($path))
+            {
+                unlink($path);
+            }
+        
+            $image_name= rand(1111,9999);
+            $ext=strtolower($image->getClientOriginalExtension());
+            $image_full_name=$image_name.'.'.$ext;
+            $upload_path='recruitment_notices_image/';
+            $image_url=$upload_path.$image_full_name;
+            $success=$image->move($upload_path,$image_full_name);
+            $data['image']=$image_url;
+            $update = DB::table('recruitment_notices')->where('id', $id)->update($data);
+        }
+        else
+        {
+            $update = DB::table('recruitment_notices')->where('id', $id)->update($data);
+        }
+
+        if ($update) 
+        {
+            Toastr::success(__('Recruitment Notices Update Successfully'));
+            return redirect()->route('recruitment_notices.index');
+        }
+        else
+        {
+            Toastr::error(__('Recruitment Notices Update Unsuccessfully'));
+            return redirect()->route('recruitment_notices.index');
+        }
     }
 
     /**
@@ -84,6 +124,27 @@ class RecruitmentNoticesController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $data = DB::table("recruitment_notices")->where('id',$id)->first();
+        
+        if ($data) 
+        {
+            $old_image = DB::table("recruitment_notices")->where('id',$id)->first();
+            
+            $path = public_path().'/'.$old_image->image;
+
+            if(file_exists($path))
+            {
+                unlink($path);
+            }
+            
+            DB::table("recruitment_notices")->where("id",$id)->delete();
+            Toastr::success(__('Recruitment Notices Delete Successfully'));
+            return redirect()->route('recruitment_notices.index');
+        }
+        else
+        {
+            Toastr::error(__('Recruitment Notices Result Delete Unsuccessfully'));
+            return redirect()->route('recruitment_notices.index');
+        }
     }
 }

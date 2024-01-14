@@ -138,7 +138,7 @@ class EmploymentInformationController extends Controller
             }
             
             DB::table("employment_information")->where("id",$id)->delete();
-            Toastr::success(__('Board Exam Result Delete Successfully'));
+            Toastr::success(__('Employment Information Delete Successfully'));
             return redirect()->route('employment_information.index');
         }
         else
