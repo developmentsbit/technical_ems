@@ -4,13 +4,13 @@
 
 @php
 
-$department = DB::table("add_department")->where('show',1)->get();
-$semester = DB::table("semester_info")->where('status',1)->get();
-$section  = DB::table("section_info")->get();
+$department = DB::table("department")->get();
+$semester = DB::table("semesters")->where('status',1)->get();
+$section  = DB::table("addsection")->get();
 $subject = DB::table("subject_info")
 ->join('subject_priority','subject_priority.subject_id','subject_info.id')
-->select('subject_info.*','subject_priority.admin_id')
-->where("subject_priority.admin_id",Auth('teacher')->user()->id)
+->select('subject_info.*','subject_priority.teacher_id')
+->where("subject_priority.teacher_id",Auth('teacher')->user()->id)
 ->get();
 
 @endphp
@@ -23,117 +23,95 @@ $subject = DB::table("subject_info")
 		<div class="col-lg-12">
 			<div class="card">
 				<div class="card-body">
-					<h4 class="card-title">Course Materials</h4><br>
+					<h4 class="card-title">@lang('teacher.addtitle')</h4><br>
 					<div class="basic-form">
 						<form method="post" class="row" action="{{ url("insertcoursematerials") }}" enctype="multipart/form-data">
-
 							@csrf
-
 							<div class="form-group col-md-4">
-								<label>Department:</label>
+								<label>@lang('common.date') :<span class="text-danger" style="font-size: 15px;">*</span></label>
+								<input type="date" class="form-control" name="date" required="">
+							</div>
+							<div class="form-group col-md-4">
+								<label>@lang('teacher.departname') :</label>
 								<select  name="department_id" class="form-control" required="">
-									<option value="">Select Department</option>
+									<option value="">@lang('teacher.select_department')</option>
 									@if(isset($department))
 									@foreach($department as $d)
-
-									<option value="{{ $d->dpt_id }}">{{ $d->department_name }}</option>
-
+									<option value="{{ $d->id }}">@if($lang == 'en'){{ $d->department ?: $d->department_name_bn}}@else {{$d->department_name_bn ?: $d->department}}@endif</option>
 									@endforeach
 									@endif
 								</select>
 							</div>
-
-
-
 							<div class="form-group col-md-4">
-								<label>Semester:</label>
+								<label>@lang('teacher.semester') :</label>
 								<select  name="semester_id" class="form-control" required="">
-									<option value="">Select Semester</option>
+									<option value="">@lang('teacher.select_semester')</option>
 									@if(isset($semester))
 									@foreach($semester as $d)
-									<option value="{{ $d->id }}" <?php if ($d->id == $data->semester) {
+									<option value="{{ $d->id }}" <?php if ($d->id == $d->semester_name) {
 										echo "selected";
-									} ?>>{{ $d->semester }}</option>
+									} ?>>@if($lang == 'en'){{ $d->semester_name ?: $d->semester_name_bn}}@else {{$d->semester_name_bn ?: $d->semester_name}}@endif</option>
 									@endforeach
 									@endif
 								</select>
 							</div>
-
-
-
 							<div class="form-group col-md-4">
-								<label>Shift:</label>
-								<select  name="shift" class="form-control" required="">
-									<option value="1st Shift">First Shift</option>
-									<option value="2nd Shift">Second Shift</option>
+								<label>@lang('teacher.shift') :</label>
+								<select  name="type" class="form-control" required="">
+									<option value="1">First Shift</option>
+									<option value="2">Second Shift</option>
 								</select>
 							</div>
-
-
 							<div class="form-group col-md-4">
-								<label>Section:</label>
+								<label>@lang('teacher.section') :</label>
 								<select  name="section_id" class="form-control" required="">
-									<option value="">Select Section</option>
-									
+									<option value="">@lang('teacher.select_section')</option>
 									@if(isset($section))
 									@foreach($section as $d)
-									<option value="{{ $d->section_id }}">{{ $d->section }}</option>
+									<option value="{{ $d->id }}">@if($lang == 'en'){{ $d->section_name ?: $d->section_name_bn}}@else {{$d->section_name_bn ?: $d->section_name}}@endif</option>
 									@endforeach
 									@endif
-
 								</select>
 							</div>
-
-
 							<div class="form-group col-md-4">
-								<label>Subject:</label>
+								<label>@lang('teacher.subjectname') :</label>
 								<select  name="subject_id" class="form-control" required="">
-									<option value="">Select Subject</option>
-									
+									<option value="">@lang('teacher.select_subject')</option>
 									@if(isset($subject))
 									@foreach($subject as $d)
-									<option value="{{ $d->id }}">{{ $d->subName }}</option>
+									<option value="{{ $d->id }}">@if($lang == 'en'){{ $d->subject_name ?: $d->subject_name_bn}}@else{{$d->subject_name_bn ?: $d->subject_name}}@endif</option>
 									@endforeach
 									@endif
-
 								</select>
 							</div>
-
-
-
-							<div class="form-group col-md-12">
-								<label>Title:</label>
+							<div class="form-group col-md-6">
+								<label>@lang('teacher.title_en') :</label>
 								<input type="text" name="title" class="form-control" required="">
 							</div>
-
+							<div class="form-group col-md-6">
+								<label>@lang('teacher.title_bn') :</label>
+								<input type="text" name="title_bn" class="form-control">
+							</div>
+							<div class="form-group col-md-6">
+								<label>@lang('teacher.details_en') :</label>
+								<textarea id="summernote"  class="form-control w-100" rows="10" type="text" name="details" ></textarea>
+							</div>
+							<div class="form-group col-md-6">
+								<label>@lang('teacher.details_bn') :</label>
+								<textarea id="summernote1"  class="form-control w-100" rows="10" type="text" name="details_bn" ></textarea>
+							</div>
 							<div class="form-group col-md-12">
-								<label>Details:</label>
-								<textarea class="form-control summernote" name="details"></textarea>
-															
-								</div>
-
-							<div class="form-group col-md-12">
-								<label>File:</label>
+								<label>@lang('teacher.file') :</label>
 								<input type="file" name="image" class="form-control">
 							</div>
-
-
-
 							<div class="form-group col-md-12">
-								<button type="submit" class="btn btn-dark">Save Now</button>
+								<button type="submit" class="btn btn-dark">@lang('common.save')</button>
 							</div>
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>
-
-
-
-
-
-
-
 	</div>
 </div>
 

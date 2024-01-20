@@ -36,6 +36,8 @@ return new class extends Migration
             $table->string('type')->nullable();
             $table->integer('status')->nullable();
             $table->string('image',100)->default('0');
+            $table->string('password',255);
+            $table->string('show_password',255);
             $table->timestamps();
         });
     }

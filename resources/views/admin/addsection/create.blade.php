@@ -40,27 +40,6 @@
 					@csrf
 					<div class="row myinput">
 						<div class="form-group mb-3 col-md-6">
-							<label>@lang('addsection.classname'): <span class="text-danger" style="font-size: 15px;">*</span></label>
-							<div class="input-group mt-2">
-								<select class="form-control" name="class_id" id="class_id" onchange="return getgroup();">
-                                    <option value="">@lang('common.select_one')</option>
-									@if(isset($class))
-									@foreach($class as $c)
-									<option value="{{ $c->id }}">@if($lang == 'en'){{ $c->class_name }}@else {{$c->class_name_bn}}@endif</option>
-									@endforeach
-									@endif
-								</select>
-							</div>
-						</div>
-						<div class="form-group mb-3 col-md-6">
-							<label>@lang('addsection.groupname'):</label>
-							<div class="input-group mt-2">
-								<select class="form-control" name="group_id" id="group_id">
-
-								</select>
-							</div>
-						</div>
-						<div class="form-group mb-3 col-md-6">
 							<label>@lang('addsection.name'): <span class="text-danger" style="font-size: 15px;">*</span></label>
 							<div class="input-group mt-2">
 								<input class="form-control" type="text" name="section_name" id="section_name" required="">
@@ -96,25 +75,6 @@
 
 <script src="{{ asset('assets/js/vendor/quill.min.js') }}"></script>
 <script src="{{ asset('assets/js/pages/demo.quilljs.js') }}"></script>
-
-
-<script type="text/javascript">
-	function getgroup(){
-
-		var class_id = $("#class_id").val();
-
-
-		$.ajax({
-			url: "{{ url("getgroup") }}/"+class_id,
-			type: "get",
-			success: function (response) {
-
-				$("#group_id").html(response);
-
-			}
-		});
-	}
-</script>
 
 
 

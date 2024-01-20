@@ -7,11 +7,9 @@
   $t_coursematerial = DB::table("t_coursematerial")->where('teacher_id',Auth('teacher')->user()->id)->count();
   $t_notices = DB::table("t_notices")->where('teacher_id',Auth('teacher')->user()->id)->count();
   $t_result = DB::table("t_result")->where('teacher_id',Auth('teacher')->user()->id)->count();
-  $t_students = DB::table("student_information")->where('department',Auth('teacher')->user()->department)->count();
 @endphp
 
 <div class="content-body">
-
     <div class="container-fluid mt-3">
         <div class="row">
             <div class="col-lg-3 col-sm-6">
@@ -55,7 +53,7 @@
                     <div class="card-body">
                         <h3 class="card-title text-white">Students</h3>
                         <div class="d-inline-block">
-                            <h2 class="text-white">{{ $t_students }}</h2>
+                            <h2 class="text-white"></h2>
                             <p class="text-white mb-0">Students</p>
                         </div>
                         <span class="float-right display-5 opacity-5"><i class="fa fa-users"></i></span>
@@ -63,11 +61,7 @@
                 </div>
             </div>
         </div>
-
-
-
     </div>
-
 </div>
 
 @endsection

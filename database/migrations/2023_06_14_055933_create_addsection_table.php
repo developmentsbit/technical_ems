@@ -13,8 +13,6 @@ return new class extends Migration
     {
         Schema::create('addsection', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('class_id')->constrained('addclass')->cascadeOnDelete();
-            $table->foreignId('group_id')->nullable()->constrained('addgroup')->cascadeOnDelete();
             $table->string('section_name')->nullable();
             $table->string('section_name_bn')->nullable();
             $table->string('status');

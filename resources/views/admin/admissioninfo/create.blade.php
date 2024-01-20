@@ -54,7 +54,7 @@
 						<div class="form-group mb-3 col-md-6">
 							<label>@lang('admissioninfo.date'): <span class="text-danger" style="font-size: 15px;">*</span></label>
 							<div class="input-group mt-2">
-								<input class="form-control" type="date" name="date" id="date"  required="">
+								<input class="form-control" type="date" name="date" id="date" required="">
 							</div>
 						</div>
 						<div class="form-group mb-3 col-md-6">

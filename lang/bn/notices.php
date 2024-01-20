@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'managetitle' => 'নোটিশ',
+    'addtitle' => 'নোটিশ যুক্ত করুন',
+    'edittitle' => 'নোটিশ পরিবর্তন করুন',
+    'viewtitle' => 'নোটিশ দেখুন',
+	'subjectname' => 'বিষয়ের নাম',
+    'departname' => 'ডিপার্টমেন্ট',
+    'semester' => 'সেমিষ্টার',
+    'section' => 'সেকশান',
+	'shift' => 'শিফট',
+    'title' => 'টাইটেল',
+    'title_en' => 'টাইটেল (ইংরেজি)',
+    'title_bn'=>'টাইটেল (বাংলা)',
+    'details' => 'বিস্তারিত',
+    'details_en' => 'বিস্তারিত (ইংরেজি)',
+    'details_bn'=>'বিস্তারিত (বাংলা)',
+    'file' => 'ছবি/ফাইল',
+	'select_department' => 'ডিপার্টমেন্ট নির্বাচন করুন',
+	'select_semester' => 'সেমিস্টার নির্বাচন করুন',
+	'select_section' => 'সেকশান নির্বাচন করুন',
+	'select_subject' => 'সেকশান নির্বাচন করুন',
+	'department_info' => 'ডিপার্টমেন্টের তথ্য',
+];

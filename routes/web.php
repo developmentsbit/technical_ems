@@ -66,6 +66,11 @@ use App\Http\Controllers\AgreementsController;
 use App\Http\Controllers\IndustrialAttachmentController;
 use App\Http\Controllers\JobplacementCVController;
 use App\Http\Controllers\CVAttachementController;
+use App\Http\Controllers\TeacherDashboardController;
+use App\Http\Controllers\TeacherloginController;
+
+use App\Http\Controllers\SubjectInfoController;
+use App\Http\Controllers\SubjectPriorityController;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -214,6 +219,65 @@ Route::post('/loadSearchStudent',[FrontendController::class,'loadSearchStudent']
 Route::get('/view_student_details/{student_id}',[FrontendController::class,'view_student_details']);
 Route::post('/getDateAttData',[FrontendController::class,'getDateAttData']);
 
+// teacher login
+
+// Route::get('/teacherlogin',function(){
+//     if (Auth::guard('teacher')->check()) 
+//     {
+//         return redirect('teacherdashboard');	
+//     }
+//     else
+//     {
+//         return view("teacher.teacherlogin");
+//     }
+// });
+Route::get('/teacherlogin',[TeacherloginController::class,'teacherlogin']);
+Route::post('/loginteacherdashboard',[TeacherloginController::class,'loginteacherdashboard']);
+Route::get('/teacherdashboard',[TeacherDashboardController::class,'teacherdashboard']);
+Route::get('/teacherlogout',[TeacherDashboardController::class,'teacherlogout']);
+Route::get('/teacherprofile/{id}',[TeacherDashboardController::class,'teacherprofile']);
+Route::post('/updateteacherdashboard/{id}',[TeacherDashboardController::class,'updateteacherdashboard']);
+
+// SMS
+
+Route::get('/studentsmssend',[TeacherDashboardController::class,'studentsmssend']);
+Route::get('/searchstudentdata',[TeacherDashboardController::class,'searchstudentdata']);
+
+Route::get('/guardiansmssend',[TeacherDashboardController::class,'guardiansmssend']);
+Route::get('/searchguardiandata',[TeacherDashboardController::class,'searchguardiandata']);
+
+// Course Materials
+
+Route::get('/coursematerials',[TeacherDashboardController::class,'coursematerials']);
+Route::post('/insertcoursematerials',[TeacherDashboardController::class,'insertcoursematerials']);
+Route::get('/managecoursematerials',[TeacherDashboardController::class,'managecoursematerials'])->name('managecoursematerials.index');
+Route::get('/deletecoursematerials/{id}',[TeacherDashboardController::class,'deletecoursematerials']);
+Route::get('/editcoursematerials/{id}',[TeacherDashboardController::class,'editcoursematerials']);
+Route::post('/updatcoursematerials/{id}',[TeacherDashboardController::class,'updatcoursematerials']);
+
+// Notice T
+
+Route::get('/t_notice',[TeacherDashboardController::class,'t_notice']);
+Route::post('/insertt_notice',[TeacherDashboardController::class,'insertt_notice']);
+Route::get('/t_managenotice',[TeacherDashboardController::class,'t_managenotice'])->name('t_managenotice.index');
+Route::post('/deletet_notice/{id}',[TeacherDashboardController::class,'deletet_notice']);
+Route::get('/editt_notice/{id}',[TeacherDashboardController::class,'editt_notice']);
+Route::post('/updatet_notice/{id}',[TeacherDashboardController::class,'updatet_notice']);
+
+// Results T
+
+Route::get('/t_results',[TeacherDashboardController::class,'t_results']);
+Route::post('/insertt_results',[TeacherDashboardController::class,'insertt_results']);
+Route::get('/t_manageresults',[TeacherDashboardController::class,'t_manageresults'])->name('t_manageresults.index');
+Route::get('/deletet_results/{id}',[TeacherDashboardController::class,'deletet_results']);
+Route::get('/editt_results/{id}',[TeacherDashboardController::class,'editt_results']);
+Route::post('/updatet_results',[TeacherDashboardController::class,'updatet_results']);
+
+Route::get('/inboxmessageteacher',[TeacherDashboardController::class,'inboxmessageteacher']);
+Route::post('/replyteachermessage',[TeacherDashboardController::class,'replyteachermessage']);
+Route::get('/changepasswordteacher',[TeacherDashboardController::class,'changepasswordteacher']);
+Route::post('/upchangepasswordteacher',[TeacherDashboardController::class,'upchangepasswordteacher']);
+
 // job placement
 
 Route::get('/job_placement',[FrontendController::class,'job_placementmethod']);
@@ -344,7 +408,25 @@ Route::group(['middleware' => 'auth'], function () {
         'industry_linkages' => IndustrialAttachmentController::class,
         'jobplacement' => JobplacementCVController::class,
         'cvattached' => CVAttachementController::class,
+        'add_subject' => SubjectInfoController::class,
+        'subjectpriority' => SubjectPriorityController::class,
     ]);
+
+    Route::get('subjectStatusChanged/{id}',[SubjectInfoController::class,'subjectStatusChanged']);
+
+    // Route::get('subjectpriority',
+	// ['as'=>'subjectpriority',
+	// 'uses'=>'SubjectPriorityController@subjectpriority'
+    // ])->where(['subjectpriority' => '[A-Z]+', 'subjectpriority' => '[a-z]+']);
+
+    Route::get('/deletesubjectpriority/{id}', [SubjectPriorityController::class, 'deletesubjectpriority']);
+    Route::get('/editsubjectpriority/{id}', [SubjectPriorityController::class, 'editsubjectpriority']);
+    Route::post('/updatesubjectpriority/{id}', [SubjectPriorityController::class, 'updatesubjectpriority']);
+
+    Route::get('/getteacher/{id}', [SubjectPriorityController::class, 'getteacher']);
+    Route::get('/getsubject', [SubjectPriorityController::class, 'getsubject']);
+    
+    Route::get('/showsubjectpriority/{id}', [SubjectPriorityController::class, 'showsubjectpriority']);
 
     Route::get('retrive_message/{id}', [MessageController::class, 'retrive_message']);
     Route::get('permenantMessageDelete/{id}', [MessageController::class, 'permenantMessageDelete']);

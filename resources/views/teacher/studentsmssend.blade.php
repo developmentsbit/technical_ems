@@ -4,7 +4,7 @@
 
 @php
 
-$department = DB::table("add_department")->where('show',1)->get();
+$department = DB::table("department")->where('show',1)->get();
 $semester = DB::table("semester_info")->where('status',1)->get();
 $section  = DB::table("section_info")->get();
 
@@ -32,7 +32,7 @@ $section  = DB::table("section_info")->get();
 									@if(isset($department))
 									@foreach($department as $d)
 
-									<option value="{{ $d->dpt_id }}">{{ $d->department_name }}</option>
+									<option value="{{ $d->id }}">{{ $d->department_name }}</option>
 
 									@endforeach
 									@endif

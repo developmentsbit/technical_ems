@@ -89,10 +89,10 @@ $setting = DB::table("setting")->first();
 				<div class="col-md-12 pt-4 pb-4 border border-top-0">
 					<div class="row">
 						<div class="col-md-6">
-							<center><a href="{{ url("studentlogin") }}" class="btn btn-success w-100 p-3"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;Student Login</a></center><br>
+							<center><a href="{{ url("studentlogin") }}" target="_blank" class="btn btn-success w-100 p-3"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;Student Login</a></center><br>
 						</div>
 						<div class="col-md-6">
-							<center><a href="{{ url("teacherlogin") }}" class="btn btn-dark w-100 p-3"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;Teacher Login</a></center>
+							<center><a href="{{ url("teacherlogin") }}" target="_blank" class="btn btn-dark w-100 p-3"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;Teacher Login</a></center>
 						</div>
 					</div>
 				</div>

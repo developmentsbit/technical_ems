@@ -9,6 +9,7 @@ return [
     */
 
     'dashboard' => 'ড্যাশবোর্ড',
+    'menu' => 'মেন্যু',
     'list' => 'তালিকা',
     'add_new' => '+ নতুন যোগ করুন',
     'back' => '&larr; Back',
