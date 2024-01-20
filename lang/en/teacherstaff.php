@@ -32,6 +32,7 @@ return [
      'teacher'=>'Teacher',
      'staff'=>'Staff',
      'shift'=>'Shift',
+     'password'=>'Password',
 
 
 

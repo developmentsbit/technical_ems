@@ -9,6 +9,7 @@ return [
     */
 
     'dashboard' => 'Dashboard',
+    'menu' => 'Menu',
     'list' => 'List',
     'add_new' => '+ Add New',
     'back' => '&larr; Back',

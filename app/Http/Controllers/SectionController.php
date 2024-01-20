@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Brian2694\Toastr\Facades\Toastr;
 
 class SectionController extends Controller
 {
-
-   public function __construct()
-   {
-    $this->middleware('auth');
-}
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
 
     /**
@@ -19,21 +19,16 @@ class SectionController extends Controller
      */
     public function index()
     {
-     $data = DB::table("addsection")
-     ->leftjoin("addclass",'addclass.id','addsection.class_id')
-     ->leftjoin("addgroup",'addgroup.id','addsection.group_id')
-     ->select("addsection.*",'addclass.class_name','addgroup.group_name','addclass.class_name_bn','addgroup.group_name_bn')
-     ->get();
-     return view('admin.addsection.index',compact('data'));
- }
+        $data = DB::table("addsection")->get();
+        return view('admin.addsection.index',compact('data'));
+    }
 
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        $class = DB::table("addclass")->where('status',1)->get();
-        return view('admin.addsection.create',compact('class'));
+        return view('admin.addsection.create');
     }
 
     /**
@@ -42,8 +37,6 @@ class SectionController extends Controller
     public function store(Request $request)
     {
      $data = array();
-     $data['class_id']      = $request->class_id;
-     $data['group_id']      = $request->group_id;
      $data['section_name']  = $request->section_name;
      $data['section_name_bn']  = $request->section_name_bn;
      $data['status']        = $request->status;
@@ -68,9 +61,7 @@ class SectionController extends Controller
     public function edit(string $id)
     {
         $data = DB::table("addsection")->where('id',$id)->first();
-        $class = DB::table("addclass")->where('status',1)->get();
-        $group = DB::table('addgroup')->where('class_id',$data->class_id)->get();
-        return view('admin.addsection.edit',compact('data','class','group'));
+        return view('admin.addsection.edit',compact('data'));
     }
 
     /**
@@ -79,8 +70,6 @@ class SectionController extends Controller
     public function update(Request $request, string $id)
     {
         $data = array();
-        $data['class_id']      = $request->class_id;
-        $data['group_id']      = $request->group_id;
         $data['section_name']  = $request->section_name;
         $data['section_name_bn']  = $request->section_name_bn;
         $data['status']        = $request->status;
@@ -113,28 +102,6 @@ class SectionController extends Controller
         Toastr::error(__('Section Delete Unsuccessfully'));
         return redirect()->route('addsection.index');
     }
-}
-
-public function getgroup($class_id){
-
-    $group  = DB::table("addgroup")->where("class_id",$class_id)->where("status",1)->get();
-
-    if($group)
-    {
-        foreach($group as $v)
-        {
-            if(config('app.locale') == 'en')
-            {
-                $group_name = $v->group_name;
-            }
-            else
-            {
-                $group_name = $v->group_name_bn;
-            }
-            echo "<option value='".$v->id."'>".$group_name."</option>";
-        }
-    }
-
 }
 
 

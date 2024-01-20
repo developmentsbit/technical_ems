@@ -145,7 +145,7 @@ class IndustrialAttachmentController extends Controller
         }
         else
         {
-            Toastr::error(__('Industry Linkages Menu Result Delete Unsuccessfully'));
+            Toastr::error(__('Industry Linkages Menu Delete Unsuccessfully'));
             return redirect()->route('industry_linkages.index');
         }
     }

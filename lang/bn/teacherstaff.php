@@ -30,6 +30,7 @@ return [
      'teacher'=>'শিক্ষক',
      'staff'=>'কর্মচারী',
      'shift'=>'শিফট',
+     'password'=>'পাসওয়ার্ড',
 
 
 

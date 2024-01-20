@@ -168,7 +168,7 @@
 								<textarea rows="3" class="form-control" name="education"></textarea>
 							</div>
 						</div>
-						<div class="form-group mb-3 col-md-6">
+						<div class="form-group mb-3 col-md-4">
 							<label>@lang('teacherstaff.gender'): <span class="text-danger" style="font-size: 15px;">*</span></label>
 							<div class="input-group mt-2">
 								<select class="form-control" name="gender" id="option_s2">
@@ -177,7 +177,7 @@
 								</select>
 							</div>
 						</div>
-						<div class="form-group mb-3 col-md-6">
+						<div class="form-group mb-3 col-md-4">
 							<label>@lang('teacherstaff.type'): <span class="text-danger" style="font-size: 15px;">*</span></label>
 							<div class="input-group mt-2">
 								<select class="form-control" name="type" id="option_s2">
@@ -185,6 +185,12 @@
 									<option value="1">@lang('teacherstaff.teacher')</option>
 									<option value="2">@lang('teacherstaff.staff')</option>
 								</select>
+							</div>
+						</div>
+						<div class="form-group mb-3 col-md-4">
+							<label>@lang('teacherstaff.password'): </label>
+							<div class="input-group mt-2">
+								<input class="form-control" type="text"  placeholder="Password" name="password" id="password">
 							</div>
 						</div>
 						<div class="form-group mb-3 col-md-12">

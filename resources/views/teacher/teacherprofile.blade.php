@@ -4,8 +4,8 @@
 
 
 @php
-$data = DB::table("teachers_information")->where('id',Auth('teacher')->user()->id)->first();
-$department = DB::table("add_department")->where('show',1)->get();
+$data = DB::table("teacherstaff")->where('id',Auth('teacher')->user()->id)->first();
+$department = DB::table("department")->get();
 @endphp
 
 
@@ -26,53 +26,46 @@ $department = DB::table("add_department")->where('show',1)->get();
 
     <div class="form-group col-md-3">
      <label >SL No.</label>
-     <input type="text" readonly="" name="cindex_no"  placeholder="Ex:1" class="form-control" required="" value="{{$data->cindex_no}}">
+     <input type="text" readonly="" name="sl"  placeholder="Ex:1" class="form-control" required="" value="{{$data->sl}}">
 </div>
 
 <div class="form-group col-md-6">
      <label >Teacher Name</label>
-     <input type="text" name="teachers_name" placeholder="Teacher Name" class="form-control" required="" value="{{$data->teachers_name}}">
+     <input type="text" name="name" placeholder="Teacher Name" class="form-control" required="" value="{{$data->name}}">
 </div>
 
 
 <div class="form-group col-md-3">
      <label >Type</label>
-     <select disabled="" class="form-control" required> 
-      @if($data->group_type == '3')
-      <option value="3">Department Head</option>
-      <option value="4">Department Staff</option>
-      <option value="6">Teacher</option>
-      @elseif($data->group_type == '4')
-      <option value="4">Department Staff</option>
-      <option value="3">Department Head</option>
-      <option value="6">Teacher</option>
-      @elseif($data->group_type == '6')
-      <option value="6">Teacher</option>
-      <option value="3">Department Head</option>
-      <option value="4">Department Staff</option>
-      @else
-      <option value="3">Department Head</option>
-      <option value="4">Department Staff</option>
-      <option value="6">Teacher</option>
-      @endif
-
-
-</select>
+     <select disabled="" class="form-control" required>
+          @if($data->type == 1)
+          <option value="1">@lang('teacherstaff.teacher')</option>
+          <option value="2">@lang('teacherstaff.staff')</option>
+          <option value="3">@lang('teacherstaff.department_head')</option>
+          @elseif($data->type == 2)
+          <option value="2">@lang('teacherstaff.staff')</option>
+          <option value="1">@lang('teacherstaff.teacher')</option>
+          <option value="3">@lang('teacherstaff.department_head')</option>
+          @elseif($data->type == 3)
+          <option value="3">@lang('teacherstaff.department_head')</option>
+          <option value="1">@lang('teacherstaff.teacher')</option>
+          <option value="2">@lang('teacherstaff.staff')</option>
+          @else
+          <option value="1">@lang('teacherstaff.teacher')</option>
+          <option value="2">@lang('teacherstaff.staff')</option>
+          <option value="3">@lang('teacherstaff.department_head')</option>
+          @endif
+     </select>
 </div>
 <div class="form-group col-md-3">
      <label >Department</label>
-     <select disabled="" name="department" class="form-control" required="">
-
-      @if(isset($department))
-      @foreach($department as $d)
-
-      <option value="{{ $d->dpt_id }}" <?php if ($d->dpt_id == $data->department) {
-       echo "selected";
- } ?>>{{ $d->department_name }}</option>
-
- @endforeach
- @endif
-</select>
+     <select disabled="" name="department_id" class="form-control" required="">
+          @if(isset($department))
+          @foreach($department as $d)
+          <option value="{{ $d->id }}" <?php if ($d->id == $d->department) {echo "selected";} ?>>{{ $d->department }}</option>
+          @endforeach
+          @endif
+     </select>
 </div>
 
 
@@ -83,21 +76,21 @@ $department = DB::table("add_department")->where('show',1)->get();
 
 <div class="form-group col-md-3">
      <label >Father's Name</label>
-     <input type="text" name="fathers_name" placeholder="Father's Name" class="form-control"  value="{{$data->fathers_name}}">
+     <input type="text" name="father_name" placeholder="Father's Name" class="form-control"  value="{{$data->father_name}}">
 </div>
 
 
 
 <div class="form-group col-md-3">
      <label >Mother's Name</label>
-     <input type="text" name="mothers_name" placeholder="Mother's Name" class="form-control"  value="{{$data->mothers_name}}">
+     <input type="text" name="mother_name" placeholder="Mother's Name" class="form-control"  value="{{$data->mother_name}}">
 </div>
 
 
 
 <div class="form-group col-md-4">
      <label >Mobile</label>
-     <input type="number" min="11" name="mobile_no" placeholder="Mobile" class="form-control"   value="{{$data->mobile_no}}">
+     <input type="number" min="11" name="mobile" placeholder="Mobile" class="form-control"   value="{{$data->mobile}}">
 </div>
 
 
@@ -109,17 +102,17 @@ $department = DB::table("add_department")->where('show',1)->get();
 
 <div class="form-group col-md-4">
      <label >Date Of Birth</label>
-     <input type="text" name="date_of_birth"  class="form-control"   value="{{$data->date_of_birth}}">
+     <input type="text" name="dob"  class="form-control"   value="{{$data->dob}}">
 </div>
 
 <div class="form-group col-md-3">
      <label >Blood Group</label>
-     <input type="text" name="blood_group" placeholder="Ex:A+" class="form-control" value="{{$data->blood_group}}">
+     <input type="text" name="blood" placeholder="Ex:A+" class="form-control" value="{{$data->blood}}">
 </div>
 
 <div class="form-group col-md-3">
      <label >Religion</label>
-     <input type="text" name="relegion" placeholder="Religion" class="form-control"  value="{{$data->relegion}}">
+     <input type="text" name="religion" placeholder="Religion" class="form-control"  value="{{$data->religion}}">
 </div>
 
 
@@ -127,18 +120,17 @@ $department = DB::table("add_department")->where('show',1)->get();
 <div class="form-group col-md-6">
      <label >Gender</label>
      <select name="gender" class="form-control">
-      @if($data->gender == 'Male')
-      <option value="Male">Male</option>
-      <option value="Female">Female</option>
-      @elseif($data->gender == 'Female')
-      <option value="Female">Female</option>
-      <option value="Male">Male</option>
-      @else
-      <option value="Male">Male</option>
-      <option value="Female">Female</option>
-      @endif
-
-</select>
+          @if($data->gender == 'Male')
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          @elseif($data->gender == 'Female')
+          <option value="Female">Female</option>
+          <option value="Male">Male</option>
+          @else
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          @endif
+     </select>
 </div>
 
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Hash;
 use Brian2694\Toastr\Facades\Toastr;
 
 class TeacherstaffController extends Controller
