@@ -93,6 +93,7 @@ $array = array(
     'staffinfo'=>'Staffs Information',
     'comitteemembers'=>'Comittee Members List',
     'councilmembers'=>'Council Members List',
+    'foculpoints'=>'List of In Charge Focal Points',
 
     'academic_information'=>'Academic Information',
     'rules_regulation'=>'Rules Regulation',
@@ -108,6 +109,7 @@ $array = array(
     'info'=>'Info',
     'integrity'=>'Integrity',
     'ongoingeducation'=>'On Going Education',
+    'integritystrategy'=>'Integrity Strategy',
 
     'holidaylists'=>'Holiday Lists',
     'uniform'=>'Uniform',

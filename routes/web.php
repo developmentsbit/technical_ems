@@ -71,6 +71,8 @@ use App\Http\Controllers\TeacherloginController;
 
 use App\Http\Controllers\SubjectInfoController;
 use App\Http\Controllers\SubjectPriorityController;
+use App\Http\Controllers\FoculPointController;
+use App\Http\Controllers\NationalIntegrityStrategyController;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -113,6 +115,8 @@ Route::get('/', [FrontendController::class, 'index']);
 Route::get('/page/{id}', [FrontendController::class, 'page']);
 Route::get('/teacher_permission', [FrontendController::class, 'teacher_permission']);
 Route::get('/mpo_nationalizations', [FrontendController::class, 'mpo_nationalizations']);
+Route::get('/integritystrategy', [FrontendController::class, 'integritystrategy']);
+Route::get('/view_integritystrategy/{id}', [FrontendController::class, 'view_integritystrategy']);
 Route::get('/principal_message', [FrontendController::class, 'principle_message']);
 Route::get('/vice_principal_messages', [FrontendController::class, 'vice_principal_message']);
 Route::get('/vice_prinicpalmessage', [FrontendController::class, 'vice_prinicpalmessage']);
@@ -123,6 +127,8 @@ Route::get('/principles', [FrontendController::class, 'principles']);
 Route::get('/donar', [FrontendController::class, 'donar']);
 Route::get('/ex_member', [FrontendController::class, 'ex_member']);
 Route::get('/memberdetails/{id}', [FrontendController::class, 'memberdetails']);
+Route::get('/foculpoints', [FrontendController::class, 'foculpoints']);
+Route::get('/focul_point_details/{id}', [FrontendController::class, 'focul_point_details']);
 Route::get('/department_teacher/{id}', [FrontendController::class, 'Teacher_infos']);
 
 Route::get('/teacherinfo', [FrontendController::class, 'teacherinfo']);
@@ -410,6 +416,8 @@ Route::group(['middleware' => 'auth'], function () {
         'cvattached' => CVAttachementController::class,
         'add_subject' => SubjectInfoController::class,
         'subjectpriority' => SubjectPriorityController::class,
+        'focul_point' => FoculPointController::class,
+        'nis_info' => NationalIntegrityStrategyController::class,
     ]);
 
     Route::get('subjectStatusChanged/{id}',[SubjectInfoController::class,'subjectStatusChanged']);

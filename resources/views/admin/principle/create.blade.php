@@ -33,7 +33,6 @@
             @endslot
         @endcomponent
 	<div class="col-12">
-
 		<div class="card">
 			<div class="card-body">
 				<h3>@lang('principle.addtitle')</h3><br>

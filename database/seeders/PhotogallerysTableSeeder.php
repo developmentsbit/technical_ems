@@ -14,43 +14,43 @@ class PhotogallerysTableSeeder extends Seeder
      */
     public function run()
     {
-
+        
 
         \DB::table('photogallerys')->delete();
-
+        
         \DB::table('photogallerys')->insert(array (
-            0 =>
+            0 => 
             array (
-                'created_at' => NULL,
                 'id' => 8,
-                'image' => 'photogallerys_image/22730.jpg',
-                'slider' => 1,
                 'title' => '2',
                 'title_bn' => NULL,
+                'image' => 'photogallerys_image/22730.jpg',
+                'slider' => 1,
+                'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            1 =>
+            1 => 
             array (
-                'created_at' => NULL,
                 'id' => 9,
-                'image' => 'photogallerys_image/49218.jpg',
-                'slider' => 1,
                 'title' => '3',
                 'title_bn' => NULL,
+                'image' => 'photogallerys_image/9322.png',
+                'slider' => 1,
+                'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            2 =>
+            2 => 
             array (
-                'created_at' => NULL,
                 'id' => 10,
-                'image' => 'photogallerys_image/38324.jpg',
-                'slider' => 1,
                 'title' => '3',
                 'title_bn' => NULL,
+                'image' => 'photogallerys_image/7554.jpg',
+                'slider' => 1,
+                'created_at' => NULL,
                 'updated_at' => NULL,
             ),
         ));
-
-
+        
+        
     }
 }

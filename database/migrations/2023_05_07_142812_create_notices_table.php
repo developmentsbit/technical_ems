@@ -19,7 +19,7 @@ return new class extends Migration
             $table->longText('title_bn')->nullable();
             $table->longText('details')->nullable();
             $table->longText('details_bn')->nullable();
-            $table->string('image')->nullable();
+            $table->string('image')->default('0');
             $table->timestamps();
         });
     }

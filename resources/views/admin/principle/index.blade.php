@@ -62,7 +62,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 							<td>{{ $i++ }}</td>
 							<td>
 								@if($d->type == 1)
-								  @lang('principle.principal')
+								@lang('principle.principal')
 								@else
                                 @lang('principle.president')
 								@endif
@@ -76,7 +76,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 										@csrf
 										@method('DELETE')
 										<button type="submit" class="btn btn-danger" onClick="return confirm('Are You Sure?')">@lang('common.delete')</button>
-
 									</form>
 								</div>
 							</td>
@@ -89,13 +88,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 		</div> <!-- end card -->
 	</div><!-- end col-->
 </div>
-
-
-
-
-
-
-
 
 
 

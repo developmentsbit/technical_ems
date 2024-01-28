@@ -128,15 +128,13 @@
                 <div class="nk-nav-scroll">
                     <ul class="metismenu" id="menu">
                         <li class="nav-label" style="color:gray;">@lang('common.dashboard')</li>
-
                         <li>
                             <a href="{{ url("teacherdashboard") }}" aria-expanded="false">
                                 <i class="icon-badge menu-icon"></i><span class="nav-text">@lang('common.dashboard')</span>
                             </a>
                         </li>
-
                         <li class="nav-label" style="color:gray;">@lang('common.menu')</li>
-
+                        
                         <li>
                             <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                                 <i class="icon-speedometer menu-icon"></i><span class="nav-text">@lang('teacher.managetitle')</span>
@@ -171,7 +169,7 @@
 
 
 
-                        <!-- <li class="nav-label" style="color:gray;">Chat</li>
+                        <li class="nav-label" style="color:gray;">Chat</li>
 
 
                         <li>
@@ -183,10 +181,7 @@
                             </ul>
                         </li>
                         
-                        
-                         <li class="nav-label" style="color:gray;">SMS Notification</li>
-
-
+                        <li class="nav-label" style="color:gray;">SMS Notification</li>
                         <li>
                             <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                                 <i class="icon-speedometer menu-icon"></i><span class="nav-text">SMS</span>
@@ -195,14 +190,8 @@
                                 <li><a href="{{ url('/studentsmssend')}}">Student Message</a></li>
                                 <li><a href="{{ url('/guardiansmssend')}}">Guardian Message</a></li>
                             </ul>
-                        </li> -->
+                        </li>
                         
-                        
-
-
-
-
-
                         <li class="nav-label" style="color:gray;">Profile</li>
 
                         <li>
@@ -213,9 +202,7 @@
                                 <li><a href="{{ url('/teacherprofile/'.Auth('teacher')->user()->id) }}">My Profile</a></li>
                             </ul>
                         </li>
-                        
-                        
-                           <li>
+                        <li>
                             <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                                 <i class="icon-speedometer menu-icon"></i><span class="nav-text">Change Password</span>
                             </a>
@@ -223,11 +210,6 @@
                                 <li><a href="{{ url('/changepasswordteacher')}}">Change Password</a></li>
                             </ul>
                         </li>
-
-
-
-
-
                     </ul>
                 </div>
             </div>
