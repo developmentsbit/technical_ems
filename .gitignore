@@ -15,37 +15,37 @@ app/storage/
 # Laravel 5 & Lumen specific
 public/storage
 public/hot
-public/academiccalender_image
-public/admissioninfo_image
-public/classroutine_image
-public/examroutine_image
-public/frontend/img
-public/holidaylist_image
-public/lessonplan_image
-public/member-assets
-public/members_image
-public/notices_image
-public/pages_image
-public/photogallerys_image
-public/principle_image
-public/setting_image
-public/StudentImage
-public/StudentPreviousFiles
-public/suggestion_image
-public/syllabus_image
-public/teacherstaff_image
-public/vice_principal_image
-public/class_wise_student_image
-public/section_wise
-public/gender_wise
-public/mujib100
-public/notices_image
-public/pages_image
-public/photogallerys_image
-public/principle_image
-public/profile_images
-public/setting_image
-public/vice_principal_image
+# public/academiccalender_image
+# public/admissioninfo_image
+# public/classroutine_image
+# public/examroutine_image
+# public/frontend/img
+# public/holidaylist_image
+# public/lessonplan_image
+# public/member-assets
+# public/members_image
+# public/notices_image
+# public/pages_image
+# public/photogallerys_image
+# public/principle_image
+# public/setting_image
+# public/StudentImage
+# public/StudentPreviousFiles
+# public/suggestion_image
+# public/syllabus_image
+# public/teacherstaff_image
+# public/vice_principal_image
+# public/class_wise_student_image
+# public/section_wise
+# public/gender_wise
+# public/mujib100
+# public/notices_image
+# public/pages_image
+# public/photogallerys_image
+# public/principle_image
+# public/profile_images
+# public/setting_image
+# public/vice_principal_image
 
 # result/db_connect/conect.php
 /ems/db_connect/
