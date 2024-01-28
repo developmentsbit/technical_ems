@@ -22,6 +22,9 @@ return new class extends Migration
         Schema::table('classroutine', function (Blueprint $table) {
             $table->foreign('semester_id')->references('id')->on('semesters');
         });
+        Schema::table('syllabus', function (Blueprint $table) {
+            $table->foreign('semester_id')->references('id')->on('semesters');
+        });
     }
 
     /**
