@@ -19,8 +19,10 @@ return new class extends Migration
         });
 
         Schema::table('classroutine', function (Blueprint $table) {
-            $table->foreign('department_id')->references('id')->on('department');
-            $table->foreign('department_id')->references('id')->on('department');
+             $table->foreign('department_id')->references('id')->on('department');
+        });
+        Schema::table('syllabus', function (Blueprint $table) {
+             $table->foreign('department_id')->references('id')->on('department');
         });
     }
 
