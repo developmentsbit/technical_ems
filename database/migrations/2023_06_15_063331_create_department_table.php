@@ -17,7 +17,12 @@ return new class extends Migration
             $table->string('department_name_bn')->nullable();
             $table->timestamps();
         });
+
+        Schema::table('classroutine', function (Blueprint $table) {
+            $table->foreign('department_id')->references('id')->on('department');
+        });
     }
+
 
     /**
      * Reverse the migrations.

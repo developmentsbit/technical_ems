@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('classroutine', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('department_id')->unsigned();
-            $table->foreign('department_id')->references('id')->on('department');
             $table->bigInteger('semester_id')->unsigned();
             $table->foreign('semester_id')->references('id')->on('semesters');
             $table->string('shift')->nullable();
