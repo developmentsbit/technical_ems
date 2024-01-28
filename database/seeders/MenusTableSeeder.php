@@ -206,7 +206,7 @@ class MenusTableSeeder extends Seeder
                 'updated_by' => 1,
                 'deleted_by' => NULL,
                 'created_at' => '2023-06-11 13:38:49',
-                'updated_at' => '2023-12-28 06:59:04',
+                'updated_at' => '2024-01-21 05:02:31',
                 'deleted_at' => NULL,
             ),
             10 => 
@@ -218,14 +218,14 @@ class MenusTableSeeder extends Seeder
                 'system_name' => 'Gallery',
                 'route_name' => NULL,
                 'icon' => NULL,
-                'order_by' => 39,
+                'order_by' => 40,
                 'is_hidden' => 'No',
                 'status' => 1,
                 'created_by' => 1,
                 'updated_by' => 1,
                 'deleted_by' => NULL,
                 'created_at' => '2023-06-11 13:54:20',
-                'updated_at' => '2024-01-10 06:02:06',
+                'updated_at' => '2024-01-16 06:36:45',
                 'deleted_at' => NULL,
             ),
             11 => 
@@ -275,14 +275,14 @@ class MenusTableSeeder extends Seeder
                 'system_name' => 'Useful Link',
                 'route_name' => NULL,
                 'icon' => NULL,
-                'order_by' => 36,
+                'order_by' => 37,
                 'is_hidden' => 'No',
                 'status' => 1,
                 'created_by' => 1,
                 'updated_by' => 1,
                 'deleted_by' => NULL,
                 'created_at' => '2023-06-11 14:09:21',
-                'updated_at' => '2024-01-10 06:02:06',
+                'updated_at' => '2024-01-16 06:36:45',
                 'deleted_at' => NULL,
             ),
             14 => 
@@ -313,14 +313,14 @@ class MenusTableSeeder extends Seeder
                 'system_name' => 'Add Members',
                 'route_name' => 'members.index',
                 'icon' => NULL,
-                'order_by' => 3,
+                'order_by' => 2,
                 'is_hidden' => 'No',
                 'status' => 1,
                 'created_by' => 1,
                 'updated_by' => 1,
                 'deleted_by' => NULL,
                 'created_at' => '2023-06-11 14:28:27',
-                'updated_at' => '2023-07-16 05:09:11',
+                'updated_at' => '2024-01-21 05:02:19',
                 'deleted_at' => NULL,
             ),
             16 => 
@@ -402,20 +402,20 @@ class MenusTableSeeder extends Seeder
             20 => 
             array (
                 'id' => 50,
-                'parent_id' => 29,
+                'parent_id' => 39,
                 'name' => 'Admission Info.',
                 'bn_name' => 'ভর্তি সংক্রান্ত তথ্য',
                 'system_name' => 'Admission Info.',
                 'route_name' => 'admissioninfo.index',
                 'icon' => NULL,
-                'order_by' => 5,
+                'order_by' => 10,
                 'is_hidden' => 'No',
                 'status' => 1,
                 'created_by' => 1,
                 'updated_by' => 1,
                 'deleted_by' => NULL,
                 'created_at' => '2023-06-13 14:24:49',
-                'updated_at' => '2023-06-13 14:24:49',
+                'updated_at' => '2024-01-21 05:04:37',
                 'deleted_at' => NULL,
             ),
             21 => 
@@ -439,48 +439,10 @@ class MenusTableSeeder extends Seeder
             ),
             22 => 
             array (
-                'id' => 52,
-                'parent_id' => 51,
-                'name' => 'Add Class',
-                'bn_name' => 'শ্রেণী যোগ করুন',
-                'system_name' => 'Add Class',
-                'route_name' => 'addclass.index',
-                'icon' => NULL,
-                'order_by' => 1,
-                'is_hidden' => 'No',
-                'status' => 1,
-                'created_by' => 1,
-                'updated_by' => 1,
-                'deleted_by' => NULL,
-                'created_at' => '2023-06-14 05:55:09',
-                'updated_at' => '2023-06-14 05:55:09',
-                'deleted_at' => NULL,
-            ),
-            23 => 
-            array (
-                'id' => 53,
-                'parent_id' => 51,
-                'name' => 'Add Group',
-                'bn_name' => 'গ্রুপ যোগ করুন',
-                'system_name' => 'Add Group',
-                'route_name' => 'addgroup.index',
-                'icon' => NULL,
-                'order_by' => 2,
-                'is_hidden' => 'No',
-                'status' => 1,
-                'created_by' => 1,
-                'updated_by' => 1,
-                'deleted_by' => NULL,
-                'created_at' => '2023-06-14 05:55:42',
-                'updated_at' => '2023-06-14 05:55:42',
-                'deleted_at' => NULL,
-            ),
-            24 => 
-            array (
                 'id' => 54,
                 'parent_id' => 51,
                 'name' => 'Add Section',
-                'bn_name' => 'বিভাগ যোগ করুন',
+                'bn_name' => 'সেকশন যোগ করুন',
                 'system_name' => 'Add Section',
                 'route_name' => 'addsection.index',
                 'icon' => NULL,
@@ -491,10 +453,10 @@ class MenusTableSeeder extends Seeder
                 'updated_by' => 1,
                 'deleted_by' => NULL,
                 'created_at' => '2023-06-14 05:56:11',
-                'updated_at' => '2023-06-14 06:28:09',
+                'updated_at' => '2024-01-23 06:53:22',
                 'deleted_at' => NULL,
             ),
-            25 => 
+            23 => 
             array (
                 'id' => 55,
                 'parent_id' => NULL,
@@ -513,7 +475,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2024-01-10 06:02:06',
                 'deleted_at' => NULL,
             ),
-            26 => 
+            24 => 
             array (
                 'id' => 56,
                 'parent_id' => 55,
@@ -532,7 +494,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-06-15 05:54:02',
                 'deleted_at' => NULL,
             ),
-            27 => 
+            25 => 
             array (
                 'id' => 57,
                 'parent_id' => 39,
@@ -551,7 +513,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2024-01-08 11:22:17',
                 'deleted_at' => NULL,
             ),
-            28 => 
+            26 => 
             array (
                 'id' => 58,
                 'parent_id' => 55,
@@ -570,7 +532,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-06-15 05:54:59',
                 'deleted_at' => NULL,
             ),
-            29 => 
+            27 => 
             array (
                 'id' => 59,
                 'parent_id' => 55,
@@ -589,7 +551,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-06-15 05:55:51',
                 'deleted_at' => NULL,
             ),
-            30 => 
+            28 => 
             array (
                 'id' => 60,
                 'parent_id' => NULL,
@@ -598,17 +560,17 @@ class MenusTableSeeder extends Seeder
                 'system_name' => 'Teacher & Staff info.',
                 'route_name' => NULL,
                 'icon' => NULL,
-                'order_by' => 27,
+                'order_by' => 28,
                 'is_hidden' => 'No',
                 'status' => 1,
                 'created_by' => 1,
                 'updated_by' => 1,
                 'deleted_by' => NULL,
                 'created_at' => '2023-06-15 06:30:54',
-                'updated_at' => '2024-01-10 06:02:06',
+                'updated_at' => '2024-01-16 06:36:45',
                 'deleted_at' => NULL,
             ),
-            31 => 
+            29 => 
             array (
                 'id' => 61,
                 'parent_id' => 60,
@@ -627,7 +589,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-06-15 06:31:38',
                 'deleted_at' => NULL,
             ),
-            32 => 
+            30 => 
             array (
                 'id' => 62,
                 'parent_id' => 60,
@@ -646,7 +608,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-06-15 06:32:10',
                 'deleted_at' => NULL,
             ),
-            33 => 
+            31 => 
             array (
                 'id' => 63,
                 'parent_id' => 78,
@@ -665,7 +627,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-09-23 09:50:25',
                 'deleted_at' => NULL,
             ),
-            34 => 
+            32 => 
             array (
                 'id' => 64,
                 'parent_id' => NULL,
@@ -674,17 +636,17 @@ class MenusTableSeeder extends Seeder
                 'system_name' => 'Admission Info',
                 'route_name' => NULL,
                 'icon' => NULL,
-                'order_by' => 29,
+                'order_by' => 30,
                 'is_hidden' => 'No',
                 'status' => 1,
                 'created_by' => 1,
                 'updated_by' => 1,
                 'deleted_by' => NULL,
                 'created_at' => '2023-06-27 09:20:02',
-                'updated_at' => '2024-01-10 06:02:06',
+                'updated_at' => '2024-01-16 06:36:45',
                 'deleted_at' => NULL,
             ),
-            35 => 
+            33 => 
             array (
                 'id' => 65,
                 'parent_id' => 64,
@@ -703,7 +665,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-06-27 09:20:56',
                 'deleted_at' => NULL,
             ),
-            36 => 
+            34 => 
             array (
                 'id' => 67,
                 'parent_id' => 27,
@@ -722,7 +684,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-09-10 09:47:14',
                 'deleted_at' => NULL,
             ),
-            37 => 
+            35 => 
             array (
                 'id' => 68,
                 'parent_id' => 27,
@@ -741,7 +703,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-09-10 09:48:59',
                 'deleted_at' => NULL,
             ),
-            38 => 
+            36 => 
             array (
                 'id' => 78,
                 'parent_id' => NULL,
@@ -750,17 +712,17 @@ class MenusTableSeeder extends Seeder
                 'system_name' => 'Project Settings',
                 'route_name' => NULL,
                 'icon' => NULL,
-                'order_by' => 33,
+                'order_by' => 34,
                 'is_hidden' => 'No',
                 'status' => 1,
                 'created_by' => 1,
                 'updated_by' => 1,
                 'deleted_by' => NULL,
                 'created_at' => '2023-09-23 09:50:25',
-                'updated_at' => '2024-01-10 06:02:06',
+                'updated_at' => '2024-01-16 06:36:45',
                 'deleted_at' => NULL,
             ),
-            39 => 
+            37 => 
             array (
                 'id' => 80,
                 'parent_id' => 78,
@@ -779,7 +741,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-09-23 09:56:24',
                 'deleted_at' => NULL,
             ),
-            40 => 
+            38 => 
             array (
                 'id' => 81,
                 'parent_id' => 29,
@@ -788,17 +750,17 @@ class MenusTableSeeder extends Seeder
                 'system_name' => 'Notices',
                 'route_name' => 'notices.index',
                 'icon' => NULL,
-                'order_by' => 4,
+                'order_by' => 5,
                 'is_hidden' => 'No',
                 'status' => 1,
                 'created_by' => 1,
                 'updated_by' => 1,
                 'deleted_by' => NULL,
                 'created_at' => '2023-10-04 05:33:50',
-                'updated_at' => '2023-10-04 05:33:50',
+                'updated_at' => '2024-01-21 05:00:21',
                 'deleted_at' => NULL,
             ),
-            41 => 
+            39 => 
             array (
                 'id' => 84,
                 'parent_id' => 39,
@@ -817,7 +779,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2024-01-08 05:16:44',
                 'deleted_at' => NULL,
             ),
-            42 => 
+            40 => 
             array (
                 'id' => 85,
                 'parent_id' => 51,
@@ -836,7 +798,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-12-31 06:44:44',
                 'deleted_at' => NULL,
             ),
-            43 => 
+            41 => 
             array (
                 'id' => 86,
                 'parent_id' => 39,
@@ -855,7 +817,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-12-31 11:19:48',
                 'deleted_at' => NULL,
             ),
-            44 => 
+            42 => 
             array (
                 'id' => 87,
                 'parent_id' => 39,
@@ -874,7 +836,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2024-01-08 07:28:10',
                 'deleted_at' => NULL,
             ),
-            45 => 
+            43 => 
             array (
                 'id' => 88,
                 'parent_id' => 39,
@@ -893,7 +855,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2024-01-08 10:32:55',
                 'deleted_at' => NULL,
             ),
-            46 => 
+            44 => 
             array (
                 'id' => 89,
                 'parent_id' => 39,
@@ -912,7 +874,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2024-01-08 17:33:46',
                 'deleted_at' => NULL,
             ),
-            47 => 
+            45 => 
             array (
                 'id' => 90,
                 'parent_id' => 39,
@@ -931,7 +893,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2024-01-08 18:58:19',
                 'deleted_at' => NULL,
             ),
-            48 => 
+            46 => 
             array (
                 'id' => 91,
                 'parent_id' => 39,
@@ -950,7 +912,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2024-01-09 05:15:20',
                 'deleted_at' => NULL,
             ),
-            49 => 
+            47 => 
             array (
                 'id' => 92,
                 'parent_id' => NULL,
@@ -969,7 +931,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2024-01-10 06:02:06',
                 'deleted_at' => NULL,
             ),
-            50 => 
+            48 => 
             array (
                 'id' => 93,
                 'parent_id' => 92,
@@ -988,7 +950,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2024-01-09 07:32:04',
                 'deleted_at' => NULL,
             ),
-            51 => 
+            49 => 
             array (
                 'id' => 94,
                 'parent_id' => 92,
@@ -1007,7 +969,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2024-01-09 07:31:03',
                 'deleted_at' => NULL,
             ),
-            52 => 
+            50 => 
             array (
                 'id' => 95,
                 'parent_id' => NULL,
@@ -1026,7 +988,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2024-01-10 06:02:06',
                 'deleted_at' => NULL,
             ),
-            53 => 
+            51 => 
             array (
                 'id' => 96,
                 'parent_id' => 95,
@@ -1045,7 +1007,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2024-01-09 10:58:31',
                 'deleted_at' => NULL,
             ),
-            54 => 
+            52 => 
             array (
                 'id' => 97,
                 'parent_id' => 95,
@@ -1064,7 +1026,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2024-01-09 11:52:50',
                 'deleted_at' => NULL,
             ),
-            55 => 
+            53 => 
             array (
                 'id' => 98,
                 'parent_id' => 95,
@@ -1083,7 +1045,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2024-01-10 05:10:13',
                 'deleted_at' => NULL,
             ),
-            56 => 
+            54 => 
             array (
                 'id' => 99,
                 'parent_id' => NULL,
@@ -1102,45 +1064,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2024-01-10 06:02:06',
                 'deleted_at' => NULL,
             ),
-            57 => 
-            array (
-                'id' => 100,
-                'parent_id' => 99,
-                'name' => 'Agreements',
-                'bn_name' => 'সম্পাদিত চুক্তিসমূহ',
-                'system_name' => 'Agreements',
-                'route_name' => 'agreement.index',
-                'icon' => NULL,
-                'order_by' => 1,
-                'is_hidden' => 'No',
-                'status' => 1,
-                'created_by' => 1,
-                'updated_by' => 1,
-                'deleted_by' => NULL,
-                'created_at' => '2024-01-10 06:02:06',
-                'updated_at' => '2024-01-10 06:03:46',
-                'deleted_at' => NULL,
-            ),
-            58 => 
-            array (
-                'id' => 101,
-                'parent_id' => 99,
-                'name' => 'Industrial Attachment',
-                'bn_name' => 'ইন্ডাস্ট্রিয়াল এটাচমেন্ট',
-                'system_name' => 'Industrial Attachment',
-                'route_name' => 'industrial_attachment.index',
-                'icon' => NULL,
-                'order_by' => 2,
-                'is_hidden' => 'No',
-                'status' => 1,
-                'created_by' => 1,
-                'updated_by' => 1,
-                'deleted_by' => NULL,
-                'created_at' => '2024-01-10 11:27:31',
-                'updated_at' => '2024-01-10 11:27:31',
-                'deleted_at' => NULL,
-            ),
-            59 => 
+            55 => 
             array (
                 'id' => 102,
                 'parent_id' => 99,
@@ -1159,7 +1083,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2024-01-11 05:02:59',
                 'deleted_at' => NULL,
             ),
-            60 => 
+            56 => 
             array (
                 'id' => 103,
                 'parent_id' => 95,
@@ -1178,7 +1102,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2024-01-13 10:08:47',
                 'deleted_at' => NULL,
             ),
-            61 => 
+            57 => 
             array (
                 'id' => 104,
                 'parent_id' => 95,
@@ -1195,6 +1119,101 @@ class MenusTableSeeder extends Seeder
                 'deleted_by' => NULL,
                 'created_at' => '2024-01-14 07:02:21',
                 'updated_at' => '2024-01-14 07:02:21',
+                'deleted_at' => NULL,
+            ),
+            58 => 
+            array (
+                'id' => 105,
+                'parent_id' => NULL,
+                'name' => 'Subject Info',
+                'bn_name' => 'বিষয় সম্পর্কিত তথ্য',
+                'system_name' => 'Subject Info',
+                'route_name' => NULL,
+                'icon' => NULL,
+                'order_by' => 25,
+                'is_hidden' => 'No',
+                'status' => 1,
+                'created_by' => 1,
+                'updated_by' => 1,
+                'deleted_by' => NULL,
+                'created_at' => '2024-01-16 06:36:45',
+                'updated_at' => '2024-01-16 06:36:45',
+                'deleted_at' => NULL,
+            ),
+            59 => 
+            array (
+                'id' => 106,
+                'parent_id' => 105,
+                'name' => 'Add Subject',
+                'bn_name' => 'বিষয় যোগ করুন',
+                'system_name' => 'Add Subject',
+                'route_name' => 'add_subject.index',
+                'icon' => NULL,
+                'order_by' => 1,
+                'is_hidden' => 'No',
+                'status' => 1,
+                'created_by' => 1,
+                'updated_by' => 1,
+                'deleted_by' => NULL,
+                'created_at' => '2024-01-16 06:38:45',
+                'updated_at' => '2024-01-16 06:38:45',
+                'deleted_at' => NULL,
+            ),
+            60 => 
+            array (
+                'id' => 107,
+                'parent_id' => 105,
+                'name' => 'Subject Priority',
+                'bn_name' => 'বিষয় অগ্রাধিকার',
+                'system_name' => 'Subject Priority',
+                'route_name' => 'subjectpriority.index',
+                'icon' => NULL,
+                'order_by' => 2,
+                'is_hidden' => 'No',
+                'status' => 1,
+                'created_by' => 1,
+                'updated_by' => 1,
+                'deleted_by' => NULL,
+                'created_at' => '2024-01-18 06:34:33',
+                'updated_at' => '2024-01-18 07:11:02',
+                'deleted_at' => NULL,
+            ),
+            61 => 
+            array (
+                'id' => 108,
+                'parent_id' => 29,
+                'name' => 'Focul Point',
+                'bn_name' => 'ফোকাল পয়েন্ট',
+                'system_name' => 'Focul Point',
+                'route_name' => 'focul_point.index',
+                'icon' => NULL,
+                'order_by' => 3,
+                'is_hidden' => 'No',
+                'status' => 1,
+                'created_by' => 1,
+                'updated_by' => 1,
+                'deleted_by' => NULL,
+                'created_at' => '2024-01-21 05:00:21',
+                'updated_at' => '2024-01-21 05:05:04',
+                'deleted_at' => NULL,
+            ),
+            62 => 
+            array (
+                'id' => 109,
+                'parent_id' => 39,
+            'name' => 'National Integrity Strategy (NIS)',
+            'bn_name' => 'শুদ্ধাচার সংক্রান্ত তথ্য (NIS)',
+            'system_name' => 'National Integrity Strategy (NIS)',
+                'route_name' => 'nis_info.index',
+                'icon' => NULL,
+                'order_by' => 11,
+                'is_hidden' => 'No',
+                'status' => 1,
+                'created_by' => 1,
+                'updated_by' => 1,
+                'deleted_by' => NULL,
+                'created_at' => '2024-01-23 05:09:48',
+                'updated_at' => '2024-01-23 05:09:48',
                 'deleted_at' => NULL,
             ),
         ));

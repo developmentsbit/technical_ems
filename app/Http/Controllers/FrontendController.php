@@ -86,10 +86,21 @@ class FrontendController extends Controller
 
 	}
 
-
 	public function memberdetails($id){
 		$data = DB::table("members")->where('id',$id)->first();
 		return view('frontend.memberdetails',compact('data'));
+
+	}
+	
+	public function foculpoints()
+	{
+		$data = DB::table("focul_point")->where('status',1)->get();
+		return view('frontend.foculpoints',compact('data'));
+	}
+
+	public function focul_point_details($id){
+		$data = DB::table("focul_point")->where('id',$id)->first();
+		return view('frontend.focul_point_details',compact('data'));
 
 	}
 
@@ -836,6 +847,18 @@ class FrontendController extends Controller
 
 		$department=DB::table('department')->get();
 		return view('frontend.attached_cv',compact('data','department'));
+	}
+
+	public function integritystrategy()
+	{
+		$data = DB::table("nis_info")->get();
+		return view('frontend.integritystrategy',compact('data'));
+	}
+
+	public function view_integritystrategy($id){
+		$data = DB::table("nis_info")->where('id',$id)->first();
+		return view('frontend.view_integritystrategy',compact('data'));
+
 	}
 
 }

@@ -412,6 +412,7 @@ right:0;
                   <div class="col-md-6 col-12 dmenu mt-3">
                     <li><a href="{{ url('page/28') }}">@lang('frontend.structure')</a></li>
                     <li><a href="{{ url('page/29') }}">@lang('frontend.info')</a></li>
+                    <li><a href="{{url('integritystrategy')}}">@lang('frontend.integritystrategy')</a></li>
                     <li><a href="{{ url('page/30') }}">@lang('frontend.ongoingeducation')</a></li>
                   
                   </div>
@@ -443,6 +444,7 @@ right:0;
                   <li><a href="{{ url('principles') }}">@lang('frontend.principles')</a></li>
                   <li><a href="{{ url('councilmembers') }}">@lang('frontend.councilmembers')</a></li>
                   <li><a href="{{ url('comitteemembers') }}">@lang('frontend.comitteemembers')</a></li>
+                  <li><a href="{{ url('foculpoints') }}">@lang('frontend.foculpoints')</a></li>
                   <li><a href="{{ url('teacherinfo') }}">@lang('frontend.teacherinfo')</a></li>
                   <li><a href="{{ url('staffinfo') }}">@lang('frontend.staffinfo')</a></li>
                </div>
@@ -882,6 +884,7 @@ right:0;
 
         <li><a href="{{ url('page/28') }}">@lang('frontend.structure')</a></li>
         <li><a href="{{ url('page/29') }}">@lang('frontend.info')</a></li>
+        <li><a href="{{url('integritystrategy')}}">@lang('frontend.integritystrategy')</a></li>
         <li><a href="{{ url('page/30') }}">@lang('frontend.ongoingeducation')</a></li>
       </ul>
     </li>
@@ -901,6 +904,7 @@ right:0;
           <li><a href="{{ url('principles') }}">@lang('frontend.principles')</a></li>
           <li><a href="{{ url('councilmembers') }}">@lang('frontend.councilmembers')</a></li>
           <li><a href="{{ url('comitteemembers') }}">@lang('frontend.comitteemembers')</a></li>
+          <li><a href="{{ url('foculpoints') }}">@lang('frontend.foculpoints')</a></li>
           <li><a href="{{ url('teacherinfo') }}">@lang('frontend.teacherinfo')</a></li>
           <li><a href="{{ url('staffinfo') }}">@lang('frontend.staffinfo')</a></li>
       </ul>

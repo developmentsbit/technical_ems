@@ -528,24 +528,23 @@ class TeacherDashboardController extends Controller
 
 
 	
-	public function inboxmessageteacher(){
-
+	public function inboxmessageteacher()
+	{
 		$data = DB::table("chats")
 		->where("chats.to",Auth('teacher')->user()->id)
 		->join('student_information','student_information.id','chats.from')
 		->join('department','department.id','student_information.department')
 		->join('semesters','semesters.id','student_information.semester')
-		->join('addsection','addsection.section_id','student_information.group')
-		->select("chats.*",'student_information.students_name_en','student_information.type','department.department','semesters.semester_name','addsection.section_name')
+		->join('addsection','addsection.id','student_information.group')
+		->select("chats.*",'student_information.students_name_en','department.department','semesters.semester_name','addsection.section_name')
 		->get();
-
-
-
+		
 		return view("teacher.inboxmessageteacher",compact('data'));
 	}
 
 
-	public function replyteachermessage(Request $r){
+	public function replyteachermessage(Request $r)
+	{
 		DB::table("chats")->insert([
 			'from'    => Auth('teacher')->user()->id,
 			'to'      => $r->to,
@@ -559,62 +558,45 @@ class TeacherDashboardController extends Controller
 		return Redirect()->back()->with($notification); 
 	}
 
-
-public function studentsmssend(){
-    
-    
-    return view("teacher.studentsmssend");
-    
-}
-
-
-public function searchstudentdata(Request $r){
-    
-    $data = DB::table("student_information")
-    ->where("department",$r->department_id)
-    ->where("semester",$r->semester_id)
-    ->where("type",$r->type)
-    ->where("group",$r->section_id)
-    ->get();
-    
-    
-    return view("teacher.searchstudentdata",compact('data'));
-    
-}
-
-
-public function guardiansmssend(){
-    
-    
-    return view("teacher.guardiansmssend");
-    
-}
-
-
-
-public function searchguardiandata(Request $r){
-    
-    $data = DB::table("student_information")
-    ->where("department",$r->department_id)
-    ->where("semester",$r->semester_id)
-    ->where("type",$r->type)
-    ->where("group",$r->section_id)
-    ->get();
-    
-    
-    return view("teacher.searchguardiandata",compact('data'));
-    
-}
-
-
-	
-		public function changepasswordteacher(){
-		return view("teacher.changepasswordteacher");
+	public function studentsmssend()
+	{
+		return view("teacher.studentsmssend");
 	}
 
+	public function searchstudentdata(Request $r)
+	{
+		$data = DB::table("student_information")
+		->where("department",$r->department_id)
+		->where("semester",$r->semester_id)
+		->where("group",$r->section_id)
+		->get();
 
+		return view("teacher.searchstudentdata",compact('data'));
+	}
 
-	public function upchangepasswordteacher(Request $r){
+	public function guardiansmssend()
+	{
+		return view("teacher.guardiansmssend");
+	}
+
+	public function searchguardiandata(Request $r)
+	{
+		$data = DB::table("student_information")
+		->where("department",$r->department_id)
+		->where("semester",$r->semester_id)
+		->where("group",$r->section_id)
+		->get();
+		
+		return view("teacher.searchguardiandata",compact('data'));
+	}
+	
+	public function changepasswordteacher()
+	{
+		return view("teacher.changepasswordteacher");
+	}
+	
+	public function upchangepasswordteacher(Request $r)
+	{
 		DB::table("teacherstaff")->where('id',Auth('teacher')->user()->id)->update([
 			'password'      => Hash::make($r->password),
 			'show_password' => $r->password,
@@ -624,6 +606,7 @@ public function searchguardiandata(Request $r){
 			'messege'=>'Password Update Successfully',
 			'alert-type'=>'success'
 		);
-		return Redirect()->back()->with($notification); 
+
+		return Redirect()->back()->with($notification);
 	}
 }

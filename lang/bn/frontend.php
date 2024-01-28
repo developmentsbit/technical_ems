@@ -87,6 +87,7 @@ $array = array(
     'info'=>'অর্গানোগ্রাম',
     'integrity'=>'শুদ্ধাচার সংক্রান্ত তথ্য',
     'ongoingeducation'=>'চলমান শিক্ষা',
+    'integritystrategy'=>'শুদ্ধাচার সংক্রান্ত তথ্য',
 
     // 'principal_messages'=>'প্রধান শিক্ষকের বার্তা',
     'vice_principal_message'=>'উপাধ্যক্ষের বার্তা',
@@ -100,6 +101,7 @@ $array = array(
     'staffinfo'=>'কর্মচারীদের তথ্য',
     'comitteemembers'=>'কমিটির সদস্যদের তালিকা',
     'councilmembers'=>'কাউন্সিল সদস্যদের তালিকা',
+    'foculpoints'=>'দায়িত্বপ্রাপ্ত ফোকাল পয়েন্টগণের তালিকা',
 
     'academic_information'=>'একাডেমিক তথ্য',
     'rules_regulation'=>'আচরণ বিধি',
