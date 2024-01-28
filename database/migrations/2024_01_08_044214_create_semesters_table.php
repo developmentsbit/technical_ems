@@ -18,6 +18,10 @@ return new class extends Migration
             $table->string('status');
             $table->timestamps();
         });
+
+        Schema::table('classroutine', function (Blueprint $table) {
+            $table->foreign('semester_id')->references('id')->on('semesters');
+        });
     }
 
     /**

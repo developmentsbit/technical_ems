@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('department_id')->unsigned();
             $table->bigInteger('semester_id')->unsigned();
-            $table->foreign('semester_id')->references('id')->on('semesters');
             $table->string('shift')->nullable();
             $table->text('title');
             $table->text('title_bn')->nullable();
